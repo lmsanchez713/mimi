@@ -25,7 +25,16 @@
 
 <body>
   <!-- your content here... -->
-  <div>TESTANDO</div>
+  <div id="saida">TESTANDO</div>
   <!-- <script src="js/scripts.js"></script> -->
+  <script>
+    var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
+
+    // var elemento_de_saida = document.getElementById("saida").innerHTML+= "new content"
+
+    ws.onopen = function(evt) { ws.send(JSON.stringify({ticks:'R_100'})); };
+
+    ws.onmessage = function(msg) { var data = JSON.parse(msg.data); console.log('ticks update: %o', data);};
+  </script>
 </body>
 </html>
