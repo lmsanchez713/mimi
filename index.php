@@ -40,7 +40,11 @@
 
     ws.onmessage = function(msg) { var data = JSON.parse(msg.data); console.log('ticks update: %o', data);};
 
-    function init() {}
+    function init() {
+
+        console.log("123");
+
+    }
     </script>
 </body>
 </html>
