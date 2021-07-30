@@ -75,5 +75,6 @@ var myChart = new Chart(ctx, {
 
     ws.onmessage = function(msg) { var data = JSON.parse(msg.data); console.log('ticks update: %o', data);};
   </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.0/chart.js"></script>
 </body>
 </html>
