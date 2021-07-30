@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>A Basic HTML5 Template</title>
+    <title>Mimi Broke Investor v1.0 God Version</title>
     <meta name="description" content="A simple HTML5 Template for new projects.">
     <meta name="author" content="SitePoint">
 
@@ -32,7 +32,7 @@
     <!-- <script src="js/scripts.js"></script> -->
 
     <script>
-        
+
         var ws;
         var saida;
 
@@ -40,14 +40,79 @@
 
             saida = document.getElementById("div_saida");
 
-            saida.innerHTML += "Iniciando conexão com a Deriv...<br>";
+            saida.innerHTML += "Iniciando conexão com a Deriv...";
 
             ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
 
+            saida.innerHTML += "OK<br>Autenticando...";
+
             ws.onopen = function (evt) {
+
+                var auth1 = {
+                    "authorize": "HVumMdEbE5TdVUP"
+                };
+
+                var auth2 = {
+                    "authorize": {
+                        "account_list": [
+                            {
+                                "account_type": "trading",
+                                "currency": "USD",
+                                "is_disabled": 0,
+                                "is_virtual": 1,
+                                "landing_company_name": "virtual",
+                                "loginid": "VRTC4549934",
+                                "trading": {}
+                            }
+                        ],
+                        "balance": 10000,
+                        "country": "br",
+                        "currency": "USD",
+                        "email": "lmsanchez640@hotmail.com",
+                        "fullname": "  ",
+                        "is_virtual": 1,
+                        "landing_company_fullname": "Deriv Limited",
+                        "landing_company_name": "virtual",
+                        "local_currencies": {
+                            "BRL": {
+                                "fractional_digits": 2
+                            }
+                        },
+                        "loginid": "VRTC4549934",
+                        "preferred_language": "PT",
+                        "scopes": [
+                            "read",
+                            "trade",
+                            "payments",
+                            "admin",
+                            "trading_information"
+                        ],
+                        "trading": {},
+                        "upgradeable_landing_companies": [
+                            "svg"
+                        ],
+                        "user_id": 8662791
+                    },
+                    "echo_req": {
+                        "authorize": "<not shown>"
+                    },
+                    "msg_type": "authorize"
+                };
+
+                var auth3 = {
+                    "app_list": [
+
+                    ],
+                    "echo_req": {
+                        "app_list": 1
+                    },
+                    "msg_type": "app_list"
+                };
+
                 ws.send(JSON.stringify({
                     ticks: 'R_100'
                 }));
+
             };
 
             ws.onmessage = function (msg) {
