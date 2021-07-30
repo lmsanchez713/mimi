@@ -27,9 +27,11 @@
 
 <body>
   
-  <div id="saida">TESTANDO</div>
+  <div id="saida">MIMI BROKER v1.0<br></div>
   <!-- <script src="js/scripts.js"></script> -->
   <script>
+      init();
+
     var ws = new WebSocket('wss://ws.binaryws.com/websockets/v3?app_id=1089');
 
     // var elemento_de_saida = document.getElementById("saida").innerHTML+= "new content"
@@ -37,6 +39,8 @@
     ws.onopen = function(evt) { ws.send(JSON.stringify({ticks:'R_100'})); };
 
     ws.onmessage = function(msg) { var data = JSON.parse(msg.data); console.log('ticks update: %o', data);};
-  </script>
+
+    function init() {}
+    </script>
 </body>
 </html>
