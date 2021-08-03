@@ -2,24 +2,55 @@ import sys
 import time
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
+import pathlib
+from os import listdir
+from os.path import isfile, join
+import os
+import shutil
 
-class CACHORRO_VIGIA(FileSystemEventHandler):
-    def on_any_event(self, evento):
-
-        # Aqui se insere o código a ser executado quando houver um evento de arquivo da pasta
-        # (código da DERIV)
-        print("TIPO:")
-        print(type(evento))
-        print("DIR:")
-        print(dir(evento))
-        print("VARS:")
-        print(vars(evento))
+class sentinela_de_arquivos(FileSystemEventHandler):
+    def on_created(self, evento):
+        print("ARQUIVO CRIADO: " + evento.src_path)
+        # print(vars(evento))
+    def on_modified(self, evento):
+        print("ARQUIVO MODIFICADO: " + evento.src_path)
 
 if __name__ == "__main__":
-    path = sys.argv[1] if len(sys.argv) > 1 else 'C:\\mimi\\testes\\csv'
-    CACHORRAO = CACHORRO_VIGIA()
+    print("Mimi Watchdog v0.1")
+    
+    pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\\mimi\\testes\\csv'
+    pasta_copias = str(pathlib.Path(__file__).parent.resolve()) + "\copias"
+    if not os.path.exists(pasta_copias):
+        os.mkdir(pasta_copias)
+    
+    print("Pasta CSV: " + pasta_csv)
+    print("Pasta copias: " + pasta_copias)
+
+    print("Esvaziando pasta copias...")
+    for filename in os.listdir(pasta_copias):
+        file_path = os.path.join(pasta_copias, filename)
+        try:
+            if os.path.isfile(file_path) or os.path.islink(file_path):
+                os.unlink(file_path)
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+            print("Apagando " + file_path)
+        except Exception as e:
+            print('Falha ao apagar %s. Motivo: %s' % (file_path, e))
+
+    print("Copiando pasta csv...")
+    for filename in os.listdir(pasta_csv):
+        file_path = os.path.join(pasta_csv, filename)
+        copy_path = os.path.join(pasta_copias, filename)
+        try:
+            shutil.copyfile(file_path, copy_path)
+            print("Copiando " + file_path)
+        except Exception as e:
+            print('Falha ao copiar %s. Motivo: %s' % (file_path, e))
+
+    sentinela_mt4 = sentinela_de_arquivos()
     observer = Observer()
-    observer.schedule(CACHORRAO, path, recursive=True)
+    observer.schedule(sentinela_mt4, pasta_csv, recursive=True)
     observer.start()
     try:
         while True:
