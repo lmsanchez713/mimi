@@ -34,7 +34,7 @@ if __name__ == "__main__":
     print("Mimi Watchdog v0.1")
     
     # pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\\mimi\\testes\\csv'
-    pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\Users\marro\AppData\Roaming\MetaQuotes\Terminal\9D15457EC01AD10E06A932AAC616DC32\MQL4\Files'
+    pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\\Users\\marro\\AppData\\Roaming\\MetaQuotes\\Terminal\\9D15457EC01AD10E06A932AAC616DC32\\MQL4\\Files'
     pasta_copias = str(pathlib.Path(__file__).parent.resolve()) + "\copias"
     if not os.path.exists(pasta_copias):
         os.mkdir(pasta_copias)
