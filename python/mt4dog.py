@@ -7,6 +7,8 @@ from os import listdir
 from os.path import isfile, join
 import os
 import shutil
+import asyncio
+import websockets
 
 class sentinela_de_arquivos(FileSystemEventHandler):
     def on_created(self, evento):
@@ -33,8 +35,8 @@ class sentinela_de_arquivos(FileSystemEventHandler):
 if __name__ == "__main__":
     print("Mimi Watchdog v0.1")
     
-    # pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\\mimi\\testes\\csv'
-    pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\\Users\\marro\\AppData\\Roaming\\MetaQuotes\\Terminal\\9D15457EC01AD10E06A932AAC616DC32\\MQL4\\Files'
+    pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\\mimi\\testes\\csv'
+    # pasta_csv = sys.argv[1] if len(sys.argv) > 1 else 'C:\\Users\\marro\\AppData\\Roaming\\MetaQuotes\\Terminal\\9D15457EC01AD10E06A932AAC616DC32\\MQL4\\Files'
     pasta_copias = str(pathlib.Path(__file__).parent.resolve()) + "\copias"
     if not os.path.exists(pasta_copias):
         os.mkdir(pasta_copias)
@@ -63,6 +65,23 @@ if __name__ == "__main__":
             print("Copiando " + file_path)
         except Exception as e:
             print('Falha ao copiar %s. Motivo: %s' % (file_path, e))
+
+    async def hello():
+        uri = "wss://ws.binaryws.com/websockets/v3?app_id=1089"
+        async with websockets.connect(
+            uri, ssl=True
+        ) as websocket:
+            req = """{
+  "authorize": "HVumMdEbE5TdVUP"
+}"""
+
+            await websocket.send(req)
+            print(f"> {req}")
+
+            greeting = await websocket.recv()
+            print(f"< {greeting}")
+
+    asyncio.get_event_loop().run_until_complete(hello())
 
     sentinela_mt4 = sentinela_de_arquivos()
     observer = Observer()
