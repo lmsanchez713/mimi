@@ -12,7 +12,8 @@ import websockets
 import json
 # import io
 
-token_deriv = "HVumMdEbE5TdVUP"
+token_deriv = "HVumMdEbE5TdVUP"#certo
+# token_deriv = "HVumMdEbE5TdVUPU"#errado
 uri_deriv = "wss://ws.binaryws.com/websockets/v3?app_id=1089"
 auth_deriv = False
 
@@ -79,7 +80,8 @@ async def funcao_principal():
         print("Conectando aos servidores da Deriv...")
         resposta_auth_deriv = await autenticar_deriv(soquete, token_deriv)
         auth_deriv = json.loads(resposta_auth_deriv)
-        print(auth_deriv)
+        # print(auth_deriv["msg_type"])
+        # print(auth_deriv)
 
         # rodando = True
         while rodando:
