@@ -80,10 +80,12 @@ async def funcao_principal():
         print("Conectando aos servidores da Deriv...")
         resposta_auth_deriv = await autenticar_deriv(soquete, token_deriv)
         auth_deriv = json.loads(resposta_auth_deriv)
-        # print(auth_deriv["msg_type"])
-        # print(auth_deriv)
+        if "authorize" in auth_deriv:
+            print("Autenticação bem-sucedida")
+            rodando = True
+        else:
+            print("Falha na autenticação. Saindo do programa...")
 
-        # rodando = True
         while rodando:
             name = input("Digite 'exit' para sair")
             if name == 'exit':
