@@ -20,6 +20,8 @@ namespace fs = std::filesystem;
 int main(int argc, char *argv[])
 {
 
+  cout << "Simulador MT4 - Retorno v2";
+
   if (!fs::exists("C:\\mimi\\testes\\csv\\sinais.csv"))
   {
 
@@ -27,7 +29,7 @@ int main(int argc, char *argv[])
     if (arquivo.good())
     {
 
-      arquivo << "tempo,ativo,acao,expiracao";
+      arquivo << "timestamp,ativo,acao,expiracao,gale,valor";
       arquivo.close();
 
     }
@@ -62,8 +64,12 @@ int main(int argc, char *argv[])
     if (arquivo.good())
     {
 
-      arquivo << '\n' << valor.str() << ',' << par[i_par] << ',' << acao[i_acao] << ',' << algarismos[i_n];
+      stringstream saida;
+      saida << '\n' << valor.str() << ',' << par[i_par] << ',' << acao[i_acao] << ',' << algarismos[i_n] << ",0,2";
+
+      arquivo << saida.str();
       arquivo.close();
+      cout << saida.str();
 
     }
 
