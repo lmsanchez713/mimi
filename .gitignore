@@ -1,5 +1,7 @@
-c/build/
+c/mt4sim/build/
+c/mt4sim/out/
+c/harstripper/build/
+c/harstripper/out/
 .vs/
-c/out/
 testes/csv/
 python/copias/

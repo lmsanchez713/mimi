@@ -89,12 +89,32 @@ async def funcao_principal():
         else:
             print("Falha na autenticação. Saindo do programa...")
 
+        print("Subscrevendo ao saldo")
+        print(await enviar_deriv(soquete, """{"balance": 1,"subscribe":1}"""))
+
+        print("Subscrevendo a transações")
+        print(await enviar_deriv(soquete, """{"transaction": 1,"subscribe":1}"""))
+
+        print("Fazendo CALL de teste")
+        print(await enviar_deriv(soquete, """{
+  "proposal": 1,
+  "amount": 10,
+  "barrier": "+0.1",
+  "basis": "payout",
+  "contract_type": "CALL",
+  "currency": "USD",
+  "duration": 60,
+  "duration_unit": "s",
+  "symbol": "R_100"
+}"""))
+
         while rodando:
-            name = input("Digite 'exit' para sair\n")
-            if name == 'exit':
-                rodando = False
-            else:
-                processar_sinal_retorno_v2(name)
+            # name = input("Digite 'exit' para sair\n")
+            # if name == 'exit':
+            #     rodando = False
+            # else:
+            #     processar_sinal_retorno_v2(name)
+            print(await soquete.recv())
 
 if __name__ == "__main__":
     
