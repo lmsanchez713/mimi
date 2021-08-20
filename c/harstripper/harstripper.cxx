@@ -1,81 +1,100 @@
-// tempo,ativo,acao,expiracao
-// 1626890791,CADCHF,call,5
-// 1626891003,CADCHF,call,5
-// 1626891345,CADCHF,call,5
-// 1626891604,CADCHF,put,5
-// 1626891920,CADCHF,put,5
-
-#include <cmath>
 #include <iostream>
-#include <string>
+#include <iomanip>
 #include <fstream>
-#include <sstream>
-#include <filesystem>
-#include <cstdlib>
-#include <thread>
+#include <string>
+#include <nlohmann/json.hpp>
 
-using namespace std;
-namespace fs = std::filesystem;
+// using json = nlohmann::json;
 
-int main(int argc, char *argv[])
+unsigned long nlohmann_json_dumper_indentation = 0;
+
+size_t nlohmann_json_dumper(nlohmann::json &j, std::string k = std::string(),
+                            std::function<size_t(nlohmann::json &, std::string)> f =
+                                std::function<size_t(nlohmann::json &, std::string)>())
 {
+  size_t c = 0;
 
-  cout << "Simulador MT4 - Retorno v2";
+  //
+  // std::cout << std::string(nlohmann_json_dumper_indentation, '\t');
+  // if (!k.empty())
+  //   std::cout << k << ": ";
+  // std::cout << "(" << j.type_name() << ")";
+  //
 
-  if (!fs::exists("C:\\mimi\\testes\\csv\\sinais.csv"))
+  bool is_object = false;
+  switch (j.type())
   {
-
-    fstream arquivo("C:\\mimi\\testes\\csv\\sinais.csv", ios_base::out);
-    if (arquivo.good())
-    {
-
-      arquivo << "timestamp,ativo,acao,expiracao,gale,valor";
-      arquivo.close();
-
-    }
-
-  }
-
-  #define n_par 3
-  #define n_acao 2
-  #define n_n 9
-  
-  string
-    par[n_par] = { "CADCHF", "USDBRL", "USDETH" },
-    acao[n_acao] = { "call", "put" },
-    algarismos[n_n] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-
-  while (1)
+  case nlohmann::json::value_t::object:
+    is_object = true;
+  case nlohmann::json::value_t::array:
   {
-
-    unsigned int
-      i_par = rand() % n_par,
-      i_acao = rand() % n_acao,
-      i_n = rand() % n_n;
-
-    stringstream valor;
-    valor << "162689";
-    valor << (rand() > (RAND_MAX / 2) ? '1' : '0');
-    valor << (rand() % 10) << (rand() % 10) << (rand() % 10);
-
-    //cout << valor.str() << ',' << par[i_par] << ',' << acao[i_acao] << ',' << algarismos[i_n] << '\n';
-
-    fstream arquivo("C:\\mimi\\testes\\csv\\sinais.csv", ios_base::app);
-    if (arquivo.good())
+    unsigned long counter = 0;
+    // std::cout << std::endl;
+    for (auto it = j.begin(); it != j.end(); ++it)
     {
-
-      stringstream saida;
-      saida << '\n' << valor.str() << ',' << par[i_par] << ',' << acao[i_acao] << ',' << algarismos[i_n] << ",0,2";
-
-      arquivo << saida.str();
-      arquivo.close();
-      cout << saida.str();
-
+      std::string key;
+      ++nlohmann_json_dumper_indentation;
+      if (is_object)
+        key = "\"" + it.key() + "\"";
+      else
+        key = std::to_string(counter++);
+      if (f)
+        c += f(it.value(), key);
+      nlohmann_json_dumper(it.value(), key, f);
+      --nlohmann_json_dumper_indentation;
     }
-
-    this_thread::sleep_for(1000ms);
-
   }
+  break;
+  default:
+    // std::cout << ' ' << j;
+    // std::cout << std::endl;
+    break;
+  }
+  return c;
+}
 
-  return 0;
+int main()
+{
+  std::ifstream arquivo_har("C:\\mimi\\testes\\app.deriv.com.har");
+  // create a JSON object
+  nlohmann::json j; // =
+                    // {
+                    //     {"pi", 3.141},
+                    //     {"happy", true},
+                    //     {"name", "Niels"},
+                    //     {"nothing", nullptr},
+                    //     {"answer", {{"everything", 42}}},
+                    //     {"list", {1, 0, 2}},
+                    //     {"object", {{"currency", "USD"}, {"value", 42.99}}}};
+
+  // // add new values
+  // j["new"]["key"]["value"] = {"another", "list"};
+
+  arquivo_har >> j;
+
+  // // count elements
+  // auto s = j.size();
+  // j["size"] = s;
+
+  // pretty print with indent of 4 spaces
+  // std::cout << std::setw(4) << j << '\n';
+
+  // nlohmann_json_dumper(j, [](nlohmann::json &j) -> size_t
+  //                      {
+  //                        std::cout << j.size() << '\n';
+  //                        for (auto &n : j.items())
+  //                        {
+  //                          std::cout << n.key() << '\n';
+  //                        }
+  //                        return j.size();
+  //                      });
+  nlohmann_json_dumper(j, "HAR", [](nlohmann::json &j, std::string s) -> size_t
+                       {
+                         if (!s.compare("\"_webSocketMessages\"")) {
+                           std::cout << std::string(nlohmann_json_dumper_indentation, ' ') << s << ": " << j.type_name() << '\n';
+                         }
+                         return 1;
+                       });
+  // nlohmann::detail::iteration_proxy<nlohmann::detail::iter_impl<nlohmann::json>>
+  // nlohmann::detail::iteration_proxy_value<nlohmann::detail::iter_impl<nlohmann::json>>
 }
