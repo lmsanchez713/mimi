@@ -14,12 +14,8 @@ size_t analisar_nlohmann(nlohmann::json &conteudo, std::string chave = std::stri
 {
   size_t acumulador = 0;
 
-  //
-  // std::cout << std::string(indentacao_nlohmann, '\t');
-  // if (!k.empty())
-  //   std::cout << k << ": ";
-  // std::cout << "(" << j.type_name() << ")";
-  //
+  if (predicado)
+    acumulador += predicado(conteudo, chave);
 
   bool e_objeto = false;
   switch (conteudo.type())
@@ -29,25 +25,24 @@ size_t analisar_nlohmann(nlohmann::json &conteudo, std::string chave = std::stri
   case nlohmann::json::value_t::array:
   {
     unsigned long contador_de_array = 0;
-    // std::cout << std::endl;
     for (auto iterador = conteudo.begin(); iterador != conteudo.end(); ++iterador)
     {
       std::string chave_do_iterador;
       ++indentacao_nlohmann;
       if (e_objeto)
-        chave_do_iterador = "\"" + iterador.key() + "\"";
+        chave_do_iterador = iterador.key();
       else
         chave_do_iterador = std::to_string(contador_de_array++);
-      if (predicado)
-        acumulador += predicado(iterador.value(), chave_do_iterador);
+      // if (predicado)
+      //   acumulador += predicado(iterador.value(), chave_do_iterador);
       analisar_nlohmann(iterador.value(), chave_do_iterador, predicado);
       --indentacao_nlohmann;
     }
   }
   break;
   default:
-    // std::cout << ' ' << j;
-    // std::cout << std::endl;
+    // if (predicado)
+    //       acumulador += predicado(conteudo, chave);
     break;
   }
   return acumulador;
