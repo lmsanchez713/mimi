@@ -102,7 +102,7 @@ int main()
     stringstream analise_da_mensagem;
 
     analise_da_mensagem
-        << "MSG N " << setw(qntd_digitos_n_msg) << right << contador_de_mensagens++
+        << "MSG " << setw(qntd_digitos_n_msg) << right << contador_de_mensagens++
         << ", " << mensagem["type"] << endl;
     // << setw(12) << left << "Opcode:" << mensagem["opcode"] << endl
     // << setw(12) << left << "Tipo:" << mensagem["type"] << endl;
@@ -126,7 +126,7 @@ int main()
 
     analisar_nlohmann(json_mensagem, "MSG", [&analise_da_mensagem](json &conteudo, string chave) -> size_t
                       {
-                        if (indentacao_nlohmann <= 1)
+                        if (indentacao_nlohmann <= 2)
                         {
                           analise_da_mensagem
                               << string(indentacao_nlohmann, '\t') << chave << ": ";

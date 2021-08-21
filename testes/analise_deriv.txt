@@ -1,98 +1,130 @@
-MSG N   0, "send"
+MSG   0, "send"
 MSG: object
 	authorize: "a1-KaOfRaurspLHTMMqcMqcKaAdOeJ8U"
 	req_id: 1
 
-MSG N   1, "send"
+MSG   1, "send"
 MSG: object
 	req_id: 2
 	subscribe: 1
 	website_status: 1
 
-MSG N   2, "send"
+MSG   2, "send"
 MSG: object
 	req_id: 3
 	time: 1
 
-MSG N   3, "receive"
+MSG   3, "receive"
 MSG: object
 	echo_req: object
+		req_id: 3
+		time: 1
 	msg_type: "time"
 	req_id: 3
 	time: 1628719044
 
-MSG N   4, "receive"
+MSG   4, "receive"
 MSG: object
 	authorize: object
+		account_list: array
+		balance: 10009.53
+		country: "br"
+		currency: "USD"
+		email: "lmsanchez640@hotmail.com"
+		fullname: "  "
+		is_virtual: 1
+		landing_company_fullname: "Deriv Limited"
+		landing_company_name: "virtual"
+		local_currencies: object
+		loginid: "VRTC4549934"
+		preferred_language: "PT"
+		scopes: array
+		trading: object
+		upgradeable_landing_companies: array
+		user_id: 8662791
 	echo_req: object
+		authorize: "<not shown>"
+		req_id: 1
 	msg_type: "authorize"
 	req_id: 1
 
-MSG N   5, "send"
+MSG   5, "send"
 MSG: object
 	account: "all"
 	balance: 1
 	req_id: 4
 	subscribe: 1
 
-MSG N   6, "send"
+MSG   6, "send"
 MSG: object
 	account: "VRTC4549934"
 	balance: 1
 	req_id: 5
 	subscribe: 1
 
-MSG N   7, "send"
+MSG   7, "send"
 MSG: object
 	get_account_status: 1
 	req_id: 6
 
-MSG N   8, "send"
+MSG   8, "send"
 MSG: object
 	get_settings: 1
 	req_id: 7
 
-MSG N   9, "send"
+MSG   9, "send"
 MSG: object
 	payout_currencies: 1
 	req_id: 8
 
-MSG N  10, "send"
+MSG  10, "send"
 MSG: object
 	p2p_advertiser_info: 1
 	req_id: 9
 
-MSG N  11, "send"
+MSG  11, "send"
 MSG: object
 	portfolio: 1
 	req_id: 10
 
-MSG N  12, "send"
+MSG  12, "send"
 MSG: object
 	proposal_open_contract: 1
 	req_id: 11
 	subscribe: 1
 
-MSG N  13, "send"
+MSG  13, "send"
 MSG: object
 	req_id: 12
 	subscribe: 1
 	transaction: 1
 
-MSG N  14, "receive"
+MSG  14, "receive"
 MSG: object
 	echo_req: object
+		req_id: 2
+		subscribe: 1
+		website_status: 1
 	msg_type: "website_status"
 	req_id: 2
 	subscription: object
+		id: "cdac5a57-432a-46cf-caf9-8bb94f907d0b"
 	website_status: object
+		api_call_limits: object
+		clients_country: "br"
+		crypto_config: object
+		currencies_config: object
+		p2p_config: object
+		site_status: "up"
+		supported_languages: array
+		terms_conditions_version: "Version 4.2.0 2020-08-07"
 
-MSG N  15, "send"
+MSG  15, "send"
 MSG: object
 	active_symbols: "brief"
 	req_id: 13
 
-MSG N  16, "send"
+MSG  16, "send"
 MSG: object
 	adjust_start_time: 1
 	end: "latest"
@@ -102,7 +134,7 @@ MSG: object
 	subscribe: 1
 	ticks_history: "1HZ100V"
 
-MSG N  17, "send"
+MSG  17, "send"
 MSG: object
 	adjust_start_time: 1
 	count: 1000
@@ -111,173 +143,364 @@ MSG: object
 	style: "ticks"
 	ticks_history: "1HZ100V"
 
-MSG N  18, "receive"
+MSG  18, "receive"
 MSG: object
 	balance: object
+		balance: 10009.53
+		currency: "USD"
+		id: "1d1af71f-b9ec-8be9-64f5-568e7b2d13d4"
+		loginid: "VRTC4549934"
 	echo_req: object
+		account: "VRTC4549934"
+		balance: 1
+		req_id: 5
+		subscribe: 1
 	msg_type: "balance"
 	req_id: 5
 	subscription: object
+		id: "1d1af71f-b9ec-8be9-64f5-568e7b2d13d4"
 
-MSG N  19, "receive"
+MSG  19, "receive"
 MSG: object
 	echo_req: object
+		get_settings: 1
+		req_id: 7
 	get_settings: object
+		country: "Brasil"
+		country_code: "br"
+		email: "lmsanchez640@hotmail.com"
+		email_consent: 1
+		feature_flag: object
+		immutable_fields: array
+		preferred_language: "PT"
+		residence: "Brasil"
+		user_hash: "0d461c293d5940b996f196df8ed837df59d91586718f364d8e4ec47cd59667aa"
 	msg_type: "get_settings"
 	req_id: 7
 
-MSG N  20, "send"
+MSG  20, "send"
 MSG: object
 	landing_company: "br"
 	req_id: 16
 
-MSG N  21, "receive"
+MSG  21, "receive"
 MSG: object
 	balance: object
+		accounts: object
+		balance: 10009.53
+		currency: "USD"
+		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
+		loginid: "VRTC4549934"
+		total: object
 	echo_req: object
+		account: "all"
+		balance: 1
+		req_id: 4
+		subscribe: 1
 	msg_type: "balance"
 	req_id: 4
 	subscription: object
+		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
 
-MSG N  22, "receive"
+MSG  22, "receive"
 MSG: object
 	echo_req: object
+		get_account_status: 1
+		req_id: 6
 	get_account_status: object
+		authentication: object
+		currency_config: object
+		prompt_client_to_authenticate: 0
+		risk_classification: "low"
+		status: array
 	msg_type: "get_account_status"
 	req_id: 6
 
-MSG N  23, "receive"
+MSG  23, "receive"
 MSG: object
 	echo_req: object
+		req_id: 12
+		subscribe: 1
+		transaction: 1
 	msg_type: "transaction"
 	req_id: 12
 	subscription: object
+		id: "1b70c9de-b549-ea13-c4b4-b14edc668740"
 	transaction: object
+		id: "1b70c9de-b549-ea13-c4b4-b14edc668740"
 
-MSG N  24, "receive"
+MSG  24, "receive"
 MSG: object
 	echo_req: object
+		payout_currencies: 1
+		req_id: 8
 	msg_type: "payout_currencies"
 	payout_currencies: array
+		0: "USD"
 	req_id: 8
 
-MSG N  25, "send"
+MSG  25, "send"
 MSG: object
 	platform: "mt5"
 	req_id: 17
 	trading_servers: 1
 
-MSG N  26, "send"
+MSG  26, "send"
 MSG: object
 	platform: "dxtrade"
 	req_id: 18
 	trading_platform_accounts: 1
 
-MSG N  27, "send"
+MSG  27, "send"
 MSG: object
 	req_id: 19
 	statement: 1
 
-MSG N  28, "send"
+MSG  28, "send"
 MSG: object
 	mt5_login_list: 1
 	req_id: 20
 
-MSG N  29, "receive"
+MSG  29, "receive"
 MSG: object
 	echo_req: object
+		p2p_advertiser_info: 1
+		req_id: 9
 	error: object
+		code: "UnavailableOnVirtual"
+		message: "Deriv P2P não está disponível em contas de demonstração. Por favor, mude para sua conta real."
 	msg_type: "p2p_advertiser_info"
 	req_id: 9
 
-MSG N  30, "receive"
+MSG  30, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  31, "receive"
+MSG  31, "receive"
 MSG: object
 	echo_req: object
+		portfolio: 1
+		req_id: 10
 	msg_type: "portfolio"
 	portfolio: object
+		contracts: array
 	req_id: 10
 
-MSG N  32, "receive"
+MSG  32, "receive"
 MSG: object
 	active_symbols: array
+		0: object
+		1: object
+		2: object
+		3: object
+		4: object
+		5: object
+		6: object
+		7: object
+		8: object
+		9: object
+		10: object
+		11: object
+		12: object
+		13: object
+		14: object
+		15: object
+		16: object
+		17: object
+		18: object
+		19: object
+		20: object
+		21: object
+		22: object
+		23: object
+		24: object
+		25: object
+		26: object
+		27: object
+		28: object
+		29: object
+		30: object
+		31: object
+		32: object
+		33: object
+		34: object
+		35: object
+		36: object
+		37: object
+		38: object
+		39: object
+		40: object
+		41: object
+		42: object
+		43: object
+		44: object
+		45: object
+		46: object
+		47: object
+		48: object
+		49: object
+		50: object
+		51: object
+		52: object
+		53: object
+		54: object
+		55: object
+		56: object
+		57: object
+		58: object
+		59: object
+		60: object
+		61: object
+		62: object
+		63: object
+		64: object
+		65: object
+		66: object
+		67: object
+		68: object
 	echo_req: object
+		active_symbols: "brief"
+		req_id: 13
 	msg_type: "active_symbols"
 	req_id: 13
 
-MSG N  33, "receive"
+MSG  33, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	history: object
+		prices: array
+		times: array
 	msg_type: "history"
 	pip_size: 2
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 
-MSG N  34, "receive"
+MSG  34, "receive"
 MSG: object
 	echo_req: object
+		landing_company: "br"
+		req_id: 16
 	landing_company: object
+		config: object
+		dxtrade_financial_company: object
+		dxtrade_gaming_company: object
+		financial_company: object
+		gaming_company: object
+		id: "br"
+		minimum_age: 18
+		mt_financial_company: object
+		mt_gaming_company: object
+		name: "Brazil"
+		virtual_company: "virtual"
 	msg_type: "landing_company"
 	req_id: 16
 
-MSG N  35, "receive"
+MSG  35, "receive"
 MSG: object
 	echo_req: object
+		platform: "dxtrade"
+		req_id: 18
+		trading_platform_accounts: 1
 	msg_type: "trading_platform_accounts"
 	req_id: 18
 	trading_platform_accounts: array
 
-MSG N  36, "receive"
+MSG  36, "receive"
 MSG: object
 	echo_req: object
+		platform: "mt5"
+		req_id: 17
+		trading_servers: 1
 	msg_type: "trading_servers"
 	req_id: 17
 	trading_servers: array
+		0: object
+		1: object
+		2: object
+		3: object
 
-MSG N  37, "receive"
+MSG  37, "receive"
 MSG: object
 	echo_req: object
+		mt5_login_list: 1
+		req_id: 20
 	msg_type: "mt5_login_list"
 	mt5_login_list: array
 	req_id: 20
 
-MSG N  38, "receive"
+MSG  38, "receive"
 MSG: object
 	echo_req: object
+		req_id: 19
+		statement: 1
 	msg_type: "statement"
 	req_id: 19
 	statement: object
+		count: 3
+		transactions: array
 
-MSG N  39, "send"
+MSG  39, "send"
 MSG: object
 	req_id: 21
 	residence_list: 1
 
-MSG N  40, "receive"
+MSG  40, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: 1000
+		end: "latest"
+		req_id: 15
+		style: "ticks"
+		ticks_history: "1HZ100V"
 	history: object
+		prices: array
+		times: array
 	msg_type: "history"
 	pip_size: 2
 	req_id: 15
 
-MSG N  41, "receive"
+MSG  41, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524.97
+		bid: 3524.17
+		epoch: 1628719046
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3524.57
+		symbol: "1HZ100V"
 
-MSG N  42, "send"
+MSG  42, "send"
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -290,7 +513,7 @@ MSG: object
 	subscribe: 1
 	symbol: "1HZ100V"
 
-MSG N  43, "send"
+MSG  43, "send"
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -303,151 +526,640 @@ MSG: object
 	subscribe: 1
 	symbol: "1HZ100V"
 
-MSG N  44, "receive"
+MSG  44, "receive"
 MSG: object
 	echo_req: object
+		req_id: 21
+		residence_list: 1
 	msg_type: "residence_list"
 	req_id: 21
 	residence_list: array
+		0: object
+		1: object
+		2: object
+		3: object
+		4: object
+		5: object
+		6: object
+		7: object
+		8: object
+		9: object
+		10: object
+		11: object
+		12: object
+		13: object
+		14: object
+		15: object
+		16: object
+		17: object
+		18: object
+		19: object
+		20: object
+		21: object
+		22: object
+		23: object
+		24: object
+		25: object
+		26: object
+		27: object
+		28: object
+		29: object
+		30: object
+		31: object
+		32: object
+		33: object
+		34: object
+		35: object
+		36: object
+		37: object
+		38: object
+		39: object
+		40: object
+		41: object
+		42: object
+		43: object
+		44: object
+		45: object
+		46: object
+		47: object
+		48: object
+		49: object
+		50: object
+		51: object
+		52: object
+		53: object
+		54: object
+		55: object
+		56: object
+		57: object
+		58: object
+		59: object
+		60: object
+		61: object
+		62: object
+		63: object
+		64: object
+		65: object
+		66: object
+		67: object
+		68: object
+		69: object
+		70: object
+		71: object
+		72: object
+		73: object
+		74: object
+		75: object
+		76: object
+		77: object
+		78: object
+		79: object
+		80: object
+		81: object
+		82: object
+		83: object
+		84: object
+		85: object
+		86: object
+		87: object
+		88: object
+		89: object
+		90: object
+		91: object
+		92: object
+		93: object
+		94: object
+		95: object
+		96: object
+		97: object
+		98: object
+		99: object
+		100: object
+		101: object
+		102: object
+		103: object
+		104: object
+		105: object
+		106: object
+		107: object
+		108: object
+		109: object
+		110: object
+		111: object
+		112: object
+		113: object
+		114: object
+		115: object
+		116: object
+		117: object
+		118: object
+		119: object
+		120: object
+		121: object
+		122: object
+		123: object
+		124: object
+		125: object
+		126: object
+		127: object
+		128: object
+		129: object
+		130: object
+		131: object
+		132: object
+		133: object
+		134: object
+		135: object
+		136: object
+		137: object
+		138: object
+		139: object
+		140: object
+		141: object
+		142: object
+		143: object
+		144: object
+		145: object
+		146: object
+		147: object
+		148: object
+		149: object
+		150: object
+		151: object
+		152: object
+		153: object
+		154: object
+		155: object
+		156: object
+		157: object
+		158: object
+		159: object
+		160: object
+		161: object
+		162: object
+		163: object
+		164: object
+		165: object
+		166: object
+		167: object
+		168: object
+		169: object
+		170: object
+		171: object
+		172: object
+		173: object
+		174: object
+		175: object
+		176: object
+		177: object
+		178: object
+		179: object
+		180: object
+		181: object
+		182: object
+		183: object
+		184: object
+		185: object
+		186: object
+		187: object
+		188: object
+		189: object
+		190: object
+		191: object
+		192: object
+		193: object
+		194: object
+		195: object
+		196: object
+		197: object
+		198: object
+		199: object
+		200: object
+		201: object
+		202: object
+		203: object
+		204: object
+		205: object
+		206: object
+		207: object
+		208: object
+		209: object
+		210: object
+		211: object
+		212: object
+		213: object
+		214: object
+		215: object
+		216: object
+		217: object
+		218: object
+		219: object
+		220: object
+		221: object
+		222: object
+		223: object
+		224: object
+		225: object
+		226: object
+		227: object
+		228: object
+		229: object
+		230: object
+		231: object
+		232: object
+		233: object
+		234: object
+		235: object
+		236: object
+		237: object
+		238: object
+		239: object
+		240: object
+		241: object
+		242: object
+		243: object
+		244: object
+		245: object
+		246: object
+		247: object
+		248: object
 
-MSG N  45, "receive"
+MSG  45, "receive"
 MSG: object
 	echo_req: object
+		amount: 10
+		basis: "stake"
+		contract_type: "CALL"
+		currency: "USD"
+		duration: 5
+		duration_unit: "t"
+		product_type: "basic"
+		proposal: 1
+		req_id: 22
+		subscribe: 1
+		symbol: "1HZ100V"
 	msg_type: "proposal"
 	proposal: object
+		ask_price: 10
+		date_expiry: 1628719051
+		date_start: 1628719046
+		display_value: "10.00"
+		id: "ba95a090-0f3a-916b-90c7-ac55a53f06ce"
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente superior a preço de entrada."
+		payout: 19.53
+		spot: 3524.57
+		spot_time: 1628719046
 	req_id: 22
 	subscription: object
+		id: "ba95a090-0f3a-916b-90c7-ac55a53f06ce"
 
-MSG N  46, "receive"
+MSG  46, "receive"
 MSG: object
 	echo_req: object
+		amount: 10
+		basis: "stake"
+		contract_type: "PUT"
+		currency: "USD"
+		duration: 5
+		duration_unit: "t"
+		product_type: "basic"
+		proposal: 1
+		req_id: 23
+		subscribe: 1
+		symbol: "1HZ100V"
 	msg_type: "proposal"
 	proposal: object
+		ask_price: 10
+		date_expiry: 1628719051
+		date_start: 1628719046
+		display_value: "10.00"
+		id: "efaa519d-7678-deeb-0aba-6fa99d5118a1"
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente inferior a preço de entrada."
+		payout: 19.53
+		spot: 3524.57
+		spot_time: 1628719046
 	req_id: 23
 	subscription: object
+		id: "efaa519d-7678-deeb-0aba-6fa99d5118a1"
 
-MSG N  47, "receive"
+MSG  47, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3525.63
+		bid: 3524.83
+		epoch: 1628719047
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.23
+		symbol: "1HZ100V"
 
-MSG N  48, "receive"
+MSG  48, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3525.88
+		bid: 3525.08
+		epoch: 1628719048
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.48
+		symbol: "1HZ100V"
 
-MSG N  49, "receive"
+MSG  49, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3525.6
+		bid: 3524.8
+		epoch: 1628719049
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.2
+		symbol: "1HZ100V"
 
-MSG N  50, "receive"
+MSG  50, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524.02
+		bid: 3523.22
+		epoch: 1628719050
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.62
+		symbol: "1HZ100V"
 
-MSG N  51, "receive"
+MSG  51, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524
+		bid: 3523.2
+		epoch: 1628719051
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.6
+		symbol: "1HZ100V"
 
-MSG N  52, "receive"
+MSG  52, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.22
+		bid: 3522.42
+		epoch: 1628719052
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.82
+		symbol: "1HZ100V"
 
-MSG N  53, "receive"
+MSG  53, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.86
+		bid: 3523.06
+		epoch: 1628719053
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.46
+		symbol: "1HZ100V"
 
-MSG N  54, "receive"
+MSG  54, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.87
+		bid: 3523.07
+		epoch: 1628719054
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.47
+		symbol: "1HZ100V"
 
-MSG N  55, "receive"
+MSG  55, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.01
+		bid: 3522.21
+		epoch: 1628719055
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.61
+		symbol: "1HZ100V"
 
-MSG N  56, "send"
+MSG  56, "send"
 MSG: object
 	buy: "ba95a090-0f3a-916b-90c7-ac55a53f06ce"
 	price: "10.00"
 	req_id: 24
 
-MSG N  57, "receive"
+MSG  57, "receive"
 MSG: object
 	balance: object
+		balance: 9999.53
+		currency: "USD"
+		id: "1d1af71f-b9ec-8be9-64f5-568e7b2d13d4"
+		loginid: "VRTC4549934"
 	echo_req: object
+		account: "VRTC4549934"
+		balance: 1
+		req_id: 5
+		subscribe: 1
 	msg_type: "balance"
 	req_id: 5
 	subscription: object
+		id: "1d1af71f-b9ec-8be9-64f5-568e7b2d13d4"
 
-MSG N  58, "receive"
+MSG  58, "receive"
 MSG: object
 	balance: object
+		balance: 9999.53
+		currency: "USD"
+		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
+		loginid: "VRTC4549934"
+		total: object
 	echo_req: object
+		account: "all"
+		balance: 1
+		req_id: 4
+		subscribe: 1
 	msg_type: "balance"
 	req_id: 4
 	subscription: object
+		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
 
-MSG N  59, "receive"
+MSG  59, "receive"
 MSG: object
 	buy: object
+		balance_after: 9999.53
+		buy_price: 10
+		contract_id: 131028967028
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente superior a preço de entrada."
+		payout: 19.53
+		purchase_time: 1628719055
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		start_time: 1628719055
+		transaction_id: 261462147148
 	echo_req: object
+		buy: "ba95a090-0f3a-916b-90c7-ac55a53f06ce"
+		price: "10.00"
+		req_id: 24
 	msg_type: "buy"
 	req_id: 24
 
-MSG N  60, "send"
+MSG  60, "send"
 MSG: object
 	forget_all: array
+		0: "proposal"
 	req_id: 25
 
-MSG N  61, "receive"
+MSG  61, "receive"
 MSG: object
 	echo_req: object
+		req_id: 12
+		subscribe: 1
+		transaction: 1
 	msg_type: "transaction"
 	req_id: 12
 	subscription: object
+		id: "1b70c9de-b549-ea13-c4b4-b14edc668740"
 	transaction: object
+		action: "buy"
+		amount: -10
+		balance: 9999.53
+		barrier: "S0P"
+		contract_id: 131028967028
+		currency: "USD"
+		date_expiry: 1628719060
+		display_name: "Volatility 100 (1s) Index"
+		id: "1b70c9de-b549-ea13-c4b4-b14edc668740"
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente superior a preço de entrada."
+		symbol: "1HZ100V"
+		transaction_id: 261462147148
+		transaction_time: 1628719055
 
-MSG N  62, "receive"
+MSG  62, "receive"
 MSG: object
 	echo_req: object
+		forget_all: array
+		req_id: 25
 	forget_all: array
+		0: "efaa519d-7678-deeb-0aba-6fa99d5118a1"
 	msg_type: "forget_all"
 	req_id: 25
 
-MSG N  63, "send"
+MSG  63, "send"
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -460,7 +1172,7 @@ MSG: object
 	subscribe: 1
 	symbol: "1HZ100V"
 
-MSG N  64, "send"
+MSG  64, "send"
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -473,422 +1185,1432 @@ MSG: object
 	subscribe: 1
 	symbol: "1HZ100V"
 
-MSG N  65, "receive"
+MSG  65, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.12
+		bid: 3522.32
+		epoch: 1628719056
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.72
+		symbol: "1HZ100V"
 
-MSG N  66, "receive"
+MSG  66, "receive"
 MSG: object
 	echo_req: object
+		amount: 10
+		basis: "stake"
+		contract_type: "CALL"
+		currency: "USD"
+		duration: 5
+		duration_unit: "t"
+		product_type: "basic"
+		proposal: 1
+		req_id: 26
+		subscribe: 1
+		symbol: "1HZ100V"
 	msg_type: "proposal"
 	proposal: object
+		ask_price: 10
+		date_expiry: 1628719061
+		date_start: 1628719056
+		display_value: "10.00"
+		id: "741b45e3-1cdc-a475-b68f-6f27eee9ec7d"
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente superior a preço de entrada."
+		payout: 19.53
+		spot: 3522.72
+		spot_time: 1628719056
 	req_id: 26
 	subscription: object
+		id: "741b45e3-1cdc-a475-b68f-6f27eee9ec7d"
 
-MSG N  67, "receive"
+MSG  67, "receive"
 MSG: object
 	echo_req: object
+		amount: 10
+		basis: "stake"
+		contract_type: "PUT"
+		currency: "USD"
+		duration: 5
+		duration_unit: "t"
+		product_type: "basic"
+		proposal: 1
+		req_id: 27
+		subscribe: 1
+		symbol: "1HZ100V"
 	msg_type: "proposal"
 	proposal: object
+		ask_price: 10
+		date_expiry: 1628719061
+		date_start: 1628719056
+		display_value: "10.00"
+		id: "b17f99c0-f871-9fe5-f988-b2fa5d1c140e"
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente inferior a preço de entrada."
+		payout: 19.53
+		spot: 3522.72
+		spot_time: 1628719056
 	req_id: 27
 	subscription: object
+		id: "b17f99c0-f871-9fe5-f988-b2fa5d1c140e"
 
-MSG N  68, "receive"
+MSG  68, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 9.53
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3522.72
+		current_spot_display_value: "3522.72"
+		current_spot_time: 1628719056
+		date_expiry: 1628719060
+		date_settlement: 1628719060
+		date_start: 1628719055
+		display_name: "Volatility 100 (1s) Index"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		expiry_time: 1628719060
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
+		is_expired: 0
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 0
+		is_sold: 0
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 0
+		longcode: "Win payout if Volatility 100 (1s) Index after 5 ticks is strictly higher than entry spot."
+		payout: 19.53
+		profit: -0.47
+		profit_percentage: -4.7
+		purchase_time: 1628719055
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "open"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
+		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  69, "receive"
+MSG  69, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.66
+		bid: 3522.86
+		epoch: 1628719057
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.26
+		symbol: "1HZ100V"
 
-MSG N  70, "receive"
+MSG  70, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 13.25
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3523.26
+		current_spot_display_value: "3523.26"
+		current_spot_time: 1628719057
+		date_expiry: 1628719060
+		date_settlement: 1628719060
+		date_start: 1628719055
+		display_name: "Volatility 100 (1s) Index"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		expiry_time: 1628719060
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
+		is_expired: 0
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 0
+		is_sold: 0
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 0
+		longcode: "Win payout if Volatility 100 (1s) Index after 5 ticks is strictly higher than entry spot."
+		payout: 19.53
+		profit: 3.25
+		profit_percentage: 32.5
+		purchase_time: 1628719055
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "open"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
+		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  71, "receive"
+MSG  71, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.64
+		bid: 3522.84
+		epoch: 1628719058
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.24
+		symbol: "1HZ100V"
 
-MSG N  72, "receive"
+MSG  72, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 13.85
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3523.24
+		current_spot_display_value: "3523.24"
+		current_spot_time: 1628719058
+		date_expiry: 1628719060
+		date_settlement: 1628719060
+		date_start: 1628719055
+		display_name: "Volatility 100 (1s) Index"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		expiry_time: 1628719060
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
+		is_expired: 0
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 0
+		is_sold: 0
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 0
+		longcode: "Win payout if Volatility 100 (1s) Index after 5 ticks is strictly higher than entry spot."
+		payout: 19.53
+		profit: 3.85
+		profit_percentage: 38.5
+		purchase_time: 1628719055
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "open"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
+		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  73, "receive"
+MSG  73, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524.18
+		bid: 3523.38
+		epoch: 1628719059
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.78
+		symbol: "1HZ100V"
 
-MSG N  74, "receive"
+MSG  74, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 18.41
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3523.78
+		current_spot_display_value: "3523.78"
+		current_spot_time: 1628719059
+		date_expiry: 1628719060
+		date_settlement: 1628719060
+		date_start: 1628719055
+		display_name: "Volatility 100 (1s) Index"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		expiry_time: 1628719060
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
+		is_expired: 0
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 0
+		is_sold: 0
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 0
+		longcode: "Win payout if Volatility 100 (1s) Index after 5 ticks is strictly higher than entry spot."
+		payout: 19.53
+		profit: 8.41
+		profit_percentage: 84.1
+		purchase_time: 1628719055
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "open"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
+		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  75, "receive"
+MSG  75, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.91
+		bid: 3523.11
+		epoch: 1628719060
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.51
+		symbol: "1HZ100V"
 
-MSG N  76, "receive"
+MSG  76, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 13.7
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3523.51
+		current_spot_display_value: "3523.51"
+		current_spot_time: 1628719060
+		date_expiry: 1628719060
+		date_settlement: 1628719060
+		date_start: 1628719055
+		display_name: "Volatility 100 (1s) Index"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		expiry_time: 1628719060
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
+		is_expired: 0
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 0
+		is_sold: 0
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 0
+		longcode: "Win payout if Volatility 100 (1s) Index after 5 ticks is strictly higher than entry spot."
+		payout: 19.53
+		profit: 3.7
+		profit_percentage: 37
+		purchase_time: 1628719055
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "open"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
+		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  77, "receive"
+MSG  77, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.76
+		bid: 3522.96
+		epoch: 1628719061
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.36
+		symbol: "1HZ100V"
 
-MSG N  78, "receive"
+MSG  78, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		audit_details: object
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 19.53
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3523.36
+		current_spot_display_value: "3523.36"
+		current_spot_time: 1628719061
+		date_expiry: 1628719061
+		date_settlement: 1628719061
+		date_start: 1628719055
+		display_name: "Volatility 100 (1s) Index"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		exit_tick: 3523.36
+		exit_tick_display_value: "3523.36"
+		exit_tick_time: 1628719061
+		expiry_time: 1628719061
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
+		is_expired: 1
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 1
+		is_sold: 0
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 1
+		longcode: "Win payout if Volatility 100 (1s) Index after 5 ticks is strictly higher than entry spot."
+		payout: 19.53
+		profit: 9.53
+		profit_percentage: 95.3
+		purchase_time: 1628719055
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "open"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  79, "receive"
+MSG  79, "receive"
 MSG: object
 	balance: object
+		balance: 10019.06
+		currency: "USD"
+		id: "1d1af71f-b9ec-8be9-64f5-568e7b2d13d4"
+		loginid: "VRTC4549934"
 	echo_req: object
+		account: "VRTC4549934"
+		balance: 1
+		req_id: 5
+		subscribe: 1
 	msg_type: "balance"
 	req_id: 5
 	subscription: object
+		id: "1d1af71f-b9ec-8be9-64f5-568e7b2d13d4"
 
-MSG N  80, "receive"
+MSG  80, "receive"
 MSG: object
 	balance: object
+		balance: 10019.06
+		currency: "USD"
+		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
+		loginid: "VRTC4549934"
+		total: object
 	echo_req: object
+		account: "all"
+		balance: 1
+		req_id: 4
+		subscribe: 1
 	msg_type: "balance"
 	req_id: 4
 	subscription: object
+		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
 
-MSG N  81, "receive"
+MSG  81, "receive"
 MSG: object
 	echo_req: object
+		req_id: 12
+		subscribe: 1
+		transaction: 1
 	msg_type: "transaction"
 	req_id: 12
 	subscription: object
+		id: "1b70c9de-b549-ea13-c4b4-b14edc668740"
 	transaction: object
+		action: "sell"
+		amount: 19.53
+		balance: 10019.06
+		barrier: "S0P"
+		contract_id: 131028967028
+		currency: "USD"
+		date_expiry: 1628719060
+		display_name: "Volatility 100 (1s) Index"
+		id: "1b70c9de-b549-ea13-c4b4-b14edc668740"
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente superior a preço de entrada."
+		purchase_time: 1628719055
+		symbol: "1HZ100V"
+		transaction_id: 261462172548
+		transaction_time: 1628719061
 
-MSG N  82, "send"
+MSG  82, "send"
 MSG: object
 	contract_id: 131028967028
 	proposal_open_contract: 1
 	req_id: 28
 	subscribe: 1
 
-MSG N  83, "receive"
+MSG  83, "receive"
 MSG: object
 	echo_req: object
+		contract_id: 131028967028
+		proposal_open_contract: 1
+		req_id: 28
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		audit_details: object
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 19.53
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3523.36
+		current_spot_display_value: "3523.36"
+		current_spot_time: 1628719061
+		date_expiry: 1628719061
+		date_settlement: 1628719061
+		date_start: 1628719055
+		display_name: "Índice Volatilidade 100 (1s)"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		exit_tick: 3523.36
+		exit_tick_display_value: "3523.36"
+		exit_tick_time: 1628719061
+		expiry_time: 1628719061
+		is_expired: 1
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 1
+		is_sold: 1
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 0
+		longcode: "Ganhe o prêmio se Índice Volatilidade 100 (1s) depois de 5 ticks for estritamente superior a preço de entrada."
+		payout: 19.53
+		profit: 9.53
+		profit_percentage: 95.3
+		purchase_time: 1628719055
+		sell_price: 19.53
+		sell_spot: 3523.36
+		sell_spot_display_value: "3523.36"
+		sell_spot_time: 1628719061
+		sell_time: 1628719061
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "won"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
+		validation_error: "Esse contrato foi vendido."
 	req_id: 28
 
-MSG N  84, "receive"
+MSG  84, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.89
+		bid: 3523.09
+		epoch: 1628719062
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.49
+		symbol: "1HZ100V"
 
-MSG N  85, "receive"
+MSG  85, "receive"
 MSG: object
 	echo_req: object
+		proposal_open_contract: 1
+		req_id: 11
+		subscribe: 1
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: object
+		account_id: "94901488"
+		audit_details: object
+		barrier: "3522.72"
+		barrier_count: 1
+		bid_price: 19.53
+		buy_price: 10
+		contract_id: 131028967028
+		contract_type: "CALL"
+		currency: "USD"
+		current_spot: 3523.49
+		current_spot_display_value: "3523.49"
+		current_spot_time: 1628719062
+		date_expiry: 1628719061
+		date_settlement: 1628719061
+		date_start: 1628719055
+		display_name: "Volatility 100 (1s) Index"
+		entry_spot: 3522.72
+		entry_spot_display_value: "3522.72"
+		entry_tick: 3522.72
+		entry_tick_display_value: "3522.72"
+		entry_tick_time: 1628719056
+		exit_tick: 3523.36
+		exit_tick_display_value: "3523.36"
+		exit_tick_time: 1628719061
+		expiry_time: 1628719061
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
+		is_expired: 1
+		is_forward_starting: 0
+		is_intraday: 1
+		is_path_dependent: 0
+		is_settleable: 1
+		is_sold: 1
+		is_valid_to_cancel: 0
+		is_valid_to_sell: 0
+		longcode: "Win payout if Volatility 100 (1s) Index after 5 ticks is strictly higher than entry spot."
+		payout: 19.53
+		profit: 9.53
+		profit_percentage: 95.3
+		purchase_time: 1628719055
+		sell_price: 19.53
+		sell_spot: 3523.36
+		sell_spot_display_value: "3523.36"
+		sell_spot_time: 1628719061
+		sell_time: 1628719061
+		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
+		status: "won"
+		tick_count: 5
+		tick_stream: array
+		transaction_ids: object
+		underlying: "1HZ100V"
+		validation_error: "Esse contrato foi vendido."
 	req_id: 11
 	subscription: object
+		id: "c9e44825-dff7-6c18-31df-18c1db50e43a"
 
-MSG N  86, "receive"
+MSG  86, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.29
+		bid: 3522.49
+		epoch: 1628719063
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.89
+		symbol: "1HZ100V"
 
-MSG N  87, "receive"
+MSG  87, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3522.98
+		bid: 3522.18
+		epoch: 1628719064
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.58
+		symbol: "1HZ100V"
 
-MSG N  88, "receive"
+MSG  88, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3522.54
+		bid: 3521.74
+		epoch: 1628719065
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.14
+		symbol: "1HZ100V"
 
-MSG N  89, "receive"
+MSG  89, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3522.59
+		bid: 3521.79
+		epoch: 1628719066
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.19
+		symbol: "1HZ100V"
 
-MSG N  90, "receive"
+MSG  90, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3522.26
+		bid: 3521.46
+		epoch: 1628719067
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3521.86
+		symbol: "1HZ100V"
 
-MSG N  91, "receive"
+MSG  91, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3522.54
+		bid: 3521.74
+		epoch: 1628719068
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.14
+		symbol: "1HZ100V"
 
-MSG N  92, "receive"
+MSG  92, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3522.15
+		bid: 3521.35
+		epoch: 1628719069
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3521.75
+		symbol: "1HZ100V"
 
-MSG N  93, "receive"
+MSG  93, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3522.86
+		bid: 3522.06
+		epoch: 1628719070
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3522.46
+		symbol: "1HZ100V"
 
-MSG N  94, "receive"
+MSG  94, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.43
+		bid: 3522.63
+		epoch: 1628719071
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.03
+		symbol: "1HZ100V"
 
-MSG N  95, "receive"
+MSG  95, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3523.84
+		bid: 3523.04
+		epoch: 1628719072
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.44
+		symbol: "1HZ100V"
 
-MSG N  96, "receive"
+MSG  96, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524.62
+		bid: 3523.82
+		epoch: 1628719073
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3524.22
+		symbol: "1HZ100V"
 
-MSG N  97, "receive"
+MSG  97, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524.19
+		bid: 3523.39
+		epoch: 1628719074
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3523.79
+		symbol: "1HZ100V"
 
-MSG N  98, "send"
+MSG  98, "send"
 MSG: object
 	req_id: 29
 	time: 1
 
-MSG N  99, "receive"
+MSG  99, "receive"
 MSG: object
 	echo_req: object
+		req_id: 29
+		time: 1
 	msg_type: "time"
 	req_id: 29
 	time: 1628719074
 
-MSG N 100, "receive"
+MSG 100, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524.45
+		bid: 3523.65
+		epoch: 1628719075
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3524.05
+		symbol: "1HZ100V"
 
-MSG N 101, "receive"
+MSG 101, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3524.94
+		bid: 3524.14
+		epoch: 1628719076
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3524.54
+		symbol: "1HZ100V"
 
-MSG N 102, "receive"
+MSG 102, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3525.46
+		bid: 3524.66
+		epoch: 1628719077
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.06
+		symbol: "1HZ100V"
 
-MSG N 103, "receive"
+MSG 103, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3527.09
+		bid: 3526.29
+		epoch: 1628719078
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3526.69
+		symbol: "1HZ100V"
 
-MSG N 104, "receive"
+MSG 104, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3527.16
+		bid: 3526.36
+		epoch: 1628719079
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3526.76
+		symbol: "1HZ100V"
 
-MSG N 105, "receive"
+MSG 105, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3526.97
+		bid: 3526.17
+		epoch: 1628719080
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3526.57
+		symbol: "1HZ100V"
 
-MSG N 106, "receive"
+MSG 106, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3527.05
+		bid: 3526.25
+		epoch: 1628719081
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3526.65
+		symbol: "1HZ100V"
 
-MSG N 107, "receive"
+MSG 107, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3526.9
+		bid: 3526.1
+		epoch: 1628719082
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3526.5
+		symbol: "1HZ100V"
 
-MSG N 108, "receive"
+MSG 108, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3525.94
+		bid: 3525.14
+		epoch: 1628719083
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.54
+		symbol: "1HZ100V"
 
-MSG N 109, "receive"
+MSG 109, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3526.44
+		bid: 3525.64
+		epoch: 1628719084
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3526.04
+		symbol: "1HZ100V"
 
-MSG N 110, "receive"
+MSG 110, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3525.86
+		bid: 3525.06
+		epoch: 1628719085
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.46
+		symbol: "1HZ100V"
 
-MSG N 111, "receive"
+MSG 111, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3525.57
+		bid: 3524.77
+		epoch: 1628719086
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.17
+		symbol: "1HZ100V"
 
-MSG N 112, "receive"
+MSG 112, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3526.15
+		bid: 3525.35
+		epoch: 1628719087
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3525.75
+		symbol: "1HZ100V"
 
-MSG N 113, "send"
+MSG 113, "send"
 MSG: object
 	forget_all: array
+		0: "proposal"
 	req_id: 30
 
-MSG N 114, "send"
+MSG 114, "send"
 MSG: object
 	contracts_for: "frxUSDCAD"
 	req_id: 31
 
-MSG N 115, "receive"
+MSG 115, "receive"
 MSG: object
 	echo_req: object
+		forget_all: array
+		req_id: 30
 	forget_all: array
+		0: "b17f99c0-f871-9fe5-f988-b2fa5d1c140e"
+		1: "741b45e3-1cdc-a475-b68f-6f27eee9ec7d"
 	msg_type: "forget_all"
 	req_id: 30
 
-MSG N 116, "receive"
+MSG 116, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 14
+		start: 1628718876
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "1HZ100V"
 	msg_type: "tick"
 	req_id: 14
 	subscription: object
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	tick: object
+		ask: 3526.91
+		bid: 3526.11
+		epoch: 1628719088
+		id: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		pip_size: 2
+		quote: 3526.51
+		symbol: "1HZ100V"
 
-MSG N 117, "receive"
+MSG 117, "receive"
 MSG: object
 	contracts_for: object
+		available: array
+		close: 1628726399
+		feed_license: "realtime"
+		hit_count: 14
+		open: 1628640000
+		spot: 1.25059
 	echo_req: object
+		contracts_for: "frxUSDCAD"
+		req_id: 31
 	msg_type: "contracts_for"
 	req_id: 31
 
-MSG N 118, "send"
+MSG 118, "send"
 MSG: object
 	forget: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	req_id: 32
 
-MSG N 119, "send"
+MSG 119, "send"
 MSG: object
 	adjust_start_time: 1
 	end: "latest"
@@ -898,23 +2620,35 @@ MSG: object
 	subscribe: 1
 	ticks_history: "frxUSDCAD"
 
-MSG N 120, "receive"
+MSG 120, "receive"
 MSG: object
 	echo_req: object
+		forget: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
+		req_id: 32
 	forget: 1
 	msg_type: "forget"
 	req_id: 32
 
-MSG N 121, "receive"
+MSG 121, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	history: object
+		prices: array
+		times: array
 	msg_type: "history"
 	pip_size: 5
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 
-MSG N 122, "send"
+MSG 122, "send"
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -927,7 +2661,7 @@ MSG: object
 	subscribe: 1
 	symbol: "frxUSDCAD"
 
-MSG N 123, "send"
+MSG 123, "send"
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -940,15 +2674,31 @@ MSG: object
 	subscribe: 1
 	symbol: "frxUSDCAD"
 
-MSG N 124, "receive"
+MSG 124, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25088
+		bid: 1.25037
+		epoch: 1628719089
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25063
+		symbol: "frxUSDCAD"
 
-MSG N 125, "send"
+MSG 125, "send"
 MSG: object
 	adjust_start_time: 1
 	count: 1000
@@ -957,253 +2707,723 @@ MSG: object
 	style: "ticks"
 	ticks_history: "frxUSDCAD"
 
-MSG N 126, "receive"
+MSG 126, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: 1000
+		end: "latest"
+		req_id: 36
+		style: "ticks"
+		ticks_history: "frxUSDCAD"
 	history: object
+		prices: array
+		times: array
 	msg_type: "history"
 	pip_size: 5
 	req_id: 36
 
-MSG N 127, "receive"
+MSG 127, "receive"
 MSG: object
 	echo_req: object
+		amount: 10
+		basis: "stake"
+		contract_type: "CALL"
+		currency: "USD"
+		duration: 3
+		duration_unit: "m"
+		product_type: "basic"
+		proposal: 1
+		req_id: 34
+		subscribe: 1
+		symbol: "frxUSDCAD"
 	error: object
+		code: "ContractBuyValidationError"
+		details: object
+		message: "Negociações sobre contratos de Forex com durações inferior a 5 horas não estão disponíveis das 21:00:00 às 23:59:59"
 	msg_type: "proposal"
 	req_id: 34
 
-MSG N 128, "receive"
+MSG 128, "receive"
 MSG: object
 	echo_req: object
+		amount: 10
+		basis: "stake"
+		contract_type: "PUT"
+		currency: "USD"
+		duration: 3
+		duration_unit: "m"
+		product_type: "basic"
+		proposal: 1
+		req_id: 35
+		subscribe: 1
+		symbol: "frxUSDCAD"
 	error: object
+		code: "ContractBuyValidationError"
+		details: object
+		message: "Negociações sobre contratos de Forex com durações inferior a 5 horas não estão disponíveis das 21:00:00 às 23:59:59"
 	msg_type: "proposal"
 	req_id: 35
 
-MSG N 129, "receive"
+MSG 129, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25095
+		bid: 1.25035
+		epoch: 1628719090
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25065
+		symbol: "frxUSDCAD"
 
-MSG N 130, "receive"
+MSG 130, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25078
+		bid: 1.25045
+		epoch: 1628719091
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25062
+		symbol: "frxUSDCAD"
 
-MSG N 131, "receive"
+MSG 131, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25086
+		bid: 1.25037
+		epoch: 1628719092
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25062
+		symbol: "frxUSDCAD"
 
-MSG N 132, "receive"
+MSG 132, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25086
+		bid: 1.25037
+		epoch: 1628719093
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25062
+		symbol: "frxUSDCAD"
 
-MSG N 133, "receive"
+MSG 133, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25085
+		bid: 1.25053
+		epoch: 1628719094
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25069
+		symbol: "frxUSDCAD"
 
-MSG N 134, "receive"
+MSG 134, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25077
+		bid: 1.25041
+		epoch: 1628719095
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25059
+		symbol: "frxUSDCAD"
 
-MSG N 135, "receive"
+MSG 135, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25077
+		bid: 1.25039
+		epoch: 1628719096
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25058
+		symbol: "frxUSDCAD"
 
-MSG N 136, "receive"
+MSG 136, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25078
+		bid: 1.25038
+		epoch: 1628719097
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25058
+		symbol: "frxUSDCAD"
 
-MSG N 137, "receive"
+MSG 137, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25079
+		bid: 1.25044
+		epoch: 1628719098
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25062
+		symbol: "frxUSDCAD"
 
-MSG N 138, "receive"
+MSG 138, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25078
+		bid: 1.25039
+		epoch: 1628719099
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25059
+		symbol: "frxUSDCAD"
 
-MSG N 139, "receive"
+MSG 139, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25087
+		bid: 1.25036
+		epoch: 1628719100
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25062
+		symbol: "frxUSDCAD"
 
-MSG N 140, "receive"
+MSG 140, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25087
+		bid: 1.25036
+		epoch: 1628719101
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25062
+		symbol: "frxUSDCAD"
 
-MSG N 141, "receive"
+MSG 141, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25078
+		bid: 1.2504
+		epoch: 1628719102
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25059
+		symbol: "frxUSDCAD"
 
-MSG N 142, "receive"
+MSG 142, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25094
+		bid: 1.25035
+		epoch: 1628719103
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25065
+		symbol: "frxUSDCAD"
 
-MSG N 143, "receive"
+MSG 143, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25087
+		bid: 1.25055
+		epoch: 1628719104
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25071
+		symbol: "frxUSDCAD"
 
-MSG N 144, "send"
+MSG 144, "send"
 MSG: object
 	req_id: 37
 	time: 1
 
-MSG N 145, "receive"
+MSG 145, "receive"
 MSG: object
 	echo_req: object
+		req_id: 37
+		time: 1
 	msg_type: "time"
 	req_id: 37
 	time: 1628719105
 
-MSG N 146, "receive"
+MSG 146, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25079
+		bid: 1.25037
+		epoch: 1628719105
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25058
+		symbol: "frxUSDCAD"
 
-MSG N 147, "receive"
+MSG 147, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25078
+		bid: 1.25042
+		epoch: 1628719106
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.2506
+		symbol: "frxUSDCAD"
 
-MSG N 148, "receive"
+MSG 148, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25084
+		bid: 1.25033
+		epoch: 1628719108
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25059
+		symbol: "frxUSDCAD"
 
-MSG N 149, "receive"
+MSG 149, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25079
+		bid: 1.25041
+		epoch: 1628719109
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.2506
+		symbol: "frxUSDCAD"
 
-MSG N 150, "receive"
+MSG 150, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25078
+		bid: 1.25035
+		epoch: 1628719110
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25057
+		symbol: "frxUSDCAD"
 
-MSG N 151, "receive"
+MSG 151, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25079
+		bid: 1.25044
+		epoch: 1628719112
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25062
+		symbol: "frxUSDCAD"
 
-MSG N 152, "receive"
+MSG 152, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25079
+		bid: 1.2504
+		epoch: 1628719114
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.2506
+		symbol: "frxUSDCAD"
 
-MSG N 153, "receive"
+MSG 153, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25076
+		bid: 1.25044
+		epoch: 1628719115
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.2506
+		symbol: "frxUSDCAD"
 
-MSG N 154, "receive"
+MSG 154, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25073
+		bid: 1.25041
+		epoch: 1628719116
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25057
+		symbol: "frxUSDCAD"
 
-MSG N 155, "receive"
+MSG 155, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25079
+		bid: 1.25043
+		epoch: 1628719117
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25061
+		symbol: "frxUSDCAD"
 
-MSG N 156, "receive"
+MSG 156, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25094
+		bid: 1.2504
+		epoch: 1628719119
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25067
+		symbol: "frxUSDCAD"
 
-MSG N 157, "receive"
+MSG 157, "receive"
 MSG: object
 	echo_req: object
+		adjust_start_time: 1
+		count: "5000"
+		end: "latest"
+		req_id: 33
+		start: 1628718921
+		style: "ticks"
+		subscribe: 1
+		ticks_history: "frxUSDCAD"
 	msg_type: "tick"
 	req_id: 33
 	subscription: object
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
 	tick: object
+		ask: 1.25094
+		bid: 1.2504
+		epoch: 1628719121
+		id: "d135ac52-30ca-11a9-65b2-d38c18623383"
+		pip_size: 5
+		quote: 1.25067
+		symbol: "frxUSDCAD"
 
