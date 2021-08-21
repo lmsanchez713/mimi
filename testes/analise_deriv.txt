@@ -1,0 +1,790 @@
+MSG N:      0
+Tipo:       "send"
+Dados:      string, tamanho 59
+{"authorize":"a1-KaOfRaurspLHTMMqcMqcKaAdOeJ8U","req_id":1}
+
+MSG N:      1
+Tipo:       "send"
+Dados:      string, tamanho 45
+{"website_status":1,"subscribe":1,"req_id":2}
+
+MSG N:      2
+Tipo:       "send"
+Dados:      string, tamanho 21
+{"time":1,"req_id":3}
+
+MSG N:      3
+Tipo:       "receive"
+Dados:      string, tamanho 81
+{"echo_req":{"req_id":3,"time":1},"msg_type":"time","req_id":3,"time":1628719044}
+
+MSG N:      4
+Tipo:       "receive"
+Dados:      string, tamanho 693
+{"authorize":{"account_list":[{"account_type":"trading","currency":"USD","is_disabled":0,"is_virtual":1,"landing_compan
+
+MSG N:      5
+Tipo:       "send"
+Dados:      string, tamanho 54
+{"balance":1,"account":"all","subscribe":1,"req_id":4}
+
+MSG N:      6
+Tipo:       "send"
+Dados:      string, tamanho 62
+{"balance":1,"account":"VRTC4549934","subscribe":1,"req_id":5}
+
+MSG N:      7
+Tipo:       "send"
+Dados:      string, tamanho 35
+{"get_account_status":1,"req_id":6}
+
+MSG N:      8
+Tipo:       "send"
+Dados:      string, tamanho 29
+{"get_settings":1,"req_id":7}
+
+MSG N:      9
+Tipo:       "send"
+Dados:      string, tamanho 34
+{"payout_currencies":1,"req_id":8}
+
+MSG N:      10
+Tipo:       "send"
+Dados:      string, tamanho 36
+{"p2p_advertiser_info":1,"req_id":9}
+
+MSG N:      11
+Tipo:       "send"
+Dados:      string, tamanho 27
+{"portfolio":1,"req_id":10}
+
+MSG N:      12
+Tipo:       "send"
+Dados:      string, tamanho 54
+{"proposal_open_contract":1,"subscribe":1,"req_id":11}
+
+MSG N:      13
+Tipo:       "send"
+Dados:      string, tamanho 43
+{"transaction":1,"subscribe":1,"req_id":12}
+
+MSG N:      14
+Tipo:       "receive"
+Dados:      string, tamanho 9745
+{"echo_req":{"req_id":2,"subscribe":1,"website_status":1},"msg_type":"website_status","req_id":2,"subscription":{"id":"
+
+MSG N:      15
+Tipo:       "send"
+Dados:      string, tamanho 38
+{"active_symbols":"brief","req_id":13}
+
+MSG N:      16
+Tipo:       "send"
+Dados:      string, tamanho 125
+{"ticks_history":"1HZ100V","style":"ticks","end":"latest","adjust_start_time":1,"subscribe":1,"start":1628718876,"req_i
+
+MSG N:      17
+Tipo:       "send"
+Dados:      string, tamanho 105
+{"ticks_history":"1HZ100V","style":"ticks","end":"latest","count":1000,"adjust_start_time":1,"req_id":15}
+
+MSG N:      18
+Tipo:       "receive"
+Dados:      string, tamanho 284
+{"balance":{"balance":10009.53,"currency":"USD","id":"1d1af71f-b9ec-8be9-64f5-568e7b2d13d4","loginid":"VRTC4549934"},"e
+
+MSG N:      19
+Tipo:       "receive"
+Dados:      string, tamanho 375
+{"echo_req":{"get_settings":1,"req_id":7},"get_settings":{"country":"Brasil","country_code":"br","email":"lmsanchez640@
+
+MSG N:      20
+Tipo:       "send"
+Dados:      string, tamanho 36
+{"landing_company":"br","req_id":16}
+
+MSG N:      21
+Tipo:       "receive"
+Dados:      string, tamanho 587
+{"balance":{"accounts":{"VRTC4549934":{"balance":10009.53,"converted_amount":10009.53,"currency":"USD","demo_account":1
+
+MSG N:      22
+Tipo:       "receive"
+Dados:      string, tamanho 806
+{"echo_req":{"get_account_status":1,"req_id":6},"get_account_status":{"authentication":{"attempts":{"count":0,"history"
+
+MSG N:      23
+Tipo:       "receive"
+Dados:      string, tamanho 214
+{"echo_req":{"req_id":12,"subscribe":1,"transaction":1},"msg_type":"transaction","req_id":12,"subscription":{"id":"1b70
+
+MSG N:      24
+Tipo:       "receive"
+Dados:      string, tamanho 117
+{"echo_req":{"payout_currencies":1,"req_id":8},"msg_type":"payout_currencies","payout_currencies":["USD"],"req_id":8}
+
+MSG N:      25
+Tipo:       "send"
+Dados:      string, tamanho 50
+{"platform":"mt5","trading_servers":1,"req_id":17}
+
+MSG N:      26
+Tipo:       "send"
+Dados:      string, tamanho 64
+{"trading_platform_accounts":1,"platform":"dxtrade","req_id":18}
+
+MSG N:      27
+Tipo:       "send"
+Dados:      string, tamanho 27
+{"statement":1,"req_id":19}
+
+MSG N:      28
+Tipo:       "send"
+Dados:      string, tamanho 32
+{"mt5_login_list":1,"req_id":20}
+
+MSG N:      29
+Tipo:       "receive"
+Dados:      string, tamanho 244
+{"echo_req":{"p2p_advertiser_info":1,"req_id":9},"error":{"code":"UnavailableOnVirtual","message":"Deriv P2P não está
+
+MSG N:      30
+Tipo:       "receive"
+Dados:      string, tamanho 204
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      31
+Tipo:       "receive"
+Dados:      string, tamanho 104
+{"echo_req":{"portfolio":1,"req_id":10},"msg_type":"portfolio","portfolio":{"contracts":[]},"req_id":10}
+
+MSG N:      32
+Tipo:       "receive"
+Dados:      string, tamanho 20792
+{"active_symbols":[{"allow_forward_starting":0,"display_name":"Índice AUD","exchange_is_open":1,"is_trading_suspended"
+
+MSG N:      33
+Tipo:       "receive"
+Dados:      string, tamanho 3488
+{"echo_req":{"adjust_start_time":1,"end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscribe":1,"ticks_h
+
+MSG N:      34
+Tipo:       "receive"
+Dados:      string, tamanho 24817
+{"echo_req":{"landing_company":"br","req_id":16},"landing_company":{"config":{"tax_details_required":1,"tin_format":["^
+
+MSG N:      35
+Tipo:       "receive"
+Dados:      string, tamanho 159
+{"echo_req":{"platform":"dxtrade","req_id":18,"trading_platform_accounts":1},"msg_type":"trading_platform_accounts","re
+
+MSG N:      36
+Tipo:       "receive"
+Dados:      string, tamanho 947
+{"echo_req":{"platform":"mt5","req_id":17,"trading_servers":1},"msg_type":"trading_servers","req_id":17,"trading_server
+
+MSG N:      37
+Tipo:       "receive"
+Dados:      string, tamanho 105
+{"echo_req":{"mt5_login_list":1,"req_id":20},"msg_type":"mt5_login_list","mt5_login_list":[],"req_id":20}
+
+MSG N:      38
+Tipo:       "receive"
+Dados:      string, tamanho 731
+{"echo_req":{"req_id":19,"statement":1},"msg_type":"statement","req_id":19,"statement":{"count":3,"transactions":[{"act
+
+MSG N:      39
+Tipo:       "send"
+Dados:      string, tamanho 32
+{"residence_list":1,"req_id":21}
+
+MSG N:      40
+Tipo:       "receive"
+Dados:      string, tamanho 19092
+{"echo_req":{"adjust_start_time":1,"count":1000,"end":"latest","req_id":15,"style":"ticks","ticks_history":"1HZ100V"},"
+
+MSG N:      41
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      42
+Tipo:       "send"
+Dados:      string, tamanho 160
+{"proposal":1,"subscribe":1,"amount":10,"basis":"stake","contract_type":"CALL","currency":"USD","symbol":"1HZ100V","dur
+
+MSG N:      43
+Tipo:       "send"
+Dados:      string, tamanho 159
+{"proposal":1,"subscribe":1,"amount":10,"basis":"stake","contract_type":"PUT","currency":"USD","symbol":"1HZ100V","dura
+
+MSG N:      44
+Tipo:       "receive"
+Dados:      string, tamanho 87465
+{"echo_req":{"req_id":21,"residence_list":1},"msg_type":"residence_list","req_id":21,"residence_list":[{"identity":{"se
+
+MSG N:      45
+Tipo:       "receive"
+Dados:      string, tamanho 616
+{"echo_req":{"amount":10,"basis":"stake","contract_type":"CALL","currency":"USD","duration":5,"duration_unit":"t","prod
+
+MSG N:      46
+Tipo:       "receive"
+Dados:      string, tamanho 615
+{"echo_req":{"amount":10,"basis":"stake","contract_type":"PUT","currency":"USD","duration":5,"duration_unit":"t","produ
+
+MSG N:      47
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      48
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      49
+Tipo:       "receive"
+Dados:      string, tamanho 389
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      50
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      51
+Tipo:       "receive"
+Dados:      string, tamanho 387
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      52
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      53
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      54
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      55
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      56
+Tipo:       "send"
+Dados:      string, tamanho 74
+{"buy":"ba95a090-0f3a-916b-90c7-ac55a53f06ce","price":"10.00","req_id":24}
+
+MSG N:      57
+Tipo:       "receive"
+Dados:      string, tamanho 283
+{"balance":{"balance":9999.53,"currency":"USD","id":"1d1af71f-b9ec-8be9-64f5-568e7b2d13d4","loginid":"VRTC4549934"},"ec
+
+MSG N:      58
+Tipo:       "receive"
+Dados:      string, tamanho 323
+{"balance":{"balance":9999.53,"currency":"USD","id":"1671ca4b-7dcf-3490-56d4-8e04817bb2b3","loginid":"VRTC4549934","tot
+
+MSG N:      59
+Tipo:       "receive"
+Dados:      string, tamanho 466
+{"buy":{"balance_after":9999.53,"buy_price":10,"contract_id":131028967028,"longcode":"Ganhe o prêmio se Índice Volati
+
+MSG N:      60
+Tipo:       "send"
+Dados:      string, tamanho 39
+{"forget_all":["proposal"],"req_id":25}
+
+MSG N:      61
+Tipo:       "receive"
+Dados:      string, tamanho 594
+{"echo_req":{"req_id":12,"subscribe":1,"transaction":1},"msg_type":"transaction","req_id":12,"subscription":{"id":"1b70
+
+MSG N:      62
+Tipo:       "receive"
+Dados:      string, tamanho 142
+{"echo_req":{"forget_all":["proposal"],"req_id":25},"forget_all":["efaa519d-7678-deeb-0aba-6fa99d5118a1"],"msg_type":"f
+
+MSG N:      63
+Tipo:       "send"
+Dados:      string, tamanho 160
+{"proposal":1,"subscribe":1,"amount":10,"basis":"stake","contract_type":"CALL","currency":"USD","symbol":"1HZ100V","dur
+
+MSG N:      64
+Tipo:       "send"
+Dados:      string, tamanho 159
+{"proposal":1,"subscribe":1,"amount":10,"basis":"stake","contract_type":"PUT","currency":"USD","symbol":"1HZ100V","dura
+
+MSG N:      65
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      66
+Tipo:       "receive"
+Dados:      string, tamanho 616
+{"echo_req":{"amount":10,"basis":"stake","contract_type":"CALL","currency":"USD","duration":5,"duration_unit":"t","prod
+
+MSG N:      67
+Tipo:       "receive"
+Dados:      string, tamanho 615
+{"echo_req":{"amount":10,"basis":"stake","contract_type":"PUT","currency":"USD","duration":5,"duration_unit":"t","produ
+
+MSG N:      68
+Tipo:       "receive"
+Dados:      string, tamanho 1422
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      69
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      70
+Tipo:       "receive"
+Dados:      string, tamanho 1489
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      71
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      72
+Tipo:       "receive"
+Dados:      string, tamanho 1556
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      73
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      74
+Tipo:       "receive"
+Dados:      string, tamanho 1623
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      75
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      76
+Tipo:       "receive"
+Dados:      string, tamanho 1686
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      77
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      78
+Tipo:       "receive"
+Dados:      string, tamanho 2365
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      79
+Tipo:       "receive"
+Dados:      string, tamanho 284
+{"balance":{"balance":10019.06,"currency":"USD","id":"1d1af71f-b9ec-8be9-64f5-568e7b2d13d4","loginid":"VRTC4549934"},"e
+
+MSG N:      80
+Tipo:       "receive"
+Dados:      string, tamanho 324
+{"balance":{"balance":10019.06,"currency":"USD","id":"1671ca4b-7dcf-3490-56d4-8e04817bb2b3","loginid":"VRTC4549934","to
+
+MSG N:      81
+Tipo:       "receive"
+Dados:      string, tamanho 625
+{"echo_req":{"req_id":12,"subscribe":1,"transaction":1},"msg_type":"transaction","req_id":12,"subscription":{"id":"1b70
+
+MSG N:      82
+Tipo:       "send"
+Dados:      string, tamanho 81
+{"proposal_open_contract":1,"contract_id":131028967028,"subscribe":1,"req_id":28}
+
+MSG N:      83
+Tipo:       "receive"
+Dados:      string, tamanho 2650
+{"echo_req":{"contract_id":131028967028,"proposal_open_contract":1,"req_id":28,"subscribe":1},"msg_type":"proposal_open
+
+MSG N:      84
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      85
+Tipo:       "receive"
+Dados:      string, tamanho 2681
+{"echo_req":{"proposal_open_contract":1,"req_id":11,"subscribe":1},"msg_type":"proposal_open_contract","proposal_open_c
+
+MSG N:      86
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      87
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      88
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      89
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      90
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      91
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      92
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      93
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      94
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      95
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      96
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      97
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      98
+Tipo:       "send"
+Dados:      string, tamanho 22
+{"time":1,"req_id":29}
+
+MSG N:      99
+Tipo:       "receive"
+Dados:      string, tamanho 83
+{"echo_req":{"req_id":29,"time":1},"msg_type":"time","req_id":29,"time":1628719074}
+
+MSG N:      100
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      101
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      102
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      103
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      104
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      105
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      106
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      107
+Tipo:       "receive"
+Dados:      string, tamanho 389
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      108
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      109
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      110
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      111
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      112
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      113
+Tipo:       "send"
+Dados:      string, tamanho 39
+{"forget_all":["proposal"],"req_id":30}
+
+MSG N:      114
+Tipo:       "send"
+Dados:      string, tamanho 41
+{"contracts_for":"frxUSDCAD","req_id":31}
+
+MSG N:      115
+Tipo:       "receive"
+Dados:      string, tamanho 181
+{"echo_req":{"forget_all":["proposal"],"req_id":30},"forget_all":["b17f99c0-f871-9fe5-f988-b2fa5d1c140e","741b45e3-1cdc
+
+MSG N:      116
+Tipo:       "receive"
+Dados:      string, tamanho 392
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":14,"start":1628718876,"style":"ticks","subscr
+
+MSG N:      117
+Tipo:       "receive"
+Dados:      string, tamanho 5979
+{"contracts_for":{"available":[{"barrier_category":"euro_atm","barriers":0,"contract_category":"callput","contract_cate
+
+MSG N:      118
+Tipo:       "send"
+Dados:      string, tamanho 61
+{"forget":"ad0292f9-a166-7ada-c3ce-f2aa27e15ed1","req_id":32}
+
+MSG N:      119
+Tipo:       "send"
+Dados:      string, tamanho 127
+{"ticks_history":"frxUSDCAD","style":"ticks","end":"latest","adjust_start_time":1,"subscribe":1,"start":1628718921,"req
+
+MSG N:      120
+Tipo:       "receive"
+Dados:      string, tamanho 117
+{"echo_req":{"forget":"ad0292f9-a166-7ada-c3ce-f2aa27e15ed1","req_id":32},"forget":1,"msg_type":"forget","req_id":32}
+
+MSG N:      121
+Tipo:       "receive"
+Dados:      string, tamanho 1923
+{"echo_req":{"adjust_start_time":1,"end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscribe":1,"ticks_h
+
+MSG N:      122
+Tipo:       "send"
+Dados:      string, tamanho 162
+{"proposal":1,"subscribe":1,"amount":10,"basis":"stake","contract_type":"CALL","currency":"USD","symbol":"frxUSDCAD","d
+
+MSG N:      123
+Tipo:       "send"
+Dados:      string, tamanho 161
+{"proposal":1,"subscribe":1,"amount":10,"basis":"stake","contract_type":"PUT","currency":"USD","symbol":"frxUSDCAD","du
+
+MSG N:      124
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      125
+Tipo:       "send"
+Dados:      string, tamanho 107
+{"ticks_history":"frxUSDCAD","style":"ticks","end":"latest","count":1000,"adjust_start_time":1,"req_id":36}
+
+MSG N:      126
+Tipo:       "receive"
+Dados:      string, tamanho 19087
+{"echo_req":{"adjust_start_time":1,"count":1000,"end":"latest","req_id":36,"style":"ticks","ticks_history":"frxUSDCAD"}
+
+MSG N:      127
+Tipo:       "receive"
+Dados:      string, tamanho 445
+{"echo_req":{"amount":10,"basis":"stake","contract_type":"CALL","currency":"USD","duration":3,"duration_unit":"m","prod
+
+MSG N:      128
+Tipo:       "receive"
+Dados:      string, tamanho 444
+{"echo_req":{"amount":10,"basis":"stake","contract_type":"PUT","currency":"USD","duration":3,"duration_unit":"m","produ
+
+MSG N:      129
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      130
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      131
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      132
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      133
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      134
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      135
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      136
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      137
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      138
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      139
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      140
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      141
+Tipo:       "receive"
+Dados:      string, tamanho 395
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      142
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      143
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      144
+Tipo:       "send"
+Dados:      string, tamanho 22
+{"time":1,"req_id":37}
+
+MSG N:      145
+Tipo:       "receive"
+Dados:      string, tamanho 83
+{"echo_req":{"req_id":37,"time":1},"msg_type":"time","req_id":37,"time":1628719105}
+
+MSG N:      146
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      147
+Tipo:       "receive"
+Dados:      string, tamanho 395
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      148
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      149
+Tipo:       "receive"
+Dados:      string, tamanho 395
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      150
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      151
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      152
+Tipo:       "receive"
+Dados:      string, tamanho 394
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      153
+Tipo:       "receive"
+Dados:      string, tamanho 395
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      154
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      155
+Tipo:       "receive"
+Dados:      string, tamanho 396
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      156
+Tipo:       "receive"
+Dados:      string, tamanho 395
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+
+MSG N:      157
+Tipo:       "receive"
+Dados:      string, tamanho 395
+{"echo_req":{"adjust_start_time":1,"count":"5000","end":"latest","req_id":33,"start":1628718921,"style":"ticks","subscr
+

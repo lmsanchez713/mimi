@@ -2,15 +2,17 @@
 #include <iomanip>
 #include <fstream>
 #include <string>
+#include <sstream>
 #include <nlohmann/json.hpp>
 
-// using json = nlohmann::json;
+using json = nlohmann::json;
+using namespace std;
 
 unsigned long indentacao_nlohmann = 0;
 
-size_t analisar_nlohmann(nlohmann::json &conteudo, std::string chave = std::string(),
-                         std::function<size_t(nlohmann::json &, std::string)> predicado =
-                             std::function<size_t(nlohmann::json &, std::string)>())
+size_t analisar_nlohmann(json &conteudo, string chave = string(),
+                         function<size_t(json &, string)> predicado =
+                             function<size_t(json &, string)>())
 {
   size_t acumulador = 0;
 
@@ -20,19 +22,19 @@ size_t analisar_nlohmann(nlohmann::json &conteudo, std::string chave = std::stri
   bool e_objeto = false;
   switch (conteudo.type())
   {
-  case nlohmann::json::value_t::object:
+  case json::value_t::object:
     e_objeto = true;
-  case nlohmann::json::value_t::array:
+  case json::value_t::array:
   {
     unsigned long contador_de_array = 0;
     for (auto iterador = conteudo.begin(); iterador != conteudo.end(); ++iterador)
     {
-      std::string chave_do_iterador;
+      string chave_do_iterador;
       ++indentacao_nlohmann;
       if (e_objeto)
         chave_do_iterador = iterador.key();
       else
-        chave_do_iterador = std::to_string(contador_de_array++);
+        chave_do_iterador = to_string(contador_de_array++);
       // if (predicado)
       //   acumulador += predicado(iterador.value(), chave_do_iterador);
       analisar_nlohmann(iterador.value(), chave_do_iterador, predicado);
@@ -50,45 +52,60 @@ size_t analisar_nlohmann(nlohmann::json &conteudo, std::string chave = std::stri
 
 int main()
 {
-  // std::ifstream arquivo_har("C:\\mimi\\testes\\app.deriv.com.har");
-  // create a JSON object
-  nlohmann::json j =
-      {
-          {"pi", 3.141},
-          {"happy", true},
-          {"name", "Niels"},
-          {"nothing", nullptr},
-          {"answer", {{"everything", 42}}},
-          {"list", {1, 0, 2}},
-          {"object", {{"currency", "USD"}, {"value", 42.99}}}};
-  j["new"]["key"]["value"] = {"another", "list"};
+  // json j =
+  //     {
+  //         {"pi", 3.141},
+  //         {"happy", true},
+  //         {"name", "Niels"},
+  //         {"nothing", nullptr},
+  //         {"answer", {{"everything", 42}}},
+  //         {"list", {1, 0, 2}},
+  //         {"object", {{"currency", "USD"}, {"value", 42.99}}}};
+  // j["new"]["key"]["value"] = {"another", "list"};
 
-  // arquivo_har >> j;
+  ifstream arquivo_har("C:\\mimi\\testes\\app.deriv.com.har");
+  json json_har;
+  arquivo_har >> json_har;
+  arquivo_har.close();
 
-  // // count elements
-  // auto s = j.size();
-  // j["size"] = s;
+  json json_wss;
 
-  // pretty print with indent of 4 spaces
-  // std::cout << std::setw(4) << j << '\n';
-
-  // dumper_nlohmann(j, [](nlohmann::json &j) -> size_t
-  //                      {
-  //                        std::cout << j.size() << '\n';
-  //                        for (auto &n : j.items())
-  //                        {
-  //                          std::cout << n.key() << '\n';
-  //                        }
-  //                        return j.size();
-  //                      });
-  analisar_nlohmann(j, "HAR", [](nlohmann::json &j, std::string s) -> size_t
+  analisar_nlohmann(json_har, "HAR", [&json_wss](json &conteudo, string chave) -> size_t
                     {
-                      // if (!s.compare("\"_webSocketMessages\""))
-                      // {
-                      std::cout << std::string(indentacao_nlohmann, '\t') << s << ": " << j.type_name() << '\n';
-                      // }
+                      if (!chave.compare("_webSocketMessages"))
+                      {
+                        // cout << string(indentacao_nlohmann, '\t') << chave << ": " << conteudo.type_name() << '\n';
+                        cout << "Chave " << chave << " encontrada, tipo: " << conteudo.type_name() << endl;
+                        json_wss = conteudo;
+                      }
                       return 1;
                     });
-  // nlohmann::detail::iteration_proxy<nlohmann::detail::iter_impl<nlohmann::json>>
-  // nlohmann::detail::iteration_proxy_value<nlohmann::detail::iter_impl<nlohmann::json>>
+
+  ofstream arquivo_json_wss("C:\\mimi\\testes\\trafego_websockets_deriv.json");
+  arquivo_json_wss << json_wss;
+  arquivo_json_wss.close();
+
+  // analisar_nlohmann(json_wss, "HAR", [](json &conteudo, string chave) -> size_t { cout << string(indentacao_nlohmann, '\t') << chave << ": " << conteudo.type_name() << '\n'; return 1; });
+  // for(auto iterador = json_wss.begin(); iterador != json_wss.end(); ++iterador) {
+  unsigned long contador_de_mensagens = 0;
+  ofstream arquivo_analise_json_har("C:\\mimi\\testes\\analise_deriv.txt");
+  for (auto mensagem : json_wss)
+  {
+    string dados = mensagem["data"];
+    stringstream analise_da_mensagem;
+    analise_da_mensagem
+        << setw(12) << left << "MSG N:" << contador_de_mensagens++ << endl
+        // << setw(12) << left << "Opcode:" << mensagem["opcode"] << endl
+        << setw(12) << left << "Tipo:" << mensagem["type"] << endl
+        // << setw(12) << left << "Hora:" << mensagem["time"] << endl
+        << setw(12) << left << "Dados:" << mensagem["data"].type_name() << ", tamanho " << dados.length() << endl
+        << dados.substr(0, 119) << endl
+        << endl;
+    arquivo_analise_json_har << analise_da_mensagem.str();
+    cout << analise_da_mensagem.str();
+  }
+  arquivo_analise_json_har.close();
 }
+
+// detail::iteration_proxy<detail::iter_impl<json>>
+// detail::iteration_proxy_value<detail::iter_impl<json>>
