@@ -50,19 +50,25 @@ size_t analisar_nlohmann(json &conteudo, string chave = string(),
   return acumulador;
 }
 
+string remover_barras_invertidas_de_escape(string &texto_a_processar)
+{
+  string texto_a_retornar;
+  for (unsigned long posicao_no_texto = 0; posicao_no_texto < texto_a_processar.length();)
+  {
+    if (texto_a_processar[posicao_no_texto] == '\\')
+    {
+      ++posicao_no_texto;
+    }
+    texto_a_retornar.push_back(texto_a_processar[posicao_no_texto++]);
+  }
+  return texto_a_retornar;
+}
+
 int main()
 {
-  // json j =
-  //     {
-  //         {"pi", 3.141},
-  //         {"happy", true},
-  //         {"name", "Niels"},
-  //         {"nothing", nullptr},
-  //         {"answer", {{"everything", 42}}},
-  //         {"list", {1, 0, 2}},
-  //         {"object", {{"currency", "USD"}, {"value", 42.99}}}};
-  // j["new"]["key"]["value"] = {"another", "list"};
-
+  cout << endl
+       << "Mimi HarStripper v0.1b" << endl
+       << endl;
   ifstream arquivo_har("C:\\mimi\\testes\\app.deriv.com.har");
   json json_har;
   arquivo_har >> json_har;
@@ -74,8 +80,8 @@ int main()
                     {
                       if (!chave.compare("_webSocketMessages"))
                       {
-                        // cout << string(indentacao_nlohmann, '\t') << chave << ": " << conteudo.type_name() << '\n';
-                        cout << "Chave " << chave << " encontrada, tipo: " << conteudo.type_name() << endl;
+                        cout << "Chave " << chave << " encontrada, tipo: " << conteudo.type_name() << endl
+                             << endl;
                         json_wss = conteudo;
                       }
                       return 1;
@@ -86,21 +92,58 @@ int main()
   arquivo_json_wss.close();
 
   // analisar_nlohmann(json_wss, "HAR", [](json &conteudo, string chave) -> size_t { cout << string(indentacao_nlohmann, '\t') << chave << ": " << conteudo.type_name() << '\n'; return 1; });
-  // for(auto iterador = json_wss.begin(); iterador != json_wss.end(); ++iterador) {
   unsigned long contador_de_mensagens = 0;
   ofstream arquivo_analise_json_har("C:\\mimi\\testes\\analise_deriv.txt");
+  size_t qntd_digitos_n_msg = to_string(json_wss.size()).length();
+
   for (auto mensagem : json_wss)
   {
     string dados = mensagem["data"];
     stringstream analise_da_mensagem;
+
     analise_da_mensagem
-        << setw(12) << left << "MSG N:" << contador_de_mensagens++ << endl
-        // << setw(12) << left << "Opcode:" << mensagem["opcode"] << endl
-        << setw(12) << left << "Tipo:" << mensagem["type"] << endl
-        // << setw(12) << left << "Hora:" << mensagem["time"] << endl
-        << setw(12) << left << "Dados:" << mensagem["data"].type_name() << ", tamanho " << dados.length() << endl
-        << dados.substr(0, 119) << endl
-        << endl;
+        << "MSG N " << setw(qntd_digitos_n_msg) << right << contador_de_mensagens++
+        << ", " << mensagem["type"] << endl;
+    // << setw(12) << left << "Opcode:" << mensagem["opcode"] << endl
+    // << setw(12) << left << "Tipo:" << mensagem["type"] << endl;
+    // << setw(12) << left << "Hora:" << mensagem["time"] << endl
+    // << setw(12) << left << "Dados:" << mensagem["data"].type_name() << ", tamanho " << dados.length() << endl
+    // << dados.substr(0, 119) << endl
+
+    // analise_da_mensagem
+    //     << setw(12) << left << "msgdata_t:" << mensagem["data"].type_name() << endl;
+
+    string texto_mensagem = mensagem["data"];
+    // for(unsigned long cc = 0; cc < 16; ++cc) {
+    //   analise_da_mensagem << setw(2) << right << cc << ": " << texto_mensagem[cc] << endl;
+    // }
+    // texto_mensagem = remover_barras_invertidas_de_escape(texto_mensagem);
+    json json_mensagem = json::parse(texto_mensagem);
+    analise_da_mensagem
+        // << setw(12) << left << "Tipo dados:" << json_mensagem.type_name() << endl
+        // << json_mensagem << endl;
+        << setw(12) << left << "Campos:" << json_mensagem.size() << endl;
+
+    analisar_nlohmann(json_mensagem, "MSG", [&analise_da_mensagem](json &conteudo, string chave) -> size_t
+                      {
+                        if (indentacao_nlohmann <= 1)
+                        {
+                          analise_da_mensagem
+                              << string(indentacao_nlohmann, '\t') << chave << ": ";
+                          if ((conteudo.type() == json::value_t::object) || (conteudo.type() == json::value_t::array))
+                            analise_da_mensagem
+                                << conteudo.type_name();
+                          else
+                            analise_da_mensagem
+                                << conteudo;
+                          analise_da_mensagem
+                              << endl;
+                        }
+                        return 1;
+                      });
+
+    analise_da_mensagem << endl;
+
     arquivo_analise_json_har << analise_da_mensagem.str();
     cout << analise_da_mensagem.str();
   }
