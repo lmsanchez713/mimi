@@ -119,10 +119,10 @@ int main()
     // }
     // texto_mensagem = remover_barras_invertidas_de_escape(texto_mensagem);
     json json_mensagem = json::parse(texto_mensagem);
-    analise_da_mensagem
+    // analise_da_mensagem
         // << setw(12) << left << "Tipo dados:" << json_mensagem.type_name() << endl
         // << json_mensagem << endl;
-        << setw(12) << left << "Campos:" << json_mensagem.size() << endl;
+        // << setw(12) << left << "Campos:" << json_mensagem.size() << endl;
 
     analisar_nlohmann(json_mensagem, "MSG", [&analise_da_mensagem](json &conteudo, string chave) -> size_t
                       {

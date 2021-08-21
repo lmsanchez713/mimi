@@ -1,24 +1,20 @@
 MSG N   0, "send"
-Campos:     2
 MSG: object
 	authorize: "a1-KaOfRaurspLHTMMqcMqcKaAdOeJ8U"
 	req_id: 1
 
 MSG N   1, "send"
-Campos:     3
 MSG: object
 	req_id: 2
 	subscribe: 1
 	website_status: 1
 
 MSG N   2, "send"
-Campos:     2
 MSG: object
 	req_id: 3
 	time: 1
 
 MSG N   3, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "time"
@@ -26,7 +22,6 @@ MSG: object
 	time: 1628719044
 
 MSG N   4, "receive"
-Campos:     4
 MSG: object
 	authorize: object
 	echo_req: object
@@ -34,7 +29,6 @@ MSG: object
 	req_id: 1
 
 MSG N   5, "send"
-Campos:     4
 MSG: object
 	account: "all"
 	balance: 1
@@ -42,7 +36,6 @@ MSG: object
 	subscribe: 1
 
 MSG N   6, "send"
-Campos:     4
 MSG: object
 	account: "VRTC4549934"
 	balance: 1
@@ -50,51 +43,43 @@ MSG: object
 	subscribe: 1
 
 MSG N   7, "send"
-Campos:     2
 MSG: object
 	get_account_status: 1
 	req_id: 6
 
 MSG N   8, "send"
-Campos:     2
 MSG: object
 	get_settings: 1
 	req_id: 7
 
 MSG N   9, "send"
-Campos:     2
 MSG: object
 	payout_currencies: 1
 	req_id: 8
 
 MSG N  10, "send"
-Campos:     2
 MSG: object
 	p2p_advertiser_info: 1
 	req_id: 9
 
 MSG N  11, "send"
-Campos:     2
 MSG: object
 	portfolio: 1
 	req_id: 10
 
 MSG N  12, "send"
-Campos:     3
 MSG: object
 	proposal_open_contract: 1
 	req_id: 11
 	subscribe: 1
 
 MSG N  13, "send"
-Campos:     3
 MSG: object
 	req_id: 12
 	subscribe: 1
 	transaction: 1
 
 MSG N  14, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "website_status"
@@ -103,13 +88,11 @@ MSG: object
 	website_status: object
 
 MSG N  15, "send"
-Campos:     2
 MSG: object
 	active_symbols: "brief"
 	req_id: 13
 
 MSG N  16, "send"
-Campos:     7
 MSG: object
 	adjust_start_time: 1
 	end: "latest"
@@ -120,7 +103,6 @@ MSG: object
 	ticks_history: "1HZ100V"
 
 MSG N  17, "send"
-Campos:     6
 MSG: object
 	adjust_start_time: 1
 	count: 1000
@@ -130,7 +112,6 @@ MSG: object
 	ticks_history: "1HZ100V"
 
 MSG N  18, "receive"
-Campos:     5
 MSG: object
 	balance: object
 	echo_req: object
@@ -139,7 +120,6 @@ MSG: object
 	subscription: object
 
 MSG N  19, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	get_settings: object
@@ -147,13 +127,11 @@ MSG: object
 	req_id: 7
 
 MSG N  20, "send"
-Campos:     2
 MSG: object
 	landing_company: "br"
 	req_id: 16
 
 MSG N  21, "receive"
-Campos:     5
 MSG: object
 	balance: object
 	echo_req: object
@@ -162,7 +140,6 @@ MSG: object
 	subscription: object
 
 MSG N  22, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	get_account_status: object
@@ -170,7 +147,6 @@ MSG: object
 	req_id: 6
 
 MSG N  23, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "transaction"
@@ -179,7 +155,6 @@ MSG: object
 	transaction: object
 
 MSG N  24, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "payout_currencies"
@@ -187,33 +162,28 @@ MSG: object
 	req_id: 8
 
 MSG N  25, "send"
-Campos:     3
 MSG: object
 	platform: "mt5"
 	req_id: 17
 	trading_servers: 1
 
 MSG N  26, "send"
-Campos:     3
 MSG: object
 	platform: "dxtrade"
 	req_id: 18
 	trading_platform_accounts: 1
 
 MSG N  27, "send"
-Campos:     2
 MSG: object
 	req_id: 19
 	statement: 1
 
 MSG N  28, "send"
-Campos:     2
 MSG: object
 	mt5_login_list: 1
 	req_id: 20
 
 MSG N  29, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	error: object
@@ -221,7 +191,6 @@ MSG: object
 	req_id: 9
 
 MSG N  30, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -230,7 +199,6 @@ MSG: object
 	subscription: object
 
 MSG N  31, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "portfolio"
@@ -238,7 +206,6 @@ MSG: object
 	req_id: 10
 
 MSG N  32, "receive"
-Campos:     4
 MSG: object
 	active_symbols: array
 	echo_req: object
@@ -246,7 +213,6 @@ MSG: object
 	req_id: 13
 
 MSG N  33, "receive"
-Campos:     6
 MSG: object
 	echo_req: object
 	history: object
@@ -256,7 +222,6 @@ MSG: object
 	subscription: object
 
 MSG N  34, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	landing_company: object
@@ -264,7 +229,6 @@ MSG: object
 	req_id: 16
 
 MSG N  35, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "trading_platform_accounts"
@@ -272,7 +236,6 @@ MSG: object
 	trading_platform_accounts: array
 
 MSG N  36, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "trading_servers"
@@ -280,7 +243,6 @@ MSG: object
 	trading_servers: array
 
 MSG N  37, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "mt5_login_list"
@@ -288,7 +250,6 @@ MSG: object
 	req_id: 20
 
 MSG N  38, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "statement"
@@ -296,13 +257,11 @@ MSG: object
 	statement: object
 
 MSG N  39, "send"
-Campos:     2
 MSG: object
 	req_id: 21
 	residence_list: 1
 
 MSG N  40, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	history: object
@@ -311,7 +270,6 @@ MSG: object
 	req_id: 15
 
 MSG N  41, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -320,7 +278,6 @@ MSG: object
 	tick: object
 
 MSG N  42, "send"
-Campos:     10
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -334,7 +291,6 @@ MSG: object
 	symbol: "1HZ100V"
 
 MSG N  43, "send"
-Campos:     10
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -348,7 +304,6 @@ MSG: object
 	symbol: "1HZ100V"
 
 MSG N  44, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "residence_list"
@@ -356,7 +311,6 @@ MSG: object
 	residence_list: array
 
 MSG N  45, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal"
@@ -365,7 +319,6 @@ MSG: object
 	subscription: object
 
 MSG N  46, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal"
@@ -374,7 +327,6 @@ MSG: object
 	subscription: object
 
 MSG N  47, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -383,7 +335,6 @@ MSG: object
 	tick: object
 
 MSG N  48, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -392,7 +343,6 @@ MSG: object
 	tick: object
 
 MSG N  49, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -401,7 +351,6 @@ MSG: object
 	tick: object
 
 MSG N  50, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -410,7 +359,6 @@ MSG: object
 	tick: object
 
 MSG N  51, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -419,7 +367,6 @@ MSG: object
 	tick: object
 
 MSG N  52, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -428,7 +375,6 @@ MSG: object
 	tick: object
 
 MSG N  53, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -437,7 +383,6 @@ MSG: object
 	tick: object
 
 MSG N  54, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -446,7 +391,6 @@ MSG: object
 	tick: object
 
 MSG N  55, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -455,14 +399,12 @@ MSG: object
 	tick: object
 
 MSG N  56, "send"
-Campos:     3
 MSG: object
 	buy: "ba95a090-0f3a-916b-90c7-ac55a53f06ce"
 	price: "10.00"
 	req_id: 24
 
 MSG N  57, "receive"
-Campos:     5
 MSG: object
 	balance: object
 	echo_req: object
@@ -471,7 +413,6 @@ MSG: object
 	subscription: object
 
 MSG N  58, "receive"
-Campos:     5
 MSG: object
 	balance: object
 	echo_req: object
@@ -480,7 +421,6 @@ MSG: object
 	subscription: object
 
 MSG N  59, "receive"
-Campos:     4
 MSG: object
 	buy: object
 	echo_req: object
@@ -488,13 +428,11 @@ MSG: object
 	req_id: 24
 
 MSG N  60, "send"
-Campos:     2
 MSG: object
 	forget_all: array
 	req_id: 25
 
 MSG N  61, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "transaction"
@@ -503,7 +441,6 @@ MSG: object
 	transaction: object
 
 MSG N  62, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	forget_all: array
@@ -511,7 +448,6 @@ MSG: object
 	req_id: 25
 
 MSG N  63, "send"
-Campos:     10
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -525,7 +461,6 @@ MSG: object
 	symbol: "1HZ100V"
 
 MSG N  64, "send"
-Campos:     10
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -539,7 +474,6 @@ MSG: object
 	symbol: "1HZ100V"
 
 MSG N  65, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -548,7 +482,6 @@ MSG: object
 	tick: object
 
 MSG N  66, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal"
@@ -557,7 +490,6 @@ MSG: object
 	subscription: object
 
 MSG N  67, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal"
@@ -566,7 +498,6 @@ MSG: object
 	subscription: object
 
 MSG N  68, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -575,7 +506,6 @@ MSG: object
 	subscription: object
 
 MSG N  69, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -584,7 +514,6 @@ MSG: object
 	tick: object
 
 MSG N  70, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -593,7 +522,6 @@ MSG: object
 	subscription: object
 
 MSG N  71, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -602,7 +530,6 @@ MSG: object
 	tick: object
 
 MSG N  72, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -611,7 +538,6 @@ MSG: object
 	subscription: object
 
 MSG N  73, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -620,7 +546,6 @@ MSG: object
 	tick: object
 
 MSG N  74, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -629,7 +554,6 @@ MSG: object
 	subscription: object
 
 MSG N  75, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -638,7 +562,6 @@ MSG: object
 	tick: object
 
 MSG N  76, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -647,7 +570,6 @@ MSG: object
 	subscription: object
 
 MSG N  77, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -656,7 +578,6 @@ MSG: object
 	tick: object
 
 MSG N  78, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -665,7 +586,6 @@ MSG: object
 	subscription: object
 
 MSG N  79, "receive"
-Campos:     5
 MSG: object
 	balance: object
 	echo_req: object
@@ -674,7 +594,6 @@ MSG: object
 	subscription: object
 
 MSG N  80, "receive"
-Campos:     5
 MSG: object
 	balance: object
 	echo_req: object
@@ -683,7 +602,6 @@ MSG: object
 	subscription: object
 
 MSG N  81, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "transaction"
@@ -692,7 +610,6 @@ MSG: object
 	transaction: object
 
 MSG N  82, "send"
-Campos:     4
 MSG: object
 	contract_id: 131028967028
 	proposal_open_contract: 1
@@ -700,7 +617,6 @@ MSG: object
 	subscribe: 1
 
 MSG N  83, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -708,7 +624,6 @@ MSG: object
 	req_id: 28
 
 MSG N  84, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -717,7 +632,6 @@ MSG: object
 	tick: object
 
 MSG N  85, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "proposal_open_contract"
@@ -726,7 +640,6 @@ MSG: object
 	subscription: object
 
 MSG N  86, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -735,7 +648,6 @@ MSG: object
 	tick: object
 
 MSG N  87, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -744,7 +656,6 @@ MSG: object
 	tick: object
 
 MSG N  88, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -753,7 +664,6 @@ MSG: object
 	tick: object
 
 MSG N  89, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -762,7 +672,6 @@ MSG: object
 	tick: object
 
 MSG N  90, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -771,7 +680,6 @@ MSG: object
 	tick: object
 
 MSG N  91, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -780,7 +688,6 @@ MSG: object
 	tick: object
 
 MSG N  92, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -789,7 +696,6 @@ MSG: object
 	tick: object
 
 MSG N  93, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -798,7 +704,6 @@ MSG: object
 	tick: object
 
 MSG N  94, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -807,7 +712,6 @@ MSG: object
 	tick: object
 
 MSG N  95, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -816,7 +720,6 @@ MSG: object
 	tick: object
 
 MSG N  96, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -825,7 +728,6 @@ MSG: object
 	tick: object
 
 MSG N  97, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -834,13 +736,11 @@ MSG: object
 	tick: object
 
 MSG N  98, "send"
-Campos:     2
 MSG: object
 	req_id: 29
 	time: 1
 
 MSG N  99, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "time"
@@ -848,7 +748,6 @@ MSG: object
 	time: 1628719074
 
 MSG N 100, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -857,7 +756,6 @@ MSG: object
 	tick: object
 
 MSG N 101, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -866,7 +764,6 @@ MSG: object
 	tick: object
 
 MSG N 102, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -875,7 +772,6 @@ MSG: object
 	tick: object
 
 MSG N 103, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -884,7 +780,6 @@ MSG: object
 	tick: object
 
 MSG N 104, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -893,7 +788,6 @@ MSG: object
 	tick: object
 
 MSG N 105, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -902,7 +796,6 @@ MSG: object
 	tick: object
 
 MSG N 106, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -911,7 +804,6 @@ MSG: object
 	tick: object
 
 MSG N 107, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -920,7 +812,6 @@ MSG: object
 	tick: object
 
 MSG N 108, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -929,7 +820,6 @@ MSG: object
 	tick: object
 
 MSG N 109, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -938,7 +828,6 @@ MSG: object
 	tick: object
 
 MSG N 110, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -947,7 +836,6 @@ MSG: object
 	tick: object
 
 MSG N 111, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -956,7 +844,6 @@ MSG: object
 	tick: object
 
 MSG N 112, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -965,19 +852,16 @@ MSG: object
 	tick: object
 
 MSG N 113, "send"
-Campos:     2
 MSG: object
 	forget_all: array
 	req_id: 30
 
 MSG N 114, "send"
-Campos:     2
 MSG: object
 	contracts_for: "frxUSDCAD"
 	req_id: 31
 
 MSG N 115, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	forget_all: array
@@ -985,7 +869,6 @@ MSG: object
 	req_id: 30
 
 MSG N 116, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -994,7 +877,6 @@ MSG: object
 	tick: object
 
 MSG N 117, "receive"
-Campos:     4
 MSG: object
 	contracts_for: object
 	echo_req: object
@@ -1002,13 +884,11 @@ MSG: object
 	req_id: 31
 
 MSG N 118, "send"
-Campos:     2
 MSG: object
 	forget: "ad0292f9-a166-7ada-c3ce-f2aa27e15ed1"
 	req_id: 32
 
 MSG N 119, "send"
-Campos:     7
 MSG: object
 	adjust_start_time: 1
 	end: "latest"
@@ -1019,7 +899,6 @@ MSG: object
 	ticks_history: "frxUSDCAD"
 
 MSG N 120, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	forget: 1
@@ -1027,7 +906,6 @@ MSG: object
 	req_id: 32
 
 MSG N 121, "receive"
-Campos:     6
 MSG: object
 	echo_req: object
 	history: object
@@ -1037,7 +915,6 @@ MSG: object
 	subscription: object
 
 MSG N 122, "send"
-Campos:     10
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -1051,7 +928,6 @@ MSG: object
 	symbol: "frxUSDCAD"
 
 MSG N 123, "send"
-Campos:     10
 MSG: object
 	amount: 10
 	basis: "stake"
@@ -1065,7 +941,6 @@ MSG: object
 	symbol: "frxUSDCAD"
 
 MSG N 124, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1074,7 +949,6 @@ MSG: object
 	tick: object
 
 MSG N 125, "send"
-Campos:     6
 MSG: object
 	adjust_start_time: 1
 	count: 1000
@@ -1084,7 +958,6 @@ MSG: object
 	ticks_history: "frxUSDCAD"
 
 MSG N 126, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	history: object
@@ -1093,7 +966,6 @@ MSG: object
 	req_id: 36
 
 MSG N 127, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	error: object
@@ -1101,7 +973,6 @@ MSG: object
 	req_id: 34
 
 MSG N 128, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	error: object
@@ -1109,7 +980,6 @@ MSG: object
 	req_id: 35
 
 MSG N 129, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1118,7 +988,6 @@ MSG: object
 	tick: object
 
 MSG N 130, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1127,7 +996,6 @@ MSG: object
 	tick: object
 
 MSG N 131, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1136,7 +1004,6 @@ MSG: object
 	tick: object
 
 MSG N 132, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1145,7 +1012,6 @@ MSG: object
 	tick: object
 
 MSG N 133, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1154,7 +1020,6 @@ MSG: object
 	tick: object
 
 MSG N 134, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1163,7 +1028,6 @@ MSG: object
 	tick: object
 
 MSG N 135, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1172,7 +1036,6 @@ MSG: object
 	tick: object
 
 MSG N 136, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1181,7 +1044,6 @@ MSG: object
 	tick: object
 
 MSG N 137, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1190,7 +1052,6 @@ MSG: object
 	tick: object
 
 MSG N 138, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1199,7 +1060,6 @@ MSG: object
 	tick: object
 
 MSG N 139, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1208,7 +1068,6 @@ MSG: object
 	tick: object
 
 MSG N 140, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1217,7 +1076,6 @@ MSG: object
 	tick: object
 
 MSG N 141, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1226,7 +1084,6 @@ MSG: object
 	tick: object
 
 MSG N 142, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1235,7 +1092,6 @@ MSG: object
 	tick: object
 
 MSG N 143, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1244,13 +1100,11 @@ MSG: object
 	tick: object
 
 MSG N 144, "send"
-Campos:     2
 MSG: object
 	req_id: 37
 	time: 1
 
 MSG N 145, "receive"
-Campos:     4
 MSG: object
 	echo_req: object
 	msg_type: "time"
@@ -1258,7 +1112,6 @@ MSG: object
 	time: 1628719105
 
 MSG N 146, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1267,7 +1120,6 @@ MSG: object
 	tick: object
 
 MSG N 147, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1276,7 +1128,6 @@ MSG: object
 	tick: object
 
 MSG N 148, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1285,7 +1136,6 @@ MSG: object
 	tick: object
 
 MSG N 149, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1294,7 +1144,6 @@ MSG: object
 	tick: object
 
 MSG N 150, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1303,7 +1152,6 @@ MSG: object
 	tick: object
 
 MSG N 151, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1312,7 +1160,6 @@ MSG: object
 	tick: object
 
 MSG N 152, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1321,7 +1168,6 @@ MSG: object
 	tick: object
 
 MSG N 153, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1330,7 +1176,6 @@ MSG: object
 	tick: object
 
 MSG N 154, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1339,7 +1184,6 @@ MSG: object
 	tick: object
 
 MSG N 155, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1348,7 +1192,6 @@ MSG: object
 	tick: object
 
 MSG N 156, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
@@ -1357,7 +1200,6 @@ MSG: object
 	tick: object
 
 MSG N 157, "receive"
-Campos:     5
 MSG: object
 	echo_req: object
 	msg_type: "tick"
