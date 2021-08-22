@@ -16,7 +16,8 @@ size_t analisar_nlohmann(json &conteudo, string chave = string(),
 {
   size_t acumulador = 0;
 
-  if (predicado) acumulador += predicado(conteudo, chave);
+  if (predicado)
+    acumulador += predicado(conteudo, chave);
 
   bool e_objeto = false;
   switch (conteudo.type())
@@ -100,27 +101,41 @@ int main()
 
     analise_da_mensagem
         << "MSG " << setw(qntd_digitos_n_msg) << right << contador_de_mensagens++
-        << ", " << mensagem["type"] << endl;
+        << " - " << (!string(mensagem["type"]).compare("send") ? "ENVIADA" : "RECEBIDA") << endl;
 
     string texto_mensagem = mensagem["data"];
 
     json json_mensagem = json::parse(texto_mensagem);
 
-    analisar_nlohmann(json_mensagem, "MSG", [&analise_da_mensagem](json &conteudo, string chave) -> size_t
+    analisar_nlohmann(json_mensagem, "Chaves", [&analise_da_mensagem](json &conteudo, string chave) -> size_t
                       {
                         if (indentacao_nlohmann <= 2)
                         {
+                          // analise_da_mensagem
+                          //     << ' ' << chave;
                           analise_da_mensagem
                               << string(indentacao_nlohmann, '\t') << chave << ": ";
                           if ((conteudo.type() == json::value_t::object) || (conteudo.type() == json::value_t::array))
-                            analise_da_mensagem
-                                << conteudo.type_name();
+                          {
+                            if (indentacao_nlohmann >= 2)
+                            {
+                              analise_da_mensagem
+                                  << conteudo.type_name();
+                            }
+                          }
                           else
+                          {
                             analise_da_mensagem
                                 << conteudo;
+                          }
                           analise_da_mensagem
                               << endl;
                         }
+                        // else if (indentacao_nlohmann == 0)
+                        // {
+                        //   analise_da_mensagem
+                        //       << endl << string(indentacao_nlohmann, '\t') << chave << ':';
+                        // }
                         return 1;
                       });
 
