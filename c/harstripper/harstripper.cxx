@@ -16,8 +16,7 @@ size_t analisar_nlohmann(json &conteudo, string chave = string(),
 {
   size_t acumulador = 0;
 
-  if (predicado)
-    acumulador += predicado(conteudo, chave);
+  if (predicado) acumulador += predicado(conteudo, chave);
 
   bool e_objeto = false;
   switch (conteudo.type())
@@ -35,16 +34,14 @@ size_t analisar_nlohmann(json &conteudo, string chave = string(),
         chave_do_iterador = iterador.key();
       else
         chave_do_iterador = to_string(contador_de_array++);
-      // if (predicado)
-      //   acumulador += predicado(iterador.value(), chave_do_iterador);
+      // if (predicado) acumulador += predicado(iterador.value(), chave_do_iterador);
       analisar_nlohmann(iterador.value(), chave_do_iterador, predicado);
       --indentacao_nlohmann;
     }
   }
   break;
   default:
-    // if (predicado)
-    //       acumulador += predicado(conteudo, chave);
+    // if (predicado) acumulador += predicado(conteudo, chave);
     break;
   }
   return acumulador;
@@ -104,25 +101,10 @@ int main()
     analise_da_mensagem
         << "MSG " << setw(qntd_digitos_n_msg) << right << contador_de_mensagens++
         << ", " << mensagem["type"] << endl;
-    // << setw(12) << left << "Opcode:" << mensagem["opcode"] << endl
-    // << setw(12) << left << "Tipo:" << mensagem["type"] << endl;
-    // << setw(12) << left << "Hora:" << mensagem["time"] << endl
-    // << setw(12) << left << "Dados:" << mensagem["data"].type_name() << ", tamanho " << dados.length() << endl
-    // << dados.substr(0, 119) << endl
-
-    // analise_da_mensagem
-    //     << setw(12) << left << "msgdata_t:" << mensagem["data"].type_name() << endl;
 
     string texto_mensagem = mensagem["data"];
-    // for(unsigned long cc = 0; cc < 16; ++cc) {
-    //   analise_da_mensagem << setw(2) << right << cc << ": " << texto_mensagem[cc] << endl;
-    // }
-    // texto_mensagem = remover_barras_invertidas_de_escape(texto_mensagem);
+
     json json_mensagem = json::parse(texto_mensagem);
-    // analise_da_mensagem
-        // << setw(12) << left << "Tipo dados:" << json_mensagem.type_name() << endl
-        // << json_mensagem << endl;
-        // << setw(12) << left << "Campos:" << json_mensagem.size() << endl;
 
     analisar_nlohmann(json_mensagem, "MSG", [&analise_da_mensagem](json &conteudo, string chave) -> size_t
                       {
@@ -149,6 +131,3 @@ int main()
   }
   arquivo_analise_json_har.close();
 }
-
-// detail::iteration_proxy<detail::iter_impl<json>>
-// detail::iteration_proxy_value<detail::iter_impl<json>>
