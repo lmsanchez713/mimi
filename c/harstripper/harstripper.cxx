@@ -109,7 +109,8 @@ int main()
 
     analisar_nlohmann(json_mensagem, "Chaves", [&analise_da_mensagem](json &conteudo, string chave) -> size_t
                       {
-                        if (indentacao_nlohmann <= 2)
+                        unsigned long threshold_nlohmann = 4;
+                        if (indentacao_nlohmann <= threshold_nlohmann)
                         {
                           // analise_da_mensagem
                           //     << ' ' << chave;
@@ -117,7 +118,7 @@ int main()
                               << string(indentacao_nlohmann, '\t') << chave << ": ";
                           if ((conteudo.type() == json::value_t::object) || (conteudo.type() == json::value_t::array))
                           {
-                            if (indentacao_nlohmann >= 2)
+                            if (indentacao_nlohmann >= threshold_nlohmann)
                             {
                               analise_da_mensagem
                                   << conteudo.type_name();

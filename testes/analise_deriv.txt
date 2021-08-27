@@ -26,7 +26,15 @@ Chaves:
 MSG   4 - RECEBIDA
 Chaves: 
 	authorize: 
-		account_list: array
+		account_list: 
+			0: 
+				account_type: "trading"
+				currency: "USD"
+				is_disabled: 0
+				is_virtual: 1
+				landing_company_name: "virtual"
+				loginid: "VRTC4549934"
+				trading: object
 		balance: 10009.53
 		country: "br"
 		currency: "USD"
@@ -35,12 +43,20 @@ Chaves:
 		is_virtual: 1
 		landing_company_fullname: "Deriv Limited"
 		landing_company_name: "virtual"
-		local_currencies: object
+		local_currencies: 
+			BRL: 
+				fractional_digits: 2
 		loginid: "VRTC4549934"
 		preferred_language: "PT"
-		scopes: array
-		trading: object
-		upgradeable_landing_companies: array
+		scopes: 
+			0: "read"
+			1: "trade"
+			2: "trading_information"
+			3: "payments"
+			4: "admin"
+		trading: 
+		upgradeable_landing_companies: 
+			0: "svg"
 		user_id: 8662791
 	echo_req: 
 		authorize: "<not shown>"
@@ -110,13 +126,240 @@ Chaves:
 	subscription: 
 		id: "cdac5a57-432a-46cf-caf9-8bb94f907d0b"
 	website_status: 
-		api_call_limits: object
+		api_call_limits: 
+			max_proposal_subscription: 
+				applies_to: "subscribing to proposal concurrently"
+				max: 5
+			max_requestes_general: 
+				applies_to: "rest of calls"
+				hourly: 14400
+				minutely: 180
+			max_requests_outcome: 
+				applies_to: "portfolio, statement and proposal"
+				hourly: 1500
+				minutely: 25
+			max_requests_pricing: 
+				applies_to: "proposal and proposal_open_contract"
+				hourly: 3600
+				minutely: 80
 		clients_country: "br"
-		crypto_config: object
-		currencies_config: object
-		p2p_config: object
+		crypto_config: 
+			BTC: 
+				minimum_withdrawal: 0.00053926
+			BUSD: 
+				minimum_withdrawal: 25
+			DAI: 
+				minimum_withdrawal: 25.08
+			ETH: 
+				minimum_withdrawal: 0.0092695
+			EURS: 
+				minimum_withdrawal: 21.01
+			IDK: 
+				minimum_withdrawal: 72
+			LTC: 
+				minimum_withdrawal: 0.02891293
+			PAX: 
+				minimum_withdrawal: 25
+			TUSD: 
+				minimum_withdrawal: 25
+			USB: 
+				minimum_withdrawal: 25
+			USDC: 
+				minimum_withdrawal: 25
+			USDK: 
+				minimum_withdrawal: 25.01
+			UST: 
+				minimum_withdrawal: 25.13
+			eUSDT: 
+				minimum_withdrawal: 25.13
+		currencies_config: 
+			AUD: 
+				fractional_digits: 2
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "Australian Dollar"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "fiat"
+			BTC: 
+				fractional_digits: 8
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "Bitcoin"
+				stake_default: 0.0002
+				transfer_between_accounts: object
+				type: "crypto"
+			BUSD: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "Binance USD"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			DAI: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "Multi-Collateral DAI"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			ETH: 
+				fractional_digits: 8
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "Ethereum"
+				stake_default: 0.006
+				transfer_between_accounts: object
+				type: "crypto"
+			EUR: 
+				fractional_digits: 2
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "Euro"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "fiat"
+			EURS: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "STATIS Euro"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			GBP: 
+				fractional_digits: 2
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "Pound Sterling"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "fiat"
+			IDK: 
+				fractional_digits: 0
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "IDK"
+				stake_default: 140
+				transfer_between_accounts: object
+				type: "crypto"
+			LTC: 
+				fractional_digits: 8
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "Litecoin"
+				stake_default: 0.06
+				transfer_between_accounts: object
+				type: "crypto"
+			PAX: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "Paxos Standard"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			TUSD: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "True USD"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			USB: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "Binary Coin"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			USD: 
+				fractional_digits: 2
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "US Dollar"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "fiat"
+			USDC: 
+				fractional_digits: 2
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "USD Coin"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			USDK: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "USDK"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			UST: 
+				fractional_digits: 2
+				is_deposit_suspended: 0
+				is_suspended: 0
+				is_withdrawal_suspended: 0
+				name: "Tether Omni"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+			eUSDT: 
+				fractional_digits: 2
+				is_deposit_suspended: 1
+				is_suspended: 1
+				is_withdrawal_suspended: 1
+				name: "Tether ERC20"
+				stake_default: 10
+				transfer_between_accounts: object
+				type: "crypto"
+		p2p_config: 
+			adverts_active_limit: 3
+			cancellation_block_duration: 24
+			cancellation_count_period: 24
+			cancellation_grace_period: 15
+			cancellation_limit: 3
+			maximum_advert_amount: 5001
+			maximum_order_amount: 1000
+			order_daily_limit: 200
+			order_payment_period: 120
 		site_status: "up"
-		supported_languages: array
+		supported_languages: 
+			0: "EN"
+			1: "ID"
+			2: "RU"
+			3: "ES"
+			4: "FR"
+			5: "IT"
+			6: "PT"
+			7: "PL"
+			8: "DE"
+			9: "ZH_CN"
+			10: "VI"
+			11: "ZH_TW"
+			12: "TH"
 		terms_conditions_version: "Version 4.2.0 2020-08-07"
 
 MSG  15 - ENVIADA
@@ -170,8 +413,10 @@ Chaves:
 		country_code: "br"
 		email: "lmsanchez640@hotmail.com"
 		email_consent: 1
-		feature_flag: object
-		immutable_fields: array
+		feature_flag: 
+			wallet: 0
+		immutable_fields: 
+			0: "residence"
 		preferred_language: "PT"
 		residence: "Brasil"
 		user_hash: "0d461c293d5940b996f196df8ed837df59d91586718f364d8e4ec47cd59667aa"
@@ -186,12 +431,31 @@ Chaves:
 MSG  21 - RECEBIDA
 Chaves: 
 	balance: 
-		accounts: object
+		accounts: 
+			VRTC4549934: 
+				balance: 10009.53
+				converted_amount: 10009.53
+				currency: "USD"
+				demo_account: 1
+				status: 1
+				type: "deriv"
 		balance: 10009.53
 		currency: "USD"
 		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
 		loginid: "VRTC4549934"
-		total: object
+		total: 
+			deriv: 
+				amount: 0
+				currency: "USD"
+			deriv_demo: 
+				amount: 10009.53
+				currency: "USD"
+			mt5: 
+				amount: 0
+				currency: "USD"
+			mt5_demo: 
+				amount: 0
+				currency: "USD"
 	echo_req: 
 		account: "all"
 		balance: 1
@@ -208,11 +472,28 @@ Chaves:
 		get_account_status: 1
 		req_id: 6
 	get_account_status: 
-		authentication: object
-		currency_config: object
+		authentication: 
+			attempts: 
+				count: 0
+				history: array
+				latest: null
+			document: 
+				status: "none"
+			identity: 
+				services: object
+				status: "none"
+			needs_verification: 
+		currency_config: 
+			USD: 
+				is_deposit_suspended: 0
+				is_withdrawal_suspended: 0
 		prompt_client_to_authenticate: 0
 		risk_classification: "low"
-		status: array
+		status: 
+			0: "cashier_locked"
+			1: "financial_information_not_complete"
+			2: "trading_experience_not_complete"
+			3: "trading_password_required"
 	msg_type: "get_account_status"
 	req_id: 6
 
@@ -291,81 +572,840 @@ Chaves:
 		req_id: 10
 	msg_type: "portfolio"
 	portfolio: 
-		contracts: array
+		contracts: 
 	req_id: 10
 
 MSG  32 - RECEBIDA
 Chaves: 
 	active_symbols: 
-		0: object
-		1: object
-		2: object
-		3: object
-		4: object
-		5: object
-		6: object
-		7: object
-		8: object
-		9: object
-		10: object
-		11: object
-		12: object
-		13: object
-		14: object
-		15: object
-		16: object
-		17: object
-		18: object
-		19: object
-		20: object
-		21: object
-		22: object
-		23: object
-		24: object
-		25: object
-		26: object
-		27: object
-		28: object
-		29: object
-		30: object
-		31: object
-		32: object
-		33: object
-		34: object
-		35: object
-		36: object
-		37: object
-		38: object
-		39: object
-		40: object
-		41: object
-		42: object
-		43: object
-		44: object
-		45: object
-		46: object
-		47: object
-		48: object
-		49: object
-		50: object
-		51: object
-		52: object
-		53: object
-		54: object
-		55: object
-		56: object
-		57: object
-		58: object
-		59: object
-		60: object
-		61: object
-		62: object
-		63: object
-		64: object
-		65: object
-		66: object
-		67: object
-		68: object
+		0: 
+			allow_forward_starting: 0
+			display_name: "Índice AUD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "smart_fx"
+			submarket_display_name: "Inteligente FX"
+			symbol: "WLDAUD"
+			symbol_type: "smart_fx"
+		1: 
+			allow_forward_starting: 0
+			display_name: "AUD/CAD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxAUDCAD"
+			symbol_type: "forex"
+		2: 
+			allow_forward_starting: 0
+			display_name: "AUD/CHF"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxAUDCHF"
+			symbol_type: "forex"
+		3: 
+			allow_forward_starting: 0
+			display_name: "AUD/JPY"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxAUDJPY"
+			symbol_type: "forex"
+		4: 
+			allow_forward_starting: 0
+			display_name: "AUD/NZD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxAUDNZD"
+			symbol_type: "forex"
+		5: 
+			allow_forward_starting: 0
+			display_name: "AUD/USD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxAUDUSD"
+			symbol_type: "forex"
+		6: 
+			allow_forward_starting: 0
+			display_name: "índice Australiano"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "asia_oceania_OTC"
+			submarket_display_name: "Ásia/Oceânia"
+			symbol: "OTC_AS51"
+			symbol_type: "stockindex"
+		7: 
+			allow_forward_starting: 0
+			display_name: "BTC/USD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "cryptocurrency"
+			market_display_name: "Criptomoedas"
+			pip: 0.001
+			submarket: "non_stable_coin"
+			submarket_display_name: "Criptomoedas"
+			symbol: "cryBTCUSD"
+			symbol_type: "cryptocurrency"
+		8: 
+			allow_forward_starting: 0
+			display_name: "Índice \"Mercado em Baixa\""
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.0001
+			submarket: "random_daily"
+			submarket_display_name: "Índices \"Reinício Diário\""
+			symbol: "RDBEAR"
+			symbol_type: "stockindex"
+		9: 
+			allow_forward_starting: 0
+			display_name: "Índice Boom 500"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.001
+			submarket: "crash_index"
+			submarket_display_name: "Índices Crash/Boom"
+			symbol: "BOOM500"
+			symbol_type: ""
+		10: 
+			allow_forward_starting: 0
+			display_name: "Índice Boom 1000"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.001
+			submarket: "crash_index"
+			submarket_display_name: "Índices Crash/Boom"
+			symbol: "BOOM1000"
+			symbol_type: ""
+		11: 
+			allow_forward_starting: 0
+			display_name: "Índice \"Mercado em Alta\""
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.0001
+			submarket: "random_daily"
+			submarket_display_name: "Índices \"Reinício Diário\""
+			symbol: "RDBULL"
+			symbol_type: "stockindex"
+		12: 
+			allow_forward_starting: 0
+			display_name: "Índice Crash 500"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.001
+			submarket: "crash_index"
+			submarket_display_name: "Índices Crash/Boom"
+			symbol: "CRASH500"
+			symbol_type: ""
+		13: 
+			allow_forward_starting: 0
+			display_name: "Índice Crash 1000"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.001
+			submarket: "crash_index"
+			submarket_display_name: "Índices Crash/Boom"
+			symbol: "CRASH1000"
+			symbol_type: ""
+		14: 
+			allow_forward_starting: 0
+			display_name: "Índice Holandês"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "europe_OTC"
+			submarket_display_name: "Europa"
+			symbol: "OTC_AEX"
+			symbol_type: "stockindex"
+		15: 
+			allow_forward_starting: 0
+			display_name: "ETH/USD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "cryptocurrency"
+			market_display_name: "Criptomoedas"
+			pip: 1e-05
+			submarket: "non_stable_coin"
+			submarket_display_name: "Criptomoedas"
+			symbol: "cryETHUSD"
+			symbol_type: "cryptocurrency"
+		16: 
+			allow_forward_starting: 0
+			display_name: "Índice EUR"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "smart_fx"
+			submarket_display_name: "Inteligente FX"
+			symbol: "WLDEUR"
+			symbol_type: "smart_fx"
+		17: 
+			allow_forward_starting: 0
+			display_name: "EUR/AUD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxEURAUD"
+			symbol_type: "forex"
+		18: 
+			allow_forward_starting: 0
+			display_name: "EUR/CAD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxEURCAD"
+			symbol_type: "forex"
+		19: 
+			allow_forward_starting: 0
+			display_name: "EUR/CHF"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxEURCHF"
+			symbol_type: "forex"
+		20: 
+			allow_forward_starting: 0
+			display_name: "EUR/GBP"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxEURGBP"
+			symbol_type: "forex"
+		21: 
+			allow_forward_starting: 0
+			display_name: "EUR/JPY"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxEURJPY"
+			symbol_type: "forex"
+		22: 
+			allow_forward_starting: 0
+			display_name: "EUR/NZD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxEURNZD"
+			symbol_type: "forex"
+		23: 
+			allow_forward_starting: 0
+			display_name: "EUR/USD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxEURUSD"
+			symbol_type: "forex"
+		24: 
+			allow_forward_starting: 0
+			display_name: "Índice 50 Europeu"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "europe_OTC"
+			submarket_display_name: "Europa"
+			symbol: "OTC_SX5E"
+			symbol_type: "stockindex"
+		25: 
+			allow_forward_starting: 0
+			display_name: "Índice Francês"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "europe_OTC"
+			submarket_display_name: "Europa"
+			symbol: "OTC_FCHI"
+			symbol_type: "stockindex"
+		26: 
+			allow_forward_starting: 0
+			display_name: "Índice GBP"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "smart_fx"
+			submarket_display_name: "Inteligente FX"
+			symbol: "WLDGBP"
+			symbol_type: "smart_fx"
+		27: 
+			allow_forward_starting: 0
+			display_name: "GBP/AUD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxGBPAUD"
+			symbol_type: "forex"
+		28: 
+			allow_forward_starting: 0
+			display_name: "GBP/CAD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxGBPCAD"
+			symbol_type: "forex"
+		29: 
+			allow_forward_starting: 0
+			display_name: "GBP/CHF"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxGBPCHF"
+			symbol_type: "forex"
+		30: 
+			allow_forward_starting: 0
+			display_name: "GBP/JPY"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxGBPJPY"
+			symbol_type: "forex"
+		31: 
+			allow_forward_starting: 0
+			display_name: "GBP/NZD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxGBPNZD"
+			symbol_type: "forex"
+		32: 
+			allow_forward_starting: 0
+			display_name: "GBP/USD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxGBPUSD"
+			symbol_type: "forex"
+		33: 
+			allow_forward_starting: 0
+			display_name: "Índice Alemão"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "europe_OTC"
+			submarket_display_name: "Europa"
+			symbol: "OTC_GDAXI"
+			symbol_type: "stockindex"
+		34: 
+			allow_forward_starting: 0
+			display_name: "Ouro/USD"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "commodities"
+			market_display_name: "Matérias-primas"
+			pip: 0.01
+			submarket: "metals"
+			submarket_display_name: "Metais"
+			symbol: "frxXAUUSD"
+			symbol_type: "commodities"
+		35: 
+			allow_forward_starting: 0
+			display_name: "Índice de Hong Kong"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "asia_oceania_OTC"
+			submarket_display_name: "Ásia/Oceânia"
+			symbol: "OTC_HSI"
+			symbol_type: "stockindex"
+		36: 
+			allow_forward_starting: 0
+			display_name: "Índice Japonês"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "asia_oceania_OTC"
+			submarket_display_name: "Ásia/Oceânia"
+			symbol: "OTC_N225"
+			symbol_type: "stockindex"
+		37: 
+			allow_forward_starting: 0
+			display_name: "Índice Jump 10"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "jump_index"
+			submarket_display_name: "Índices Jump"
+			symbol: "JD10"
+			symbol_type: "stockindex"
+		38: 
+			allow_forward_starting: 0
+			display_name: "Índice Jump 25"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "jump_index"
+			submarket_display_name: "Índices Jump"
+			symbol: "JD25"
+			symbol_type: "stockindex"
+		39: 
+			allow_forward_starting: 0
+			display_name: "Índice Jump 50"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "jump_index"
+			submarket_display_name: "Índices Jump"
+			symbol: "JD50"
+			symbol_type: "stockindex"
+		40: 
+			allow_forward_starting: 0
+			display_name: "Índice Jump 75"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "jump_index"
+			submarket_display_name: "Índices Jump"
+			symbol: "JD75"
+			symbol_type: "stockindex"
+		41: 
+			allow_forward_starting: 0
+			display_name: "Índice Jump 100"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "jump_index"
+			submarket_display_name: "Índices Jump"
+			symbol: "JD100"
+			symbol_type: "stockindex"
+		42: 
+			allow_forward_starting: 0
+			display_name: "NZD/JPY"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxNZDJPY"
+			symbol_type: "forex"
+		43: 
+			allow_forward_starting: 0
+			display_name: "NZD/USD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxNZDUSD"
+			symbol_type: "forex"
+		44: 
+			allow_forward_starting: 0
+			display_name: "Paládio/USD"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "commodities"
+			market_display_name: "Matérias-primas"
+			pip: 0.01
+			submarket: "metals"
+			submarket_display_name: "Metais"
+			symbol: "frxXPDUSD"
+			symbol_type: "commodities"
+		45: 
+			allow_forward_starting: 0
+			display_name: "Platina/USD"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "commodities"
+			market_display_name: "Matérias-primas"
+			pip: 0.01
+			submarket: "metals"
+			submarket_display_name: "Metais"
+			symbol: "frxXPTUSD"
+			symbol_type: "commodities"
+		46: 
+			allow_forward_starting: 0
+			display_name: "Prata/USD"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "commodities"
+			market_display_name: "Matérias-primas"
+			pip: 0.0001
+			submarket: "metals"
+			submarket_display_name: "Metais"
+			symbol: "frxXAGUSD"
+			symbol_type: "commodities"
+		47: 
+			allow_forward_starting: 0
+			display_name: "Índice Step"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.1
+			submarket: "step_index"
+			submarket_display_name: "Índices Step"
+			symbol: "stpRNG"
+			symbol_type: ""
+		48: 
+			allow_forward_starting: 0
+			display_name: "Índice Suíço"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "europe_OTC"
+			submarket_display_name: "Europa"
+			symbol: "OTC_SSMI"
+			symbol_type: "stockindex"
+		49: 
+			allow_forward_starting: 0
+			display_name: "Índice do RU"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "europe_OTC"
+			submarket_display_name: "Europa"
+			symbol: "OTC_FTSE"
+			symbol_type: "stockindex"
+		50: 
+			allow_forward_starting: 0
+			display_name: "Índice USA"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "americas_OTC"
+			submarket_display_name: "Américas"
+			symbol: "OTC_SPC"
+			symbol_type: "stockindex"
+		51: 
+			allow_forward_starting: 0
+			display_name: "Índice US Tech"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "americas_OTC"
+			submarket_display_name: "Américas"
+			symbol: "OTC_NDX"
+			symbol_type: "stockindex"
+		52: 
+			allow_forward_starting: 0
+			display_name: "Índice USD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "smart_fx"
+			submarket_display_name: "Inteligente FX"
+			symbol: "WLDUSD"
+			symbol_type: "smart_fx"
+		53: 
+			allow_forward_starting: 0
+			display_name: "USD/CAD"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxUSDCAD"
+			symbol_type: "forex"
+		54: 
+			allow_forward_starting: 0
+			display_name: "USD/CHF"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 1e-05
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxUSDCHF"
+			symbol_type: "forex"
+		55: 
+			allow_forward_starting: 0
+			display_name: "USD/JPY"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.001
+			submarket: "major_pairs"
+			submarket_display_name: "Pares Principais"
+			symbol: "frxUSDJPY"
+			symbol_type: "forex"
+		56: 
+			allow_forward_starting: 0
+			display_name: "USD/MXR"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.0001
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxUSDMXN"
+			symbol_type: "forex"
+		57: 
+			allow_forward_starting: 0
+			display_name: "USD/PLN"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "forex"
+			market_display_name: "Mercado de Câmbio (Forex)"
+			pip: 0.0001
+			submarket: "minor_pairs"
+			submarket_display_name: "Pares secundários"
+			symbol: "frxUSDPLN"
+			symbol_type: "forex"
+		58: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatilidade 10 (1s)"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "1HZ10V"
+			symbol_type: "stockindex"
+		59: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatility 10"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.001
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "R_10"
+			symbol_type: "stockindex"
+		60: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatilidade 25 (1s)"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "1HZ25V"
+			symbol_type: "stockindex"
+		61: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatility 25"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.001
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "R_25"
+			symbol_type: "stockindex"
+		62: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatilidade 50 (1s)"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "1HZ50V"
+			symbol_type: "stockindex"
+		63: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatility 50"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.0001
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "R_50"
+			symbol_type: "stockindex"
+		64: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatilidade 75 (1s)"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "1HZ75V"
+			symbol_type: "stockindex"
+		65: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatility 75"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.0001
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "R_75"
+			symbol_type: "stockindex"
+		66: 
+			allow_forward_starting: 0
+			display_name: "Índice Volatilidade 100 (1s)"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "1HZ100V"
+			symbol_type: "stockindex"
+		67: 
+			allow_forward_starting: 0
+			display_name: "Índice de Volatilidade 100"
+			exchange_is_open: 1
+			is_trading_suspended: 0
+			market: "synthetic_index"
+			market_display_name: "Índices Sintéticos"
+			pip: 0.01
+			submarket: "random_index"
+			submarket_display_name: "Índices Contínuos"
+			symbol: "R_100"
+			symbol_type: "stockindex"
+		68: 
+			allow_forward_starting: 0
+			display_name: "Índice de Wall Street"
+			exchange_is_open: 0
+			is_trading_suspended: 0
+			market: "indices"
+			market_display_name: "Índices de Ações"
+			pip: 0.01
+			submarket: "americas_OTC"
+			submarket_display_name: "Américas"
+			symbol: "OTC_DJI"
+			symbol_type: "stockindex"
 	echo_req: 
 		active_symbols: "brief"
 		req_id: 13
@@ -383,8 +1423,348 @@ Chaves:
 		subscribe: 1
 		ticks_history: "1HZ100V"
 	history: 
-		prices: array
-		times: array
+		prices: 
+			0: 3512.31
+			1: 3512.37
+			2: 3512.65
+			3: 3512.01
+			4: 3512.43
+			5: 3511.39
+			6: 3511.08
+			7: 3511.6
+			8: 3511.39
+			9: 3512.47
+			10: 3511.97
+			11: 3511.61
+			12: 3511.44
+			13: 3510.89
+			14: 3511.46
+			15: 3510.98
+			16: 3510.71
+			17: 3510.54
+			18: 3509.73
+			19: 3509.02
+			20: 3508.19
+			21: 3508.65
+			22: 3507.06
+			23: 3507.37
+			24: 3507.83
+			25: 3506.98
+			26: 3507.74
+			27: 3507.15
+			28: 3506.87
+			29: 3507.43
+			30: 3506.37
+			31: 3506.83
+			32: 3507.09
+			33: 3506.22
+			34: 3506.05
+			35: 3506.51
+			36: 3506.36
+			37: 3505.88
+			38: 3506.45
+			39: 3506.68
+			40: 3505.95
+			41: 3506.43
+			42: 3506.05
+			43: 3505.3
+			44: 3505.4
+			45: 3506.31
+			46: 3505.11
+			47: 3504.86
+			48: 3504.93
+			49: 3503.69
+			50: 3503.34
+			51: 3504.07
+			52: 3504.64
+			53: 3505.52
+			54: 3505.6
+			55: 3505.86
+			56: 3504.95
+			57: 3504.56
+			58: 3505.25
+			59: 3505.47
+			60: 3505.74
+			61: 3505.25
+			62: 3505.87
+			63: 3505.07
+			64: 3506.16
+			65: 3506.89
+			66: 3507.44
+			67: 3507.27
+			68: 3507.75
+			69: 3506.74
+			70: 3507.5
+			71: 3507
+			72: 3507.58
+			73: 3507.42
+			74: 3506.65
+			75: 3506.21
+			76: 3506.06
+			77: 3505.9
+			78: 3507.13
+			79: 3507.94
+			80: 3508.51
+			81: 3508.35
+			82: 3508.8
+			83: 3508.25
+			84: 3508.99
+			85: 3510.3
+			86: 3510.38
+			87: 3509.76
+			88: 3510.52
+			89: 3510.48
+			90: 3510.84
+			91: 3511.36
+			92: 3510.44
+			93: 3510.34
+			94: 3511.04
+			95: 3510.76
+			96: 3510.91
+			97: 3509.72
+			98: 3510.01
+			99: 3510.44
+			100: 3509.62
+			101: 3510.78
+			102: 3511.44
+			103: 3510.22
+			104: 3510.46
+			105: 3510.47
+			106: 3510.49
+			107: 3511.02
+			108: 3511.17
+			109: 3512.41
+			110: 3512.26
+			111: 3512.86
+			112: 3513.27
+			113: 3514.09
+			114: 3514.31
+			115: 3515.14
+			116: 3516.4
+			117: 3516.79
+			118: 3517.37
+			119: 3517.39
+			120: 3518.26
+			121: 3518.75
+			122: 3517.86
+			123: 3518.69
+			124: 3519.07
+			125: 3520.4
+			126: 3519.32
+			127: 3518.26
+			128: 3519.05
+			129: 3518.86
+			130: 3519.18
+			131: 3519.4
+			132: 3518.93
+			133: 3518.87
+			134: 3519.07
+			135: 3518.02
+			136: 3518.55
+			137: 3518.36
+			138: 3518.35
+			139: 3518.75
+			140: 3519.6
+			141: 3519.6
+			142: 3519.14
+			143: 3519.16
+			144: 3519.89
+			145: 3519.79
+			146: 3520.2
+			147: 3520.69
+			148: 3520.05
+			149: 3520.03
+			150: 3520.32
+			151: 3520.53
+			152: 3521.4
+			153: 3521.13
+			154: 3520.12
+			155: 3521.02
+			156: 3521.4
+			157: 3523.1
+			158: 3522.95
+			159: 3523.14
+			160: 3522.87
+			161: 3521.87
+			162: 3521.82
+			163: 3520.61
+			164: 3520.86
+			165: 3522.36
+			166: 3522.99
+			167: 3523.09
+			168: 3524.05
+			169: 3524.53
+		times: 
+			0: 1628718876
+			1: 1628718877
+			2: 1628718878
+			3: 1628718879
+			4: 1628718880
+			5: 1628718881
+			6: 1628718882
+			7: 1628718883
+			8: 1628718884
+			9: 1628718885
+			10: 1628718886
+			11: 1628718887
+			12: 1628718888
+			13: 1628718889
+			14: 1628718890
+			15: 1628718891
+			16: 1628718892
+			17: 1628718893
+			18: 1628718894
+			19: 1628718895
+			20: 1628718896
+			21: 1628718897
+			22: 1628718898
+			23: 1628718899
+			24: 1628718900
+			25: 1628718901
+			26: 1628718902
+			27: 1628718903
+			28: 1628718904
+			29: 1628718905
+			30: 1628718906
+			31: 1628718907
+			32: 1628718908
+			33: 1628718909
+			34: 1628718910
+			35: 1628718911
+			36: 1628718912
+			37: 1628718913
+			38: 1628718914
+			39: 1628718915
+			40: 1628718916
+			41: 1628718917
+			42: 1628718918
+			43: 1628718919
+			44: 1628718920
+			45: 1628718921
+			46: 1628718922
+			47: 1628718923
+			48: 1628718924
+			49: 1628718925
+			50: 1628718926
+			51: 1628718927
+			52: 1628718928
+			53: 1628718929
+			54: 1628718930
+			55: 1628718931
+			56: 1628718932
+			57: 1628718933
+			58: 1628718934
+			59: 1628718935
+			60: 1628718936
+			61: 1628718937
+			62: 1628718938
+			63: 1628718939
+			64: 1628718940
+			65: 1628718941
+			66: 1628718942
+			67: 1628718943
+			68: 1628718944
+			69: 1628718945
+			70: 1628718946
+			71: 1628718947
+			72: 1628718948
+			73: 1628718949
+			74: 1628718950
+			75: 1628718951
+			76: 1628718952
+			77: 1628718953
+			78: 1628718954
+			79: 1628718955
+			80: 1628718956
+			81: 1628718957
+			82: 1628718958
+			83: 1628718959
+			84: 1628718960
+			85: 1628718961
+			86: 1628718962
+			87: 1628718963
+			88: 1628718964
+			89: 1628718965
+			90: 1628718966
+			91: 1628718967
+			92: 1628718968
+			93: 1628718969
+			94: 1628718970
+			95: 1628718971
+			96: 1628718972
+			97: 1628718973
+			98: 1628718974
+			99: 1628718975
+			100: 1628718976
+			101: 1628718977
+			102: 1628718978
+			103: 1628718979
+			104: 1628718980
+			105: 1628718981
+			106: 1628718982
+			107: 1628718983
+			108: 1628718984
+			109: 1628718985
+			110: 1628718986
+			111: 1628718987
+			112: 1628718988
+			113: 1628718989
+			114: 1628718990
+			115: 1628718991
+			116: 1628718992
+			117: 1628718993
+			118: 1628718994
+			119: 1628718995
+			120: 1628718996
+			121: 1628718997
+			122: 1628718998
+			123: 1628718999
+			124: 1628719000
+			125: 1628719001
+			126: 1628719002
+			127: 1628719003
+			128: 1628719004
+			129: 1628719005
+			130: 1628719006
+			131: 1628719007
+			132: 1628719008
+			133: 1628719009
+			134: 1628719010
+			135: 1628719011
+			136: 1628719012
+			137: 1628719013
+			138: 1628719014
+			139: 1628719015
+			140: 1628719016
+			141: 1628719017
+			142: 1628719018
+			143: 1628719019
+			144: 1628719020
+			145: 1628719021
+			146: 1628719022
+			147: 1628719023
+			148: 1628719024
+			149: 1628719025
+			150: 1628719026
+			151: 1628719027
+			152: 1628719028
+			153: 1628719029
+			154: 1628719030
+			155: 1628719031
+			156: 1628719032
+			157: 1628719033
+			158: 1628719034
+			159: 1628719035
+			160: 1628719036
+			161: 1628719037
+			162: 1628719038
+			163: 1628719039
+			164: 1628719040
+			165: 1628719041
+			166: 1628719042
+			167: 1628719043
+			168: 1628719044
+			169: 1628719045
 	msg_type: "history"
 	pip_size: 2
 	req_id: 14
@@ -397,15 +1777,206 @@ Chaves:
 		landing_company: "br"
 		req_id: 16
 	landing_company: 
-		config: object
-		dxtrade_financial_company: object
-		dxtrade_gaming_company: object
-		financial_company: object
-		gaming_company: object
+		config: 
+			tax_details_required: 1
+			tin_format: 
+				0: "^(\\d{11}|\\d{14})$"
+			tin_format_description: "99999999999 or 99999999999999"
+		dxtrade_financial_company: 
+			standard: 
+				address: null
+				changeable_fields: object
+				country: "Saint Vincent and the Grenadines"
+				currency_config: object
+				has_reality_check: 0
+				legal_allowed_contract_categories: array
+				legal_allowed_currencies: array
+				legal_allowed_markets: array
+				legal_default_currency: "USD"
+				name: "Deriv (SVG) LLC"
+				requirements: object
+				shortcode: "svg"
+		dxtrade_gaming_company: 
+			standard: 
+				address: null
+				changeable_fields: object
+				country: "Saint Vincent and the Grenadines"
+				currency_config: object
+				has_reality_check: 0
+				legal_allowed_contract_categories: array
+				legal_allowed_currencies: array
+				legal_allowed_markets: array
+				legal_default_currency: "USD"
+				name: "Deriv (SVG) LLC"
+				requirements: object
+				shortcode: "svg"
+		financial_company: 
+			address: null
+			changeable_fields: 
+				only_before_auth: array
+				personal_details_not_locked: array
+			country: "Saint Vincent and the Grenadines"
+			currency_config: 
+				commodities: object
+				cryptocurrency: object
+				forex: object
+				indices: object
+				synthetic_index: object
+			has_reality_check: 0
+			legal_allowed_contract_categories: 
+				0: "asian"
+				1: "callput"
+				2: "callputequal"
+				3: "callputspread"
+				4: "digits"
+				5: "endsinout"
+				6: "highlowticks"
+				7: "lookback"
+				8: "multiplier"
+				9: "reset"
+				10: "runs"
+				11: "staysinout"
+				12: "touchnotouch"
+			legal_allowed_currencies: 
+				0: "AUD"
+				1: "BTC"
+				2: "ETH"
+				3: "EUR"
+				4: "GBP"
+				5: "LTC"
+				6: "USD"
+				7: "USDC"
+				8: "UST"
+			legal_allowed_markets: 
+				0: "commodities"
+				1: "cryptocurrency"
+				2: "forex"
+				3: "indices"
+				4: "synthetic_index"
+			legal_default_currency: "USD"
+			name: "Deriv (SVG) LLC"
+			requirements: 
+				signup: array
+				withdrawal: array
+			shortcode: "svg"
+		gaming_company: 
+			address: null
+			changeable_fields: 
+				only_before_auth: array
+				personal_details_not_locked: array
+			country: "Saint Vincent and the Grenadines"
+			currency_config: 
+				commodities: object
+				cryptocurrency: object
+				forex: object
+				indices: object
+				synthetic_index: object
+			has_reality_check: 0
+			legal_allowed_contract_categories: 
+				0: "asian"
+				1: "callput"
+				2: "callputequal"
+				3: "callputspread"
+				4: "digits"
+				5: "endsinout"
+				6: "highlowticks"
+				7: "lookback"
+				8: "multiplier"
+				9: "reset"
+				10: "runs"
+				11: "staysinout"
+				12: "touchnotouch"
+			legal_allowed_currencies: 
+				0: "AUD"
+				1: "BTC"
+				2: "ETH"
+				3: "EUR"
+				4: "GBP"
+				5: "LTC"
+				6: "USD"
+				7: "USDC"
+				8: "UST"
+			legal_allowed_markets: 
+				0: "commodities"
+				1: "cryptocurrency"
+				2: "forex"
+				3: "indices"
+				4: "synthetic_index"
+			legal_default_currency: "USD"
+			name: "Deriv (SVG) LLC"
+			requirements: 
+				signup: array
+				withdrawal: array
+			shortcode: "svg"
 		id: "br"
 		minimum_age: 18
-		mt_financial_company: object
-		mt_gaming_company: object
+		mt_financial_company: 
+			financial: 
+				address: null
+				changeable_fields: object
+				country: "Saint Vincent and the Grenadines"
+				currency_config: object
+				has_reality_check: 0
+				legal_allowed_contract_categories: array
+				legal_allowed_currencies: array
+				legal_allowed_markets: array
+				legal_default_currency: "USD"
+				name: "Deriv (SVG) LLC"
+				requirements: object
+				shortcode: "svg"
+			financial_stp: 
+				address: array
+				changeable_fields: object
+				country: "British Virgin Islands"
+				currency_config: object
+				has_reality_check: 0
+				legal_allowed_contract_categories: array
+				legal_allowed_currencies: array
+				legal_allowed_markets: array
+				legal_default_currency: "USD"
+				name: "Deriv (BVI) Ltd"
+				requirements: object
+				shortcode: "bvi"
+			swap_free: 
+				address: null
+				changeable_fields: object
+				country: "Saint Vincent and the Grenadines"
+				currency_config: object
+				has_reality_check: 0
+				legal_allowed_contract_categories: array
+				legal_allowed_currencies: array
+				legal_allowed_markets: array
+				legal_default_currency: "USD"
+				name: "Deriv (SVG) LLC"
+				requirements: object
+				shortcode: "svg"
+		mt_gaming_company: 
+			financial: 
+				address: null
+				changeable_fields: object
+				country: "Saint Vincent and the Grenadines"
+				currency_config: object
+				has_reality_check: 0
+				legal_allowed_contract_categories: array
+				legal_allowed_currencies: array
+				legal_allowed_markets: array
+				legal_default_currency: "USD"
+				name: "Deriv (SVG) LLC"
+				requirements: object
+				shortcode: "svg"
+			swap_free: 
+				address: null
+				changeable_fields: object
+				country: "Saint Vincent and the Grenadines"
+				currency_config: object
+				has_reality_check: 0
+				legal_allowed_contract_categories: array
+				legal_allowed_currencies: array
+				legal_allowed_markets: array
+				legal_default_currency: "USD"
+				name: "Deriv (SVG) LLC"
+				requirements: object
+				shortcode: "svg"
 		name: "Brazil"
 		virtual_company: "virtual"
 	msg_type: "landing_company"
@@ -430,10 +2001,54 @@ Chaves:
 	msg_type: "trading_servers"
 	req_id: 17
 	trading_servers: 
-		0: object
-		1: object
-		2: object
-		3: object
+		0: 
+			disabled: 0
+			environment: "Deriv-Server"
+			geolocation: 
+				location: "Frankfurt"
+				region: "Europe"
+				sequence: 1
+			id: "p01_ts04"
+			market_type: "synthetic"
+			recommended: 1
+			supported_accounts: 
+				0: "gaming"
+		1: 
+			disabled: 0
+			environment: "Deriv-Server"
+			geolocation: 
+				location: "South Africa"
+				region: "Africa"
+				sequence: 1
+			id: "p01_ts02"
+			market_type: "synthetic"
+			recommended: 0
+			supported_accounts: 
+				0: "gaming"
+		2: 
+			disabled: 0
+			environment: "Deriv-Server-02"
+			geolocation: 
+				location: "South Africa"
+				region: "Africa"
+				sequence: 2
+			id: "p02_ts02"
+			market_type: "synthetic"
+			recommended: 0
+			supported_accounts: 
+				0: "gaming"
+		3: 
+			disabled: 0
+			environment: "Deriv-Server"
+			geolocation: 
+				location: "Singapore"
+				region: "Asia"
+				sequence: 1
+			id: "p01_ts03"
+			market_type: "synthetic"
+			recommended: 0
+			supported_accounts: 
+				0: "gaming"
 
 MSG  37 - RECEBIDA
 Chaves: 
@@ -453,7 +2068,38 @@ Chaves:
 	req_id: 19
 	statement: 
 		count: 3
-		transactions: array
+		transactions: 
+			0: 
+				action_type: "sell"
+				amount: 19.53
+				app_id: 2
+				balance_after: 10009.53
+				contract_id: 131028394148
+				payout: 19.53
+				purchase_time: 1628718766
+				reference_id: 261461000428
+				transaction_id: 261461027828
+				transaction_time: 1628718773
+			1: 
+				action_type: "buy"
+				amount: -10
+				app_id: 16929
+				balance_after: 9990
+				contract_id: 131028394148
+				payout: 19.53
+				reference_id: null
+				transaction_id: 261461000428
+				transaction_time: 1628718766
+			2: 
+				action_type: "deposit"
+				amount: 10000
+				app_id: 16929
+				balance_after: 10000
+				contract_id: null
+				payout: null
+				reference_id: null
+				transaction_id: 257875167448
+				transaction_time: 1627606541
 
 MSG  39 - ENVIADA
 Chaves: 
@@ -470,8 +2116,2008 @@ Chaves:
 		style: "ticks"
 		ticks_history: "1HZ100V"
 	history: 
-		prices: array
-		times: array
+		prices: 
+			0: 3499.77
+			1: 3500.15
+			2: 3499.49
+			3: 3498.39
+			4: 3499.36
+			5: 3499.15
+			6: 3498.55
+			7: 3499.03
+			8: 3499.43
+			9: 3499.62
+			10: 3498.3
+			11: 3498.45
+			12: 3498.25
+			13: 3498.08
+			14: 3497.57
+			15: 3498.24
+			16: 3497.5
+			17: 3497.81
+			18: 3497.76
+			19: 3497.41
+			20: 3497.63
+			21: 3498.87
+			22: 3498.88
+			23: 3498.75
+			24: 3497.58
+			25: 3496.19
+			26: 3496.04
+			27: 3495.8
+			28: 3495.31
+			29: 3496.23
+			30: 3496.81
+			31: 3496.81
+			32: 3497.21
+			33: 3497.09
+			34: 3496.66
+			35: 3495.35
+			36: 3495.38
+			37: 3495.29
+			38: 3495.18
+			39: 3493.93
+			40: 3494.21
+			41: 3493.61
+			42: 3494.54
+			43: 3494.16
+			44: 3494.4
+			45: 3493.84
+			46: 3493.71
+			47: 3493.3
+			48: 3493.18
+			49: 3493.14
+			50: 3493.66
+			51: 3493.08
+			52: 3492.69
+			53: 3493.61
+			54: 3493.22
+			55: 3494.22
+			56: 3494.86
+			57: 3494.95
+			58: 3494.79
+			59: 3494.88
+			60: 3494.4
+			61: 3493.96
+			62: 3494.05
+			63: 3493.96
+			64: 3494.63
+			65: 3495.26
+			66: 3495.87
+			67: 3495.57
+			68: 3496.52
+			69: 3496.65
+			70: 3496.84
+			71: 3497.58
+			72: 3498.01
+			73: 3497.76
+			74: 3498.45
+			75: 3499.01
+			76: 3499.36
+			77: 3499.35
+			78: 3499.6
+			79: 3499.39
+			80: 3498.68
+			81: 3498.24
+			82: 3498.09
+			83: 3498.02
+			84: 3498.82
+			85: 3499.45
+			86: 3499.47
+			87: 3500.76
+			88: 3499.85
+			89: 3499.49
+			90: 3499.83
+			91: 3499.26
+			92: 3498.97
+			93: 3498.79
+			94: 3498.43
+			95: 3498.75
+			96: 3498.81
+			97: 3498.42
+			98: 3498.6
+			99: 3498.41
+			100: 3497.08
+			101: 3497.4
+			102: 3497.49
+			103: 3497.93
+			104: 3498.4
+			105: 3498.32
+			106: 3497.85
+			107: 3497.17
+			108: 3497.46
+			109: 3497.93
+			110: 3497.5
+			111: 3497.47
+			112: 3497.55
+			113: 3499.16
+			114: 3497.91
+			115: 3497.62
+			116: 3497.89
+			117: 3497.58
+			118: 3497.43
+			119: 3497.2
+			120: 3498
+			121: 3497.73
+			122: 3497.41
+			123: 3497.32
+			124: 3497.27
+			125: 3496.59
+			126: 3497.62
+			127: 3498.2
+			128: 3496.67
+			129: 3496.66
+			130: 3496.26
+			131: 3496.38
+			132: 3496.22
+			133: 3495.48
+			134: 3494.85
+			135: 3495.08
+			136: 3494.89
+			137: 3494.71
+			138: 3494.77
+			139: 3495.52
+			140: 3495.21
+			141: 3495.16
+			142: 3493.74
+			143: 3494.03
+			144: 3493.27
+			145: 3493.09
+			146: 3493.38
+			147: 3492.05
+			148: 3493.07
+			149: 3493.4
+			150: 3493.11
+			151: 3492.85
+			152: 3491.83
+			153: 3492.09
+			154: 3492.9
+			155: 3492.43
+			156: 3491.78
+			157: 3491.5
+			158: 3491.68
+			159: 3491.08
+			160: 3491.75
+			161: 3492.06
+			162: 3491.29
+			163: 3491.47
+			164: 3490.83
+			165: 3491.77
+			166: 3491
+			167: 3490.29
+			168: 3489.95
+			169: 3489.58
+			170: 3489.32
+			171: 3489.3
+			172: 3490.45
+			173: 3489.82
+			174: 3490.31
+			175: 3489.93
+			176: 3490.09
+			177: 3491.12
+			178: 3491.05
+			179: 3490.99
+			180: 3491.49
+			181: 3490.84
+			182: 3489.93
+			183: 3488.77
+			184: 3489.37
+			185: 3488.46
+			186: 3488.41
+			187: 3488.69
+			188: 3488.25
+			189: 3488.16
+			190: 3489.41
+			191: 3488.12
+			192: 3489.16
+			193: 3489.25
+			194: 3488.85
+			195: 3489
+			196: 3489.05
+			197: 3489.95
+			198: 3489.5
+			199: 3490.16
+			200: 3490.05
+			201: 3490.02
+			202: 3489.66
+			203: 3490.53
+			204: 3490.14
+			205: 3490.36
+			206: 3491.95
+			207: 3491.79
+			208: 3492.52
+			209: 3493.04
+			210: 3493.26
+			211: 3493.99
+			212: 3494.88
+			213: 3495.63
+			214: 3495.76
+			215: 3495.54
+			216: 3497.49
+			217: 3497.13
+			218: 3496.69
+			219: 3497.25
+			220: 3496.74
+			221: 3496.04
+			222: 3496.53
+			223: 3497.67
+			224: 3498.07
+			225: 3498.23
+			226: 3498.24
+			227: 3498.05
+			228: 3498.72
+			229: 3498.67
+			230: 3498.35
+			231: 3498.76
+			232: 3498.74
+			233: 3498.85
+			234: 3498.76
+			235: 3497.98
+			236: 3497.52
+			237: 3497.44
+			238: 3497.38
+			239: 3497.66
+			240: 3496.9
+			241: 3497.39
+			242: 3497.69
+			243: 3497.17
+			244: 3495.73
+			245: 3496.11
+			246: 3496.2
+			247: 3496.41
+			248: 3497.13
+			249: 3497.23
+			250: 3496.83
+			251: 3496.72
+			252: 3496.88
+			253: 3496.31
+			254: 3496.49
+			255: 3496.13
+			256: 3497.03
+			257: 3497.04
+			258: 3496.44
+			259: 3496.21
+			260: 3496.42
+			261: 3496.74
+			262: 3496.49
+			263: 3497.85
+			264: 3497.49
+			265: 3496.56
+			266: 3496.6
+			267: 3496.49
+			268: 3495.73
+			269: 3495.14
+			270: 3494.9
+			271: 3493.84
+			272: 3494.27
+			273: 3494.3
+			274: 3494.11
+			275: 3493.82
+			276: 3493.4
+			277: 3494.69
+			278: 3494.24
+			279: 3493.9
+			280: 3493.7
+			281: 3493.98
+			282: 3495.12
+			283: 3494.79
+			284: 3495.59
+			285: 3496.61
+			286: 3495.89
+			287: 3496.05
+			288: 3495.42
+			289: 3495.61
+			290: 3495.5
+			291: 3494.47
+			292: 3495.57
+			293: 3495.87
+			294: 3495.28
+			295: 3495.46
+			296: 3496.59
+			297: 3497.55
+			298: 3497.89
+			299: 3496.66
+			300: 3497.31
+			301: 3496.9
+			302: 3496.26
+			303: 3496.84
+			304: 3496.96
+			305: 3496.78
+			306: 3496.07
+			307: 3495.24
+			308: 3495.58
+			309: 3495.56
+			310: 3495.81
+			311: 3496.31
+			312: 3497.45
+			313: 3498.34
+			314: 3497.69
+			315: 3497.44
+			316: 3497.21
+			317: 3496.74
+			318: 3497.3
+			319: 3496.12
+			320: 3496.55
+			321: 3495.62
+			322: 3496.19
+			323: 3496.51
+			324: 3496.74
+			325: 3497.37
+			326: 3496.65
+			327: 3496.1
+			328: 3495.03
+			329: 3494.71
+			330: 3494.97
+			331: 3494.58
+			332: 3493.64
+			333: 3493.06
+			334: 3493.5
+			335: 3493.48
+			336: 3493.83
+			337: 3494.29
+			338: 3494.18
+			339: 3492.79
+			340: 3492.22
+			341: 3492.13
+			342: 3491.72
+			343: 3492.16
+			344: 3491.97
+			345: 3491.37
+			346: 3490.9
+			347: 3490.72
+			348: 3491.44
+			349: 3491.87
+			350: 3491.44
+			351: 3492.38
+			352: 3492.11
+			353: 3492.27
+			354: 3491.54
+			355: 3491.3
+			356: 3491.54
+			357: 3491.85
+			358: 3491.34
+			359: 3490.35
+			360: 3491.33
+			361: 3492.78
+			362: 3492.56
+			363: 3491.21
+			364: 3491.04
+			365: 3491.24
+			366: 3491.62
+			367: 3491.47
+			368: 3491.37
+			369: 3491.8
+			370: 3491.58
+			371: 3491.97
+			372: 3491.7
+			373: 3491.87
+			374: 3492.41
+			375: 3492.81
+			376: 3493.11
+			377: 3494.23
+			378: 3494.6
+			379: 3495.68
+			380: 3496.23
+			381: 3495.76
+			382: 3496.41
+			383: 3495.64
+			384: 3496.42
+			385: 3495.89
+			386: 3497.35
+			387: 3498.59
+			388: 3500.17
+			389: 3500.19
+			390: 3500.33
+			391: 3499.92
+			392: 3499.68
+			393: 3499.62
+			394: 3498.62
+			395: 3499.21
+			396: 3498.93
+			397: 3498.07
+			398: 3497.9
+			399: 3497.56
+			400: 3497.88
+			401: 3496.81
+			402: 3496.53
+			403: 3497.67
+			404: 3498.72
+			405: 3499.36
+			406: 3498.95
+			407: 3498.67
+			408: 3498.48
+			409: 3498.73
+			410: 3498.4
+			411: 3498.49
+			412: 3499.29
+			413: 3498.82
+			414: 3499.33
+			415: 3499.51
+			416: 3499.59
+			417: 3498.62
+			418: 3498.67
+			419: 3499.51
+			420: 3498.86
+			421: 3498.63
+			422: 3499.28
+			423: 3499.46
+			424: 3499.05
+			425: 3498.16
+			426: 3497.84
+			427: 3498.28
+			428: 3499.15
+			429: 3499.83
+			430: 3499.4
+			431: 3500.29
+			432: 3501.1
+			433: 3501.36
+			434: 3501.93
+			435: 3502.28
+			436: 3503.7
+			437: 3504.15
+			438: 3505.73
+			439: 3506.17
+			440: 3506.36
+			441: 3505.79
+			442: 3505.18
+			443: 3504.98
+			444: 3504.9
+			445: 3505.05
+			446: 3504.1
+			447: 3503.59
+			448: 3503.14
+			449: 3503.87
+			450: 3503.55
+			451: 3503.01
+			452: 3502.19
+			453: 3502.87
+			454: 3501.89
+			455: 3501.75
+			456: 3502.18
+			457: 3501.45
+			458: 3501.92
+			459: 3501.61
+			460: 3502.57
+			461: 3502.77
+			462: 3502.99
+			463: 3503.26
+			464: 3503.51
+			465: 3502.55
+			466: 3501.67
+			467: 3501.78
+			468: 3502.52
+			469: 3502.26
+			470: 3502.53
+			471: 3502.35
+			472: 3502.03
+			473: 3502.97
+			474: 3502.78
+			475: 3502.38
+			476: 3502.15
+			477: 3502.02
+			478: 3501.56
+			479: 3500.69
+			480: 3501.73
+			481: 3502.25
+			482: 3502.65
+			483: 3501.89
+			484: 3501.38
+			485: 3502.33
+			486: 3503.77
+			487: 3503.75
+			488: 3504.26
+			489: 3503.77
+			490: 3503.52
+			491: 3503.18
+			492: 3503.72
+			493: 3503.65
+			494: 3502.85
+			495: 3503.25
+			496: 3502.94
+			497: 3503.48
+			498: 3504.7
+			499: 3504.26
+			500: 3503.69
+			501: 3502.87
+			502: 3503.39
+			503: 3501.92
+			504: 3500.73
+			505: 3501.14
+			506: 3501
+			507: 3501.23
+			508: 3501.05
+			509: 3501.03
+			510: 3500.64
+			511: 3499.39
+			512: 3499.58
+			513: 3499.95
+			514: 3500.1
+			515: 3500.99
+			516: 3500.64
+			517: 3500.85
+			518: 3500.68
+			519: 3500.57
+			520: 3501.01
+			521: 3501.48
+			522: 3501.41
+			523: 3501.33
+			524: 3501.55
+			525: 3502.02
+			526: 3501.65
+			527: 3502.32
+			528: 3501.81
+			529: 3502.83
+			530: 3502.83
+			531: 3502.82
+			532: 3503.61
+			533: 3504.32
+			534: 3503.69
+			535: 3504.1
+			536: 3504.07
+			537: 3503.59
+			538: 3503.31
+			539: 3503.88
+			540: 3503.44
+			541: 3503.52
+			542: 3504.18
+			543: 3504.06
+			544: 3504.13
+			545: 3504.15
+			546: 3504.47
+			547: 3504.18
+			548: 3503.59
+			549: 3502.22
+			550: 3501.72
+			551: 3502.05
+			552: 3501.61
+			553: 3501.94
+			554: 3500.71
+			555: 3500.37
+			556: 3500.06
+			557: 3500.35
+			558: 3500.21
+			559: 3500.37
+			560: 3501.14
+			561: 3501.22
+			562: 3502.23
+			563: 3503.09
+			564: 3502.86
+			565: 3503.16
+			566: 3502.39
+			567: 3502.51
+			568: 3502.88
+			569: 3501.95
+			570: 3502.13
+			571: 3502.06
+			572: 3501.81
+			573: 3502.24
+			574: 3502.87
+			575: 3502.91
+			576: 3503.07
+			577: 3503.15
+			578: 3502.54
+			579: 3503.22
+			580: 3502.33
+			581: 3503.45
+			582: 3503.16
+			583: 3503.25
+			584: 3503.07
+			585: 3502.46
+			586: 3502.84
+			587: 3502.95
+			588: 3502.38
+			589: 3501.37
+			590: 3500.55
+			591: 3501.73
+			592: 3502.28
+			593: 3502.41
+			594: 3502.53
+			595: 3502.61
+			596: 3501.95
+			597: 3501.54
+			598: 3499.72
+			599: 3499.91
+			600: 3500.15
+			601: 3500.27
+			602: 3499.3
+			603: 3499.1
+			604: 3500.09
+			605: 3500.06
+			606: 3500.59
+			607: 3501.09
+			608: 3502.02
+			609: 3501.62
+			610: 3501.08
+			611: 3501.17
+			612: 3500.73
+			613: 3501.54
+			614: 3501.94
+			615: 3501.9
+			616: 3502.26
+			617: 3501.79
+			618: 3501.51
+			619: 3501.2
+			620: 3501.39
+			621: 3501.66
+			622: 3501.44
+			623: 3501.38
+			624: 3500.95
+			625: 3500.76
+			626: 3500.75
+			627: 3502.14
+			628: 3502.39
+			629: 3502.91
+			630: 3503.27
+			631: 3503.81
+			632: 3503.76
+			633: 3504.29
+			634: 3503.32
+			635: 3502.48
+			636: 3501.68
+			637: 3500.96
+			638: 3500.66
+			639: 3500.29
+			640: 3500.34
+			641: 3500.29
+			642: 3500.24
+			643: 3500.48
+			644: 3500.22
+			645: 3501.1
+			646: 3500.72
+			647: 3501.63
+			648: 3501.67
+			649: 3501.12
+			650: 3500.39
+			651: 3500.49
+			652: 3499.59
+			653: 3501.12
+			654: 3500.22
+			655: 3499.96
+			656: 3499.31
+			657: 3500.79
+			658: 3500.78
+			659: 3500.35
+			660: 3500.78
+			661: 3500.58
+			662: 3500.14
+			663: 3500.22
+			664: 3498.87
+			665: 3498.86
+			666: 3499.02
+			667: 3499.5
+			668: 3498.61
+			669: 3498.25
+			670: 3498.46
+			671: 3497.94
+			672: 3497.04
+			673: 3496.15
+			674: 3496
+			675: 3495.65
+			676: 3495.31
+			677: 3494.57
+			678: 3494.33
+			679: 3494.54
+			680: 3494.96
+			681: 3496.36
+			682: 3496.52
+			683: 3497.33
+			684: 3497.08
+			685: 3497.95
+			686: 3498.39
+			687: 3498.19
+			688: 3498.64
+			689: 3497.62
+			690: 3498.54
+			691: 3498.61
+			692: 3499.26
+			693: 3498.43
+			694: 3499.25
+			695: 3499.33
+			696: 3500.16
+			697: 3499.19
+			698: 3500.36
+			699: 3500.58
+			700: 3501.63
+			701: 3502.6
+			702: 3502.1
+			703: 3502.08
+			704: 3501.89
+			705: 3502.24
+			706: 3502.73
+			707: 3503.61
+			708: 3503.68
+			709: 3503.23
+			710: 3503.26
+			711: 3503.05
+			712: 3503.69
+			713: 3504.26
+			714: 3504.54
+			715: 3505.26
+			716: 3504.63
+			717: 3506.06
+			718: 3505.95
+			719: 3506.34
+			720: 3507.16
+			721: 3506.94
+			722: 3508.32
+			723: 3508.27
+			724: 3508.49
+			725: 3508.7
+			726: 3508.7
+			727: 3508.24
+			728: 3508.42
+			729: 3509.87
+			730: 3508.54
+			731: 3509.35
+			732: 3509.87
+			733: 3510.12
+			734: 3510.48
+			735: 3510.36
+			736: 3510.61
+			737: 3509.73
+			738: 3509.43
+			739: 3509.89
+			740: 3509.71
+			741: 3509.37
+			742: 3509.96
+			743: 3509.66
+			744: 3510.64
+			745: 3510.25
+			746: 3510.69
+			747: 3510.92
+			748: 3510.67
+			749: 3510.8
+			750: 3511.3
+			751: 3511.29
+			752: 3511.71
+			753: 3511.99
+			754: 3512.53
+			755: 3513.8
+			756: 3513.86
+			757: 3513.34
+			758: 3512.64
+			759: 3512.77
+			760: 3512.63
+			761: 3512.75
+			762: 3512.29
+			763: 3511.41
+			764: 3510.78
+			765: 3511.14
+			766: 3510.74
+			767: 3510.6
+			768: 3510.85
+			769: 3510.62
+			770: 3510.01
+			771: 3509.38
+			772: 3510.08
+			773: 3510.21
+			774: 3509.82
+			775: 3509.65
+			776: 3509.14
+			777: 3509.06
+			778: 3508.63
+			779: 3507.31
+			780: 3507.47
+			781: 3506.94
+			782: 3506.35
+			783: 3506.33
+			784: 3506.76
+			785: 3506.41
+			786: 3506.41
+			787: 3504.8
+			788: 3504.89
+			789: 3505.98
+			790: 3506.3
+			791: 3505.78
+			792: 3505.86
+			793: 3506.54
+			794: 3506.49
+			795: 3506.36
+			796: 3506
+			797: 3505.32
+			798: 3504.85
+			799: 3505.66
+			800: 3505.04
+			801: 3505.5
+			802: 3506.45
+			803: 3505.56
+			804: 3506.45
+			805: 3506.94
+			806: 3507.32
+			807: 3506.79
+			808: 3507.07
+			809: 3507.47
+			810: 3507.99
+			811: 3507.83
+			812: 3507.41
+			813: 3507.61
+			814: 3507.79
+			815: 3507.88
+			816: 3508.5
+			817: 3508.99
+			818: 3508.77
+			819: 3508.97
+			820: 3508.7
+			821: 3509.59
+			822: 3509.94
+			823: 3510.1
+			824: 3509.7
+			825: 3509.52
+			826: 3510.28
+			827: 3510.68
+			828: 3510.65
+			829: 3511.07
+			830: 3512.31
+			831: 3512.37
+			832: 3512.65
+			833: 3512.01
+			834: 3512.43
+			835: 3511.39
+			836: 3511.08
+			837: 3511.6
+			838: 3511.39
+			839: 3512.47
+			840: 3511.97
+			841: 3511.61
+			842: 3511.44
+			843: 3510.89
+			844: 3511.46
+			845: 3510.98
+			846: 3510.71
+			847: 3510.54
+			848: 3509.73
+			849: 3509.02
+			850: 3508.19
+			851: 3508.65
+			852: 3507.06
+			853: 3507.37
+			854: 3507.83
+			855: 3506.98
+			856: 3507.74
+			857: 3507.15
+			858: 3506.87
+			859: 3507.43
+			860: 3506.37
+			861: 3506.83
+			862: 3507.09
+			863: 3506.22
+			864: 3506.05
+			865: 3506.51
+			866: 3506.36
+			867: 3505.88
+			868: 3506.45
+			869: 3506.68
+			870: 3505.95
+			871: 3506.43
+			872: 3506.05
+			873: 3505.3
+			874: 3505.4
+			875: 3506.31
+			876: 3505.11
+			877: 3504.86
+			878: 3504.93
+			879: 3503.69
+			880: 3503.34
+			881: 3504.07
+			882: 3504.64
+			883: 3505.52
+			884: 3505.6
+			885: 3505.86
+			886: 3504.95
+			887: 3504.56
+			888: 3505.25
+			889: 3505.47
+			890: 3505.74
+			891: 3505.25
+			892: 3505.87
+			893: 3505.07
+			894: 3506.16
+			895: 3506.89
+			896: 3507.44
+			897: 3507.27
+			898: 3507.75
+			899: 3506.74
+			900: 3507.5
+			901: 3507
+			902: 3507.58
+			903: 3507.42
+			904: 3506.65
+			905: 3506.21
+			906: 3506.06
+			907: 3505.9
+			908: 3507.13
+			909: 3507.94
+			910: 3508.51
+			911: 3508.35
+			912: 3508.8
+			913: 3508.25
+			914: 3508.99
+			915: 3510.3
+			916: 3510.38
+			917: 3509.76
+			918: 3510.52
+			919: 3510.48
+			920: 3510.84
+			921: 3511.36
+			922: 3510.44
+			923: 3510.34
+			924: 3511.04
+			925: 3510.76
+			926: 3510.91
+			927: 3509.72
+			928: 3510.01
+			929: 3510.44
+			930: 3509.62
+			931: 3510.78
+			932: 3511.44
+			933: 3510.22
+			934: 3510.46
+			935: 3510.47
+			936: 3510.49
+			937: 3511.02
+			938: 3511.17
+			939: 3512.41
+			940: 3512.26
+			941: 3512.86
+			942: 3513.27
+			943: 3514.09
+			944: 3514.31
+			945: 3515.14
+			946: 3516.4
+			947: 3516.79
+			948: 3517.37
+			949: 3517.39
+			950: 3518.26
+			951: 3518.75
+			952: 3517.86
+			953: 3518.69
+			954: 3519.07
+			955: 3520.4
+			956: 3519.32
+			957: 3518.26
+			958: 3519.05
+			959: 3518.86
+			960: 3519.18
+			961: 3519.4
+			962: 3518.93
+			963: 3518.87
+			964: 3519.07
+			965: 3518.02
+			966: 3518.55
+			967: 3518.36
+			968: 3518.35
+			969: 3518.75
+			970: 3519.6
+			971: 3519.6
+			972: 3519.14
+			973: 3519.16
+			974: 3519.89
+			975: 3519.79
+			976: 3520.2
+			977: 3520.69
+			978: 3520.05
+			979: 3520.03
+			980: 3520.32
+			981: 3520.53
+			982: 3521.4
+			983: 3521.13
+			984: 3520.12
+			985: 3521.02
+			986: 3521.4
+			987: 3523.1
+			988: 3522.95
+			989: 3523.14
+			990: 3522.87
+			991: 3521.87
+			992: 3521.82
+			993: 3520.61
+			994: 3520.86
+			995: 3522.36
+			996: 3522.99
+			997: 3523.09
+			998: 3524.05
+			999: 3524.53
+		times: 
+			0: 1628718046
+			1: 1628718047
+			2: 1628718048
+			3: 1628718049
+			4: 1628718050
+			5: 1628718051
+			6: 1628718052
+			7: 1628718053
+			8: 1628718054
+			9: 1628718055
+			10: 1628718056
+			11: 1628718057
+			12: 1628718058
+			13: 1628718059
+			14: 1628718060
+			15: 1628718061
+			16: 1628718062
+			17: 1628718063
+			18: 1628718064
+			19: 1628718065
+			20: 1628718066
+			21: 1628718067
+			22: 1628718068
+			23: 1628718069
+			24: 1628718070
+			25: 1628718071
+			26: 1628718072
+			27: 1628718073
+			28: 1628718074
+			29: 1628718075
+			30: 1628718076
+			31: 1628718077
+			32: 1628718078
+			33: 1628718079
+			34: 1628718080
+			35: 1628718081
+			36: 1628718082
+			37: 1628718083
+			38: 1628718084
+			39: 1628718085
+			40: 1628718086
+			41: 1628718087
+			42: 1628718088
+			43: 1628718089
+			44: 1628718090
+			45: 1628718091
+			46: 1628718092
+			47: 1628718093
+			48: 1628718094
+			49: 1628718095
+			50: 1628718096
+			51: 1628718097
+			52: 1628718098
+			53: 1628718099
+			54: 1628718100
+			55: 1628718101
+			56: 1628718102
+			57: 1628718103
+			58: 1628718104
+			59: 1628718105
+			60: 1628718106
+			61: 1628718107
+			62: 1628718108
+			63: 1628718109
+			64: 1628718110
+			65: 1628718111
+			66: 1628718112
+			67: 1628718113
+			68: 1628718114
+			69: 1628718115
+			70: 1628718116
+			71: 1628718117
+			72: 1628718118
+			73: 1628718119
+			74: 1628718120
+			75: 1628718121
+			76: 1628718122
+			77: 1628718123
+			78: 1628718124
+			79: 1628718125
+			80: 1628718126
+			81: 1628718127
+			82: 1628718128
+			83: 1628718129
+			84: 1628718130
+			85: 1628718131
+			86: 1628718132
+			87: 1628718133
+			88: 1628718134
+			89: 1628718135
+			90: 1628718136
+			91: 1628718137
+			92: 1628718138
+			93: 1628718139
+			94: 1628718140
+			95: 1628718141
+			96: 1628718142
+			97: 1628718143
+			98: 1628718144
+			99: 1628718145
+			100: 1628718146
+			101: 1628718147
+			102: 1628718148
+			103: 1628718149
+			104: 1628718150
+			105: 1628718151
+			106: 1628718152
+			107: 1628718153
+			108: 1628718154
+			109: 1628718155
+			110: 1628718156
+			111: 1628718157
+			112: 1628718158
+			113: 1628718159
+			114: 1628718160
+			115: 1628718161
+			116: 1628718162
+			117: 1628718163
+			118: 1628718164
+			119: 1628718165
+			120: 1628718166
+			121: 1628718167
+			122: 1628718168
+			123: 1628718169
+			124: 1628718170
+			125: 1628718171
+			126: 1628718172
+			127: 1628718173
+			128: 1628718174
+			129: 1628718175
+			130: 1628718176
+			131: 1628718177
+			132: 1628718178
+			133: 1628718179
+			134: 1628718180
+			135: 1628718181
+			136: 1628718182
+			137: 1628718183
+			138: 1628718184
+			139: 1628718185
+			140: 1628718186
+			141: 1628718187
+			142: 1628718188
+			143: 1628718189
+			144: 1628718190
+			145: 1628718191
+			146: 1628718192
+			147: 1628718193
+			148: 1628718194
+			149: 1628718195
+			150: 1628718196
+			151: 1628718197
+			152: 1628718198
+			153: 1628718199
+			154: 1628718200
+			155: 1628718201
+			156: 1628718202
+			157: 1628718203
+			158: 1628718204
+			159: 1628718205
+			160: 1628718206
+			161: 1628718207
+			162: 1628718208
+			163: 1628718209
+			164: 1628718210
+			165: 1628718211
+			166: 1628718212
+			167: 1628718213
+			168: 1628718214
+			169: 1628718215
+			170: 1628718216
+			171: 1628718217
+			172: 1628718218
+			173: 1628718219
+			174: 1628718220
+			175: 1628718221
+			176: 1628718222
+			177: 1628718223
+			178: 1628718224
+			179: 1628718225
+			180: 1628718226
+			181: 1628718227
+			182: 1628718228
+			183: 1628718229
+			184: 1628718230
+			185: 1628718231
+			186: 1628718232
+			187: 1628718233
+			188: 1628718234
+			189: 1628718235
+			190: 1628718236
+			191: 1628718237
+			192: 1628718238
+			193: 1628718239
+			194: 1628718240
+			195: 1628718241
+			196: 1628718242
+			197: 1628718243
+			198: 1628718244
+			199: 1628718245
+			200: 1628718246
+			201: 1628718247
+			202: 1628718248
+			203: 1628718249
+			204: 1628718250
+			205: 1628718251
+			206: 1628718252
+			207: 1628718253
+			208: 1628718254
+			209: 1628718255
+			210: 1628718256
+			211: 1628718257
+			212: 1628718258
+			213: 1628718259
+			214: 1628718260
+			215: 1628718261
+			216: 1628718262
+			217: 1628718263
+			218: 1628718264
+			219: 1628718265
+			220: 1628718266
+			221: 1628718267
+			222: 1628718268
+			223: 1628718269
+			224: 1628718270
+			225: 1628718271
+			226: 1628718272
+			227: 1628718273
+			228: 1628718274
+			229: 1628718275
+			230: 1628718276
+			231: 1628718277
+			232: 1628718278
+			233: 1628718279
+			234: 1628718280
+			235: 1628718281
+			236: 1628718282
+			237: 1628718283
+			238: 1628718284
+			239: 1628718285
+			240: 1628718286
+			241: 1628718287
+			242: 1628718288
+			243: 1628718289
+			244: 1628718290
+			245: 1628718291
+			246: 1628718292
+			247: 1628718293
+			248: 1628718294
+			249: 1628718295
+			250: 1628718296
+			251: 1628718297
+			252: 1628718298
+			253: 1628718299
+			254: 1628718300
+			255: 1628718301
+			256: 1628718302
+			257: 1628718303
+			258: 1628718304
+			259: 1628718305
+			260: 1628718306
+			261: 1628718307
+			262: 1628718308
+			263: 1628718309
+			264: 1628718310
+			265: 1628718311
+			266: 1628718312
+			267: 1628718313
+			268: 1628718314
+			269: 1628718315
+			270: 1628718316
+			271: 1628718317
+			272: 1628718318
+			273: 1628718319
+			274: 1628718320
+			275: 1628718321
+			276: 1628718322
+			277: 1628718323
+			278: 1628718324
+			279: 1628718325
+			280: 1628718326
+			281: 1628718327
+			282: 1628718328
+			283: 1628718329
+			284: 1628718330
+			285: 1628718331
+			286: 1628718332
+			287: 1628718333
+			288: 1628718334
+			289: 1628718335
+			290: 1628718336
+			291: 1628718337
+			292: 1628718338
+			293: 1628718339
+			294: 1628718340
+			295: 1628718341
+			296: 1628718342
+			297: 1628718343
+			298: 1628718344
+			299: 1628718345
+			300: 1628718346
+			301: 1628718347
+			302: 1628718348
+			303: 1628718349
+			304: 1628718350
+			305: 1628718351
+			306: 1628718352
+			307: 1628718353
+			308: 1628718354
+			309: 1628718355
+			310: 1628718356
+			311: 1628718357
+			312: 1628718358
+			313: 1628718359
+			314: 1628718360
+			315: 1628718361
+			316: 1628718362
+			317: 1628718363
+			318: 1628718364
+			319: 1628718365
+			320: 1628718366
+			321: 1628718367
+			322: 1628718368
+			323: 1628718369
+			324: 1628718370
+			325: 1628718371
+			326: 1628718372
+			327: 1628718373
+			328: 1628718374
+			329: 1628718375
+			330: 1628718376
+			331: 1628718377
+			332: 1628718378
+			333: 1628718379
+			334: 1628718380
+			335: 1628718381
+			336: 1628718382
+			337: 1628718383
+			338: 1628718384
+			339: 1628718385
+			340: 1628718386
+			341: 1628718387
+			342: 1628718388
+			343: 1628718389
+			344: 1628718390
+			345: 1628718391
+			346: 1628718392
+			347: 1628718393
+			348: 1628718394
+			349: 1628718395
+			350: 1628718396
+			351: 1628718397
+			352: 1628718398
+			353: 1628718399
+			354: 1628718400
+			355: 1628718401
+			356: 1628718402
+			357: 1628718403
+			358: 1628718404
+			359: 1628718405
+			360: 1628718406
+			361: 1628718407
+			362: 1628718408
+			363: 1628718409
+			364: 1628718410
+			365: 1628718411
+			366: 1628718412
+			367: 1628718413
+			368: 1628718414
+			369: 1628718415
+			370: 1628718416
+			371: 1628718417
+			372: 1628718418
+			373: 1628718419
+			374: 1628718420
+			375: 1628718421
+			376: 1628718422
+			377: 1628718423
+			378: 1628718424
+			379: 1628718425
+			380: 1628718426
+			381: 1628718427
+			382: 1628718428
+			383: 1628718429
+			384: 1628718430
+			385: 1628718431
+			386: 1628718432
+			387: 1628718433
+			388: 1628718434
+			389: 1628718435
+			390: 1628718436
+			391: 1628718437
+			392: 1628718438
+			393: 1628718439
+			394: 1628718440
+			395: 1628718441
+			396: 1628718442
+			397: 1628718443
+			398: 1628718444
+			399: 1628718445
+			400: 1628718446
+			401: 1628718447
+			402: 1628718448
+			403: 1628718449
+			404: 1628718450
+			405: 1628718451
+			406: 1628718452
+			407: 1628718453
+			408: 1628718454
+			409: 1628718455
+			410: 1628718456
+			411: 1628718457
+			412: 1628718458
+			413: 1628718459
+			414: 1628718460
+			415: 1628718461
+			416: 1628718462
+			417: 1628718463
+			418: 1628718464
+			419: 1628718465
+			420: 1628718466
+			421: 1628718467
+			422: 1628718468
+			423: 1628718469
+			424: 1628718470
+			425: 1628718471
+			426: 1628718472
+			427: 1628718473
+			428: 1628718474
+			429: 1628718475
+			430: 1628718476
+			431: 1628718477
+			432: 1628718478
+			433: 1628718479
+			434: 1628718480
+			435: 1628718481
+			436: 1628718482
+			437: 1628718483
+			438: 1628718484
+			439: 1628718485
+			440: 1628718486
+			441: 1628718487
+			442: 1628718488
+			443: 1628718489
+			444: 1628718490
+			445: 1628718491
+			446: 1628718492
+			447: 1628718493
+			448: 1628718494
+			449: 1628718495
+			450: 1628718496
+			451: 1628718497
+			452: 1628718498
+			453: 1628718499
+			454: 1628718500
+			455: 1628718501
+			456: 1628718502
+			457: 1628718503
+			458: 1628718504
+			459: 1628718505
+			460: 1628718506
+			461: 1628718507
+			462: 1628718508
+			463: 1628718509
+			464: 1628718510
+			465: 1628718511
+			466: 1628718512
+			467: 1628718513
+			468: 1628718514
+			469: 1628718515
+			470: 1628718516
+			471: 1628718517
+			472: 1628718518
+			473: 1628718519
+			474: 1628718520
+			475: 1628718521
+			476: 1628718522
+			477: 1628718523
+			478: 1628718524
+			479: 1628718525
+			480: 1628718526
+			481: 1628718527
+			482: 1628718528
+			483: 1628718529
+			484: 1628718530
+			485: 1628718531
+			486: 1628718532
+			487: 1628718533
+			488: 1628718534
+			489: 1628718535
+			490: 1628718536
+			491: 1628718537
+			492: 1628718538
+			493: 1628718539
+			494: 1628718540
+			495: 1628718541
+			496: 1628718542
+			497: 1628718543
+			498: 1628718544
+			499: 1628718545
+			500: 1628718546
+			501: 1628718547
+			502: 1628718548
+			503: 1628718549
+			504: 1628718550
+			505: 1628718551
+			506: 1628718552
+			507: 1628718553
+			508: 1628718554
+			509: 1628718555
+			510: 1628718556
+			511: 1628718557
+			512: 1628718558
+			513: 1628718559
+			514: 1628718560
+			515: 1628718561
+			516: 1628718562
+			517: 1628718563
+			518: 1628718564
+			519: 1628718565
+			520: 1628718566
+			521: 1628718567
+			522: 1628718568
+			523: 1628718569
+			524: 1628718570
+			525: 1628718571
+			526: 1628718572
+			527: 1628718573
+			528: 1628718574
+			529: 1628718575
+			530: 1628718576
+			531: 1628718577
+			532: 1628718578
+			533: 1628718579
+			534: 1628718580
+			535: 1628718581
+			536: 1628718582
+			537: 1628718583
+			538: 1628718584
+			539: 1628718585
+			540: 1628718586
+			541: 1628718587
+			542: 1628718588
+			543: 1628718589
+			544: 1628718590
+			545: 1628718591
+			546: 1628718592
+			547: 1628718593
+			548: 1628718594
+			549: 1628718595
+			550: 1628718596
+			551: 1628718597
+			552: 1628718598
+			553: 1628718599
+			554: 1628718600
+			555: 1628718601
+			556: 1628718602
+			557: 1628718603
+			558: 1628718604
+			559: 1628718605
+			560: 1628718606
+			561: 1628718607
+			562: 1628718608
+			563: 1628718609
+			564: 1628718610
+			565: 1628718611
+			566: 1628718612
+			567: 1628718613
+			568: 1628718614
+			569: 1628718615
+			570: 1628718616
+			571: 1628718617
+			572: 1628718618
+			573: 1628718619
+			574: 1628718620
+			575: 1628718621
+			576: 1628718622
+			577: 1628718623
+			578: 1628718624
+			579: 1628718625
+			580: 1628718626
+			581: 1628718627
+			582: 1628718628
+			583: 1628718629
+			584: 1628718630
+			585: 1628718631
+			586: 1628718632
+			587: 1628718633
+			588: 1628718634
+			589: 1628718635
+			590: 1628718636
+			591: 1628718637
+			592: 1628718638
+			593: 1628718639
+			594: 1628718640
+			595: 1628718641
+			596: 1628718642
+			597: 1628718643
+			598: 1628718644
+			599: 1628718645
+			600: 1628718646
+			601: 1628718647
+			602: 1628718648
+			603: 1628718649
+			604: 1628718650
+			605: 1628718651
+			606: 1628718652
+			607: 1628718653
+			608: 1628718654
+			609: 1628718655
+			610: 1628718656
+			611: 1628718657
+			612: 1628718658
+			613: 1628718659
+			614: 1628718660
+			615: 1628718661
+			616: 1628718662
+			617: 1628718663
+			618: 1628718664
+			619: 1628718665
+			620: 1628718666
+			621: 1628718667
+			622: 1628718668
+			623: 1628718669
+			624: 1628718670
+			625: 1628718671
+			626: 1628718672
+			627: 1628718673
+			628: 1628718674
+			629: 1628718675
+			630: 1628718676
+			631: 1628718677
+			632: 1628718678
+			633: 1628718679
+			634: 1628718680
+			635: 1628718681
+			636: 1628718682
+			637: 1628718683
+			638: 1628718684
+			639: 1628718685
+			640: 1628718686
+			641: 1628718687
+			642: 1628718688
+			643: 1628718689
+			644: 1628718690
+			645: 1628718691
+			646: 1628718692
+			647: 1628718693
+			648: 1628718694
+			649: 1628718695
+			650: 1628718696
+			651: 1628718697
+			652: 1628718698
+			653: 1628718699
+			654: 1628718700
+			655: 1628718701
+			656: 1628718702
+			657: 1628718703
+			658: 1628718704
+			659: 1628718705
+			660: 1628718706
+			661: 1628718707
+			662: 1628718708
+			663: 1628718709
+			664: 1628718710
+			665: 1628718711
+			666: 1628718712
+			667: 1628718713
+			668: 1628718714
+			669: 1628718715
+			670: 1628718716
+			671: 1628718717
+			672: 1628718718
+			673: 1628718719
+			674: 1628718720
+			675: 1628718721
+			676: 1628718722
+			677: 1628718723
+			678: 1628718724
+			679: 1628718725
+			680: 1628718726
+			681: 1628718727
+			682: 1628718728
+			683: 1628718729
+			684: 1628718730
+			685: 1628718731
+			686: 1628718732
+			687: 1628718733
+			688: 1628718734
+			689: 1628718735
+			690: 1628718736
+			691: 1628718737
+			692: 1628718738
+			693: 1628718739
+			694: 1628718740
+			695: 1628718741
+			696: 1628718742
+			697: 1628718743
+			698: 1628718744
+			699: 1628718745
+			700: 1628718746
+			701: 1628718747
+			702: 1628718748
+			703: 1628718749
+			704: 1628718750
+			705: 1628718751
+			706: 1628718752
+			707: 1628718753
+			708: 1628718754
+			709: 1628718755
+			710: 1628718756
+			711: 1628718757
+			712: 1628718758
+			713: 1628718759
+			714: 1628718760
+			715: 1628718761
+			716: 1628718762
+			717: 1628718763
+			718: 1628718764
+			719: 1628718765
+			720: 1628718766
+			721: 1628718767
+			722: 1628718768
+			723: 1628718769
+			724: 1628718770
+			725: 1628718771
+			726: 1628718772
+			727: 1628718773
+			728: 1628718774
+			729: 1628718775
+			730: 1628718776
+			731: 1628718777
+			732: 1628718778
+			733: 1628718779
+			734: 1628718780
+			735: 1628718781
+			736: 1628718782
+			737: 1628718783
+			738: 1628718784
+			739: 1628718785
+			740: 1628718786
+			741: 1628718787
+			742: 1628718788
+			743: 1628718789
+			744: 1628718790
+			745: 1628718791
+			746: 1628718792
+			747: 1628718793
+			748: 1628718794
+			749: 1628718795
+			750: 1628718796
+			751: 1628718797
+			752: 1628718798
+			753: 1628718799
+			754: 1628718800
+			755: 1628718801
+			756: 1628718802
+			757: 1628718803
+			758: 1628718804
+			759: 1628718805
+			760: 1628718806
+			761: 1628718807
+			762: 1628718808
+			763: 1628718809
+			764: 1628718810
+			765: 1628718811
+			766: 1628718812
+			767: 1628718813
+			768: 1628718814
+			769: 1628718815
+			770: 1628718816
+			771: 1628718817
+			772: 1628718818
+			773: 1628718819
+			774: 1628718820
+			775: 1628718821
+			776: 1628718822
+			777: 1628718823
+			778: 1628718824
+			779: 1628718825
+			780: 1628718826
+			781: 1628718827
+			782: 1628718828
+			783: 1628718829
+			784: 1628718830
+			785: 1628718831
+			786: 1628718832
+			787: 1628718833
+			788: 1628718834
+			789: 1628718835
+			790: 1628718836
+			791: 1628718837
+			792: 1628718838
+			793: 1628718839
+			794: 1628718840
+			795: 1628718841
+			796: 1628718842
+			797: 1628718843
+			798: 1628718844
+			799: 1628718845
+			800: 1628718846
+			801: 1628718847
+			802: 1628718848
+			803: 1628718849
+			804: 1628718850
+			805: 1628718851
+			806: 1628718852
+			807: 1628718853
+			808: 1628718854
+			809: 1628718855
+			810: 1628718856
+			811: 1628718857
+			812: 1628718858
+			813: 1628718859
+			814: 1628718860
+			815: 1628718861
+			816: 1628718862
+			817: 1628718863
+			818: 1628718864
+			819: 1628718865
+			820: 1628718866
+			821: 1628718867
+			822: 1628718868
+			823: 1628718869
+			824: 1628718870
+			825: 1628718871
+			826: 1628718872
+			827: 1628718873
+			828: 1628718874
+			829: 1628718875
+			830: 1628718876
+			831: 1628718877
+			832: 1628718878
+			833: 1628718879
+			834: 1628718880
+			835: 1628718881
+			836: 1628718882
+			837: 1628718883
+			838: 1628718884
+			839: 1628718885
+			840: 1628718886
+			841: 1628718887
+			842: 1628718888
+			843: 1628718889
+			844: 1628718890
+			845: 1628718891
+			846: 1628718892
+			847: 1628718893
+			848: 1628718894
+			849: 1628718895
+			850: 1628718896
+			851: 1628718897
+			852: 1628718898
+			853: 1628718899
+			854: 1628718900
+			855: 1628718901
+			856: 1628718902
+			857: 1628718903
+			858: 1628718904
+			859: 1628718905
+			860: 1628718906
+			861: 1628718907
+			862: 1628718908
+			863: 1628718909
+			864: 1628718910
+			865: 1628718911
+			866: 1628718912
+			867: 1628718913
+			868: 1628718914
+			869: 1628718915
+			870: 1628718916
+			871: 1628718917
+			872: 1628718918
+			873: 1628718919
+			874: 1628718920
+			875: 1628718921
+			876: 1628718922
+			877: 1628718923
+			878: 1628718924
+			879: 1628718925
+			880: 1628718926
+			881: 1628718927
+			882: 1628718928
+			883: 1628718929
+			884: 1628718930
+			885: 1628718931
+			886: 1628718932
+			887: 1628718933
+			888: 1628718934
+			889: 1628718935
+			890: 1628718936
+			891: 1628718937
+			892: 1628718938
+			893: 1628718939
+			894: 1628718940
+			895: 1628718941
+			896: 1628718942
+			897: 1628718943
+			898: 1628718944
+			899: 1628718945
+			900: 1628718946
+			901: 1628718947
+			902: 1628718948
+			903: 1628718949
+			904: 1628718950
+			905: 1628718951
+			906: 1628718952
+			907: 1628718953
+			908: 1628718954
+			909: 1628718955
+			910: 1628718956
+			911: 1628718957
+			912: 1628718958
+			913: 1628718959
+			914: 1628718960
+			915: 1628718961
+			916: 1628718962
+			917: 1628718963
+			918: 1628718964
+			919: 1628718965
+			920: 1628718966
+			921: 1628718967
+			922: 1628718968
+			923: 1628718969
+			924: 1628718970
+			925: 1628718971
+			926: 1628718972
+			927: 1628718973
+			928: 1628718974
+			929: 1628718975
+			930: 1628718976
+			931: 1628718977
+			932: 1628718978
+			933: 1628718979
+			934: 1628718980
+			935: 1628718981
+			936: 1628718982
+			937: 1628718983
+			938: 1628718984
+			939: 1628718985
+			940: 1628718986
+			941: 1628718987
+			942: 1628718988
+			943: 1628718989
+			944: 1628718990
+			945: 1628718991
+			946: 1628718992
+			947: 1628718993
+			948: 1628718994
+			949: 1628718995
+			950: 1628718996
+			951: 1628718997
+			952: 1628718998
+			953: 1628718999
+			954: 1628719000
+			955: 1628719001
+			956: 1628719002
+			957: 1628719003
+			958: 1628719004
+			959: 1628719005
+			960: 1628719006
+			961: 1628719007
+			962: 1628719008
+			963: 1628719009
+			964: 1628719010
+			965: 1628719011
+			966: 1628719012
+			967: 1628719013
+			968: 1628719014
+			969: 1628719015
+			970: 1628719016
+			971: 1628719017
+			972: 1628719018
+			973: 1628719019
+			974: 1628719020
+			975: 1628719021
+			976: 1628719022
+			977: 1628719023
+			978: 1628719024
+			979: 1628719025
+			980: 1628719026
+			981: 1628719027
+			982: 1628719028
+			983: 1628719029
+			984: 1628719030
+			985: 1628719031
+			986: 1628719032
+			987: 1628719033
+			988: 1628719034
+			989: 1628719035
+			990: 1628719036
+			991: 1628719037
+			992: 1628719038
+			993: 1628719039
+			994: 1628719040
+			995: 1628719041
+			996: 1628719042
+			997: 1628719043
+			998: 1628719044
+			999: 1628719045
 	msg_type: "history"
 	pip_size: 2
 	req_id: 15
@@ -534,255 +4180,1686 @@ Chaves:
 	msg_type: "residence_list"
 	req_id: 21
 	residence_list: 
-		0: object
-		1: object
-		2: object
-		3: object
-		4: object
-		5: object
-		6: object
-		7: object
-		8: object
-		9: object
-		10: object
-		11: object
-		12: object
-		13: object
-		14: object
-		15: object
-		16: object
-		17: object
-		18: object
-		19: object
-		20: object
-		21: object
-		22: object
-		23: object
-		24: object
-		25: object
-		26: object
-		27: object
-		28: object
-		29: object
-		30: object
-		31: object
-		32: object
-		33: object
-		34: object
-		35: object
-		36: object
-		37: object
-		38: object
-		39: object
-		40: object
-		41: object
-		42: object
-		43: object
-		44: object
-		45: object
-		46: object
-		47: object
-		48: object
-		49: object
-		50: object
-		51: object
-		52: object
-		53: object
-		54: object
-		55: object
-		56: object
-		57: object
-		58: object
-		59: object
-		60: object
-		61: object
-		62: object
-		63: object
-		64: object
-		65: object
-		66: object
-		67: object
-		68: object
-		69: object
-		70: object
-		71: object
-		72: object
-		73: object
-		74: object
-		75: object
-		76: object
-		77: object
-		78: object
-		79: object
-		80: object
-		81: object
-		82: object
-		83: object
-		84: object
-		85: object
-		86: object
-		87: object
-		88: object
-		89: object
-		90: object
-		91: object
-		92: object
-		93: object
-		94: object
-		95: object
-		96: object
-		97: object
-		98: object
-		99: object
-		100: object
-		101: object
-		102: object
-		103: object
-		104: object
-		105: object
-		106: object
-		107: object
-		108: object
-		109: object
-		110: object
-		111: object
-		112: object
-		113: object
-		114: object
-		115: object
-		116: object
-		117: object
-		118: object
-		119: object
-		120: object
-		121: object
-		122: object
-		123: object
-		124: object
-		125: object
-		126: object
-		127: object
-		128: object
-		129: object
-		130: object
-		131: object
-		132: object
-		133: object
-		134: object
-		135: object
-		136: object
-		137: object
-		138: object
-		139: object
-		140: object
-		141: object
-		142: object
-		143: object
-		144: object
-		145: object
-		146: object
-		147: object
-		148: object
-		149: object
-		150: object
-		151: object
-		152: object
-		153: object
-		154: object
-		155: object
-		156: object
-		157: object
-		158: object
-		159: object
-		160: object
-		161: object
-		162: object
-		163: object
-		164: object
-		165: object
-		166: object
-		167: object
-		168: object
-		169: object
-		170: object
-		171: object
-		172: object
-		173: object
-		174: object
-		175: object
-		176: object
-		177: object
-		178: object
-		179: object
-		180: object
-		181: object
-		182: object
-		183: object
-		184: object
-		185: object
-		186: object
-		187: object
-		188: object
-		189: object
-		190: object
-		191: object
-		192: object
-		193: object
-		194: object
-		195: object
-		196: object
-		197: object
-		198: object
-		199: object
-		200: object
-		201: object
-		202: object
-		203: object
-		204: object
-		205: object
-		206: object
-		207: object
-		208: object
-		209: object
-		210: object
-		211: object
-		212: object
-		213: object
-		214: object
-		215: object
-		216: object
-		217: object
-		218: object
-		219: object
-		220: object
-		221: object
-		222: object
-		223: object
-		224: object
-		225: object
-		226: object
-		227: object
-		228: object
-		229: object
-		230: object
-		231: object
-		232: object
-		233: object
-		234: object
-		235: object
-		236: object
-		237: object
-		238: object
-		239: object
-		240: object
-		241: object
-		242: object
-		243: object
-		244: object
-		245: object
-		246: object
-		247: object
-		248: object
+		0: 
+			identity: 
+				services: object
+			phone_idd: "93"
+			text: "Afeganistão"
+			value: "af"
+		1: 
+			identity: 
+				services: object
+			phone_idd: "355"
+			text: "Albânia"
+			tin_format: 
+				0: "^[A-Ta-t0-9]\\d{8}[A-Wa-w]$"
+			value: "al"
+		2: 
+			identity: 
+				services: object
+			phone_idd: "49"
+			text: "Alemanha"
+			tin_format: 
+				0: "^\\d{11}$"
+			value: "de"
+		3: 
+			identity: 
+				services: object
+			phone_idd: "376"
+			text: "Andorra"
+			tin_format: 
+				0: "^[FfEeAaLlCcDdGgOoPpUu]\\d{6}[a-zA-Z]$"
+			value: "ad"
+		4: 
+			identity: 
+				services: object
+			phone_idd: "244"
+			text: "Angola"
+			value: "ao"
+		5: 
+			identity: 
+				services: object
+			phone_idd: "1264"
+			text: "Anguilla"
+			value: "ai"
+		6: 
+			identity: 
+				services: object
+			phone_idd: "672"
+			selected: "selected"
+			text: "Antártida"
+			value: "aq"
+		7: 
+			identity: 
+				services: object
+			phone_idd: "1268"
+			text: "Antígua e Barbuda"
+			tin_format: 
+				0: "^\\d{6}$"
+			value: "ag"
+		8: 
+			identity: 
+				services: object
+			phone_idd: "54"
+			text: "Argentina"
+			tin_format: 
+				0: "^(20|23|24|25|26|27|30|33)\\d{9}$"
+			value: "ar"
+		9: 
+			identity: 
+				services: object
+			phone_idd: "213"
+			text: "Argélia"
+			value: "dz"
+		10: 
+			identity: 
+				services: object
+			phone_idd: "374"
+			text: "Armênia"
+			value: "am"
+		11: 
+			identity: 
+				services: object
+			phone_idd: "297"
+			text: "Aruba"
+			tin_format: 
+				0: "^\\d{8}$"
+			value: "aw"
+		12: 
+			identity: 
+				services: object
+			phone_idd: "966"
+			text: "Arábia Saudita"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "sa"
+		13: 
+			identity: 
+				services: object
+			phone_idd: "61"
+			text: "Austrália"
+			value: "au"
+		14: 
+			identity: 
+				services: object
+			phone_idd: "994"
+			text: "Azerbaijão"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "az"
+		15: 
+			identity: 
+				services: object
+			phone_idd: "1242"
+			text: "Bahamas"
+			value: "bs"
+		16: 
+			identity: 
+				services: object
+			phone_idd: "973"
+			text: "Bahrein"
+			value: "bh"
+		17: 
+			identity: 
+				services: object
+			phone_idd: "880"
+			text: "Bangladesh"
+			value: "bd"
+		18: 
+			identity: 
+				services: object
+			phone_idd: "1246"
+			text: "Barbados"
+			value: "bb"
+		19: 
+			identity: 
+				services: object
+			phone_idd: "501"
+			text: "Belize"
+			tin_format: 
+				0: "^\\d{6}(10|13|66)$"
+			value: "bz"
+		20: 
+			identity: 
+				services: object
+			phone_idd: "229"
+			text: "Benin"
+			value: "bj"
+		21: 
+			identity: 
+				services: object
+			phone_idd: "1441"
+			text: "Bermudas"
+			value: "bm"
+		22: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "375"
+			text: "Bielorrússia"
+			value: "by"
+		23: 
+			identity: 
+				services: object
+			phone_idd: "591"
+			text: "Bolívia"
+			value: "bo"
+		24: 
+			identity: 
+				services: object
+			phone_idd: "267"
+			text: "Botsuana"
+			value: "bw"
+		25: 
+			identity: 
+				services: object
+			phone_idd: "55"
+			text: "Brasil"
+			tin_format: 
+				0: "^(\\d{11}|\\d{14})$"
+			value: "br"
+		26: 
+			identity: 
+				services: object
+			phone_idd: "673"
+			text: "Brunei"
+			value: "bn"
+		27: 
+			identity: 
+				services: object
+			phone_idd: "359"
+			text: "Bulgária"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "bg"
+		28: 
+			identity: 
+				services: object
+			phone_idd: "226"
+			text: "Burquina Faso"
+			value: "bf"
+		29: 
+			identity: 
+				services: object
+			phone_idd: "257"
+			text: "Burundi"
+			value: "bi"
+		30: 
+			identity: 
+				services: object
+			phone_idd: "975"
+			text: "Butão"
+			value: "bt"
+		31: 
+			identity: 
+				services: object
+			phone_idd: "32"
+			text: "Bélgica"
+			value: "be"
+		32: 
+			identity: 
+				services: object
+			phone_idd: "387"
+			text: "Bósnia e Herzegovina"
+			value: "ba"
+		33: 
+			identity: 
+				services: object
+			phone_idd: "238"
+			text: "Cabo Verde"
+			value: "cv"
+		34: 
+			identity: 
+				services: object
+			phone_idd: "855"
+			text: "Camboja"
+			value: "kh"
+		35: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			text: "Canadá"
+			value: "ca"
+		36: 
+			identity: 
+				services: object
+			phone_idd: "974"
+			text: "Catar"
+			value: "qa"
+		37: 
+			identity: 
+				services: object
+			phone_idd: "7"
+			text: "Cazaquistão"
+			tin_format: 
+				0: "^\\d{12}$"
+			value: "kz"
+		38: 
+			identity: 
+				services: object
+			phone_idd: "235"
+			text: "Chade"
+			value: "td"
+		39: 
+			identity: 
+				services: object
+			phone_idd: "56"
+			text: "Chile"
+			tin_format: 
+				0: "^\\d{7,8}[0-9Kk]$"
+			value: "cl"
+		40: 
+			identity: 
+				services: object
+			phone_idd: "86"
+			text: "China"
+			tin_format: 
+				0: "^\\d{17}[Xx\\d]$"
+				1: "^[CcWwHhMmTt]\\d{16}[xX\\d]$"
+				2: "^[Jj]\\d{14}$"
+				3: "^(\\d{15}|\\d{18})$"
+				4: "^\\d{8}\\w{10}$"
+			value: "cn"
+		41: 
+			identity: 
+				services: object
+			phone_idd: "357"
+			text: "Chipre"
+			tin_format: 
+				0: "^\\d{8}[A-Za-z]$"
+			value: "cy"
+		42: 
+			identity: 
+				services: object
+			phone_idd: "379"
+			text: "Cidade do Vaticano"
+			value: "va"
+		43: 
+			identity: 
+				services: object
+			phone_idd: "65"
+			text: "Cingapura"
+			tin_format: 
+				0: "^[SsTtFfGg]\\d{7}[A-Za-z]$"
+				1: "^[A-Za-z]{9,10}$"
+				2: "^[Ff]0000\\d{6}$"
+				3: "^[Ff]\\d{9}$"
+				4: "^([Ss]|[Tt][4])\\d{9}$"
+				5: "^[Aa]\\d{9}$"
+			value: "sg"
+		44: 
+			identity: 
+				services: object
+			phone_idd: "57"
+			text: "Colômbia"
+			tin_format: 
+				0: "^\\d{8,10}$"
+			value: "co"
+		45: 
+			identity: 
+				services: object
+			phone_idd: "269"
+			text: "Comores"
+			value: "km"
+		46: 
+			identity: 
+				services: object
+			phone_idd: "242"
+			text: "Congo - Brazzaville"
+			value: "cg"
+		47: 
+			identity: 
+				services: object
+			phone_idd: "243"
+			text: "Congo - Kinshasa"
+			value: "cd"
+		48: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "850"
+			text: "Coreia do Norte"
+			value: "kp"
+		49: 
+			identity: 
+				services: object
+			phone_idd: "82"
+			text: "Coreia do Sul"
+			tin_format: 
+				0: "^\\d{13}$"
+			value: "kr"
+		50: 
+			identity: 
+				services: object
+			phone_idd: "506"
+			text: "Costa Rica"
+			tin_format: 
+				0: "^\\d{9,12}$"
+			value: "cr"
+		51: 
+			identity: 
+				services: object
+			phone_idd: "225"
+			text: "Costa do Marfim"
+			value: "ci"
+		52: 
+			identity: 
+				services: object
+			phone_idd: "385"
+			text: "Croácia"
+			tin_format: 
+				0: "^\\d{11}$"
+			value: "hr"
+		53: 
+			identity: 
+				services: object
+			phone_idd: "53"
+			text: "Cuba"
+			value: "cu"
+		54: 
+			identity: 
+				services: object
+			phone_idd: "5999"
+			text: "Curaçao"
+			value: "cw"
+		55: 
+			identity: 
+				services: object
+			phone_idd: "45"
+			text: "Dinamarca"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "dk"
+		56: 
+			identity: 
+				services: object
+			phone_idd: "253"
+			text: "Djibuti"
+			value: "dj"
+		57: 
+			identity: 
+				services: object
+			phone_idd: "1767"
+			text: "Dominica"
+			tin_format: 
+				0: "^[1-9]\\d{5}$"
+			value: "dm"
+		58: 
+			identity: 
+				services: object
+			phone_idd: "20"
+			text: "Egito"
+			value: "eg"
+		59: 
+			identity: 
+				services: object
+			phone_idd: "503"
+			text: "El Salvador"
+			value: "sv"
+		60: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "971"
+			text: "Emirados Árabes Unidos"
+			value: "ae"
+		61: 
+			identity: 
+				services: object
+			phone_idd: "593"
+			text: "Equador"
+			tin_format: 
+				0: "^\\d{10}001$"
+				1: "^\\d{2}6\\d{6}0001$"
+			value: "ec"
+		62: 
+			identity: 
+				services: object
+			phone_idd: "291"
+			text: "Eritreia"
+			value: "er"
+		63: 
+			identity: 
+				services: object
+			phone_idd: "421"
+			text: "Eslováquia"
+			tin_format: 
+				0: "^\\d{9,10}$"
+			value: "sk"
+		64: 
+			identity: 
+				services: object
+			phone_idd: "386"
+			text: "Eslovênia"
+			tin_format: 
+				0: "^\\d{8}$"
+			value: "si"
+		65: 
+			identity: 
+				services: object
+			phone_idd: "34"
+			text: "Espanha"
+			tin_format: 
+				0: "^[KkLlMmXxYyZz]\\d{7}[A-Za-z]$"
+				1: "^\\d{8}[A-Za-z]$"
+			value: "es"
+		66: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "1"
+			text: "Estados Unidos"
+			value: "us"
+		67: 
+			identity: 
+				services: object
+			phone_idd: "372"
+			text: "Estônia"
+			tin_format: 
+				0: "^\\d{11}$"
+			value: "ee"
+		68: 
+			identity: 
+				services: object
+			phone_idd: "251"
+			text: "Etiópia"
+			value: "et"
+		69: 
+			identity: 
+				services: object
+			phone_idd: "679"
+			text: "Fiji"
+			value: "fj"
+		70: 
+			identity: 
+				services: object
+			phone_idd: "63"
+			text: "Filipinas"
+			value: "ph"
+		71: 
+			identity: 
+				services: object
+			phone_idd: "358"
+			text: "Finlândia"
+			tin_format: 
+				0: "^\\d{6}[-+A]\\d{3}\\w$"
+			value: "fi"
+		72: 
+			identity: 
+				services: object
+			phone_idd: "33"
+			text: "França"
+			tin_format: 
+				0: "^\\d{13}$"
+			value: "fr"
+		73: 
+			identity: 
+				services: object
+			phone_idd: "241"
+			text: "Gabão"
+			value: "ga"
+		74: 
+			identity: 
+				services: object
+			phone_idd: "233"
+			text: "Gana"
+			tin_format: 
+				0: "^[A-Za-z]\\d{10}$"
+			value: "gh"
+		75: 
+			identity: 
+				services: object
+			phone_idd: "995"
+			text: "Geórgia"
+			value: "ge"
+		76: 
+			identity: 
+				services: object
+			phone_idd: "500"
+			text: "Geórgia do Sul e Ilhas Sandwich do Sul"
+			value: "gs"
+		77: 
+			identity: 
+				services: object
+			phone_idd: "350"
+			text: "Gibraltar"
+			tin_format: 
+				0: "^\\d{6}$"
+			value: "gi"
+		78: 
+			identity: 
+				services: object
+			phone_idd: "1473"
+			text: "Granada"
+			tin_format: 
+				0: "^\\d{8}$"
+			value: "gd"
+		79: 
+			identity: 
+				services: object
+			phone_idd: "299"
+			text: "Groênlandia"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "gl"
+		80: 
+			identity: 
+				services: object
+			phone_idd: "30"
+			text: "Grécia"
+			tin_format: 
+				0: "^\\d{9}$"
+			value: "gr"
+		81: 
+			identity: 
+				services: object
+			phone_idd: "590"
+			text: "Guadalupe"
+			value: "gp"
+		82: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "671"
+			text: "Guam"
+			value: "gu"
+		83: 
+			identity: 
+				services: object
+			phone_idd: "502"
+			text: "Guatemala"
+			value: "gt"
+		84: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "441481"
+			text: "Guernsey"
+			value: "gg"
+		85: 
+			identity: 
+				services: object
+			phone_idd: "592"
+			text: "Guiana"
+			value: "gy"
+		86: 
+			identity: 
+				services: object
+			phone_idd: "594"
+			text: "Guiana Francesa"
+			value: "gf"
+		87: 
+			identity: 
+				services: object
+			phone_idd: "224"
+			text: "Guiné"
+			value: "gn"
+		88: 
+			identity: 
+				services: object
+			phone_idd: "245"
+			text: "Guiné Bissau"
+			value: "gw"
+		89: 
+			identity: 
+				services: object
+			phone_idd: "240"
+			text: "Guiné Equatorial"
+			value: "gq"
+		90: 
+			identity: 
+				services: object
+			phone_idd: "220"
+			text: "Gâmbia"
+			value: "gm"
+		91: 
+			identity: 
+				services: object
+			phone_idd: "509"
+			text: "Haiti"
+			value: "ht"
+		92: 
+			identity: 
+				services: object
+			phone_idd: "31"
+			text: "Holanda"
+			tin_format: 
+				0: "^\\d{9}$"
+			value: "nl"
+		93: 
+			identity: 
+				services: object
+			phone_idd: "504"
+			text: "Honduras"
+			value: "hn"
+		94: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "852"
+			text: "Hong Kong, RAE da China"
+			value: "hk"
+		95: 
+			identity: 
+				services: object
+			phone_idd: "36"
+			text: "Hungria"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "hu"
+		96: 
+			identity: 
+				services: object
+			text: "Ilha Bouvet"
+			value: "bv"
+		97: 
+			identity: 
+				services: object
+			text: "Ilha Heard e Ilhas McDonald"
+			value: "hm"
+		98: 
+			identity: 
+				services: object
+			phone_idd: "6723"
+			text: "Ilha Norfolk"
+			value: "nf"
+		99: 
+			identity: 
+				services: object
+			phone_idd: "44"
+			text: "Ilha de Man"
+			value: "im"
+		100: 
+			identity: 
+				services: object
+			phone_idd: "1345"
+			text: "Ilhas Caiman"
+			value: "ky"
+		101: 
+			identity: 
+				services: object
+			phone_idd: "6189162"
+			text: "Ilhas Coco"
+			value: "cc"
+		102: 
+			identity: 
+				services: object
+			phone_idd: "682"
+			text: "Ilhas Cook"
+			tin_format: 
+				0: "^\\d{5}$"
+			value: "ck"
+		103: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			text: "Ilhas Distantes dos EUA"
+			value: "um"
+		104: 
+			identity: 
+				services: object
+			phone_idd: "298"
+			text: "Ilhas Faroe"
+			tin_format: 
+				0: "^\\d{9}$"
+			value: "fo"
+		105: 
+			identity: 
+				services: object
+			phone_idd: "500"
+			text: "Ilhas Malvinas"
+			value: "fk"
+		106: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "1670"
+			text: "Ilhas Marianas do Norte"
+			value: "mp"
+		107: 
+			identity: 
+				services: object
+			phone_idd: "692"
+			text: "Ilhas Marshall"
+			tin_format: 
+				0: "^\\d{7,8}$"
+			value: "mh"
+		108: 
+			identity: 
+				services: object
+			phone_idd: "618"
+			text: "Ilhas Natal"
+			value: "cx"
+		109: 
+			identity: 
+				services: object
+			phone_idd: "649"
+			text: "Ilhas Pitcairn"
+			value: "pn"
+		110: 
+			identity: 
+				services: object
+			phone_idd: "677"
+			text: "Ilhas Salomão"
+			value: "sb"
+		111: 
+			identity: 
+				services: object
+			phone_idd: "1649"
+			text: "Ilhas Turks e Caicos"
+			value: "tc"
+		112: 
+			identity: 
+				services: object
+			phone_idd: "1284"
+			text: "Ilhas Virgens Britânicas"
+			value: "vg"
+		113: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "1340"
+			text: "Ilhas Virgens dos EUA"
+			value: "vi"
+		114: 
+			identity: 
+				services: object
+			phone_idd: "35818"
+			text: "Ilhas Åland"
+			value: "ax"
+		115: 
+			identity: 
+				services: object
+			phone_idd: "62"
+			text: "Indonésia"
+			tin_format: 
+				0: "^\\d{15}$"
+			value: "id"
+		116: 
+			identity: 
+				services: object
+			phone_idd: "964"
+			text: "Iraque"
+			value: "iq"
+		117: 
+			identity: 
+				services: object
+			phone_idd: "353"
+			text: "Irlanda"
+			tin_format: 
+				0: "^\\d{7}[A-Za-z]{1,2}$"
+			value: "ie"
+		118: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "98"
+			text: "Irã"
+			value: "ir"
+		119: 
+			identity: 
+				services: object
+			phone_idd: "354"
+			text: "Islândia"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "is"
+		120: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "972"
+			text: "Israel"
+			value: "il"
+		121: 
+			identity: 
+				services: object
+			phone_idd: "39"
+			text: "Itália"
+			tin_format: 
+				0: "^[A-Za-z]{6}\\d{2}[A-Za-z]\\d{2}[A-Za-z]\\d{3}[A-Za-z]$"
+			value: "it"
+		122: 
+			identity: 
+				services: object
+			phone_idd: "967"
+			text: "Iêmen"
+			value: "ye"
+		123: 
+			identity: 
+				services: object
+			phone_idd: "1876"
+			text: "Jamaica"
+			value: "jm"
+		124: 
+			identity: 
+				services: object
+			phone_idd: "81"
+			text: "Japão"
+			value: "jp"
+		125: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "441534"
+			text: "Jersey"
+			value: "je"
+		126: 
+			identity: 
+				services: object
+			phone_idd: "962"
+			text: "Jordânia"
+			value: "jo"
+		127: 
+			identity: 
+				services: object
+			phone_idd: "965"
+			text: "Kuwait"
+			tin_format: 
+				0: "^\\d{12}$"
+			value: "kw"
+		128: 
+			identity: 
+				services: object
+			phone_idd: "856"
+			text: "Laos"
+			value: "la"
+		129: 
+			identity: 
+				services: object
+			phone_idd: "266"
+			text: "Lesoto"
+			value: "ls"
+		130: 
+			identity: 
+				services: object
+			phone_idd: "371"
+			text: "Letônia"
+			tin_format: 
+				0: "^\\d{11}$"
+				1: "^32\\d{9}$"
+			value: "lv"
+		131: 
+			identity: 
+				services: object
+			phone_idd: "231"
+			text: "Libéria"
+			value: "lr"
+		132: 
+			identity: 
+				services: object
+			phone_idd: "417"
+			text: "Liechtenstein"
+			tin_format: 
+				0: "^\\d{1,12}$"
+			value: "li"
+		133: 
+			identity: 
+				services: object
+			phone_idd: "370"
+			text: "Lituânia"
+			tin_format: 
+				0: "^\\d{11}$"
+			value: "lt"
+		134: 
+			identity: 
+				services: object
+			phone_idd: "352"
+			text: "Luxemburgo"
+			tin_format: 
+				0: "^\\d{13}$"
+			value: "lu"
+		135: 
+			identity: 
+				services: object
+			phone_idd: "961"
+			text: "Líbano"
+			tin_format: 
+				0: "^\\d+$"
+			value: "lb"
+		136: 
+			identity: 
+				services: object
+			phone_idd: "218"
+			text: "Líbia"
+			value: "ly"
+		137: 
+			identity: 
+				services: object
+			phone_idd: "853"
+			text: "Macau, RAE da China"
+			tin_format: 
+				0: "^\\d+$"
+			value: "mo"
+		138: 
+			identity: 
+				services: object
+			phone_idd: "389"
+			text: "Macedônia"
+			value: "mk"
+		139: 
+			identity: 
+				services: object
+			phone_idd: "261"
+			text: "Madagascar"
+			value: "mg"
+		140: 
+			identity: 
+				services: object
+			phone_idd: "265"
+			text: "Malawi"
+			value: "mw"
+		141: 
+			identity: 
+				services: object
+			phone_idd: "960"
+			text: "Maldivas"
+			value: "mv"
+		142: 
+			identity: 
+				services: object
+			phone_idd: "223"
+			text: "Mali"
+			value: "ml"
+		143: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "356"
+			text: "Malta"
+			value: "mt"
+		144: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "60"
+			text: "Malásia"
+			value: "my"
+		145: 
+			identity: 
+				services: object
+			phone_idd: "212"
+			text: "Marrocos"
+			value: "ma"
+		146: 
+			identity: 
+				services: object
+			phone_idd: "596"
+			text: "Martinica"
+			value: "mq"
+		147: 
+			identity: 
+				services: object
+			phone_idd: "222"
+			text: "Mauritânia"
+			value: "mr"
+		148: 
+			identity: 
+				services: object
+			phone_idd: "230"
+			text: "Maurício"
+			tin_format: 
+				0: "^[17823]\\d{7}$"
+			value: "mu"
+		149: 
+			identity: 
+				services: object
+			phone_idd: "262269"
+			text: "Mayotte"
+			value: "yt"
+		150: 
+			identity: 
+				services: object
+			phone_idd: "95"
+			text: "Mianmar (Birmânia)"
+			value: "mm"
+		151: 
+			identity: 
+				services: object
+			phone_idd: "691"
+			text: "Micronésia"
+			value: "fm"
+		152: 
+			identity: 
+				services: object
+			phone_idd: "373"
+			text: "Moldávia"
+			value: "md"
+		153: 
+			identity: 
+				services: object
+			phone_idd: "976"
+			text: "Mongólia"
+			value: "mn"
+		154: 
+			identity: 
+				services: object
+			phone_idd: "382"
+			text: "Montenegro"
+			value: "me"
+		155: 
+			identity: 
+				services: object
+			phone_idd: "1664"
+			text: "Montserrat"
+			value: "ms"
+		156: 
+			identity: 
+				services: object
+			phone_idd: "258"
+			text: "Moçambique"
+			value: "mz"
+		157: 
+			identity: 
+				services: object
+			phone_idd: "52"
+			text: "México"
+			tin_format: 
+				0: "^[a-zA-Z]{3,4}\\d{6}\\w{3}$"
+			value: "mx"
+		158: 
+			identity: 
+				services: object
+			phone_idd: "377"
+			text: "Mônaco"
+			value: "mc"
+		159: 
+			identity: 
+				services: object
+			phone_idd: "264"
+			text: "Namíbia"
+			value: "na"
+		160: 
+			identity: 
+				services: object
+			phone_idd: "674"
+			text: "Nauru"
+			tin_format: 
+				0: "^\\d{9}$"
+			value: "nr"
+		161: 
+			identity: 
+				services: object
+			phone_idd: "977"
+			text: "Nepal"
+			value: "np"
+		162: 
+			identity: 
+				services: object
+			phone_idd: "505"
+			text: "Nicarágua"
+			value: "ni"
+		163: 
+			identity: 
+				services: object
+			phone_idd: "234"
+			text: "Nigéria"
+			tin_format: 
+				0: "^\\d{10}$"
+				1: "^\\d{8}$"
+				2: "^[A-Za-z]\\d{4,8}$"
+				3: "^\\d{11}$"
+			value: "ng"
+		164: 
+			identity: 
+				services: object
+			phone_idd: "683"
+			text: "Niue"
+			value: "nu"
+		165: 
+			identity: 
+				services: object
+			phone_idd: "47"
+			text: "Noruega"
+			value: "no"
+		166: 
+			identity: 
+				services: object
+			phone_idd: "687"
+			text: "Nova Caledônia"
+			value: "nc"
+		167: 
+			identity: 
+				services: object
+			phone_idd: "64"
+			text: "Nova Zelândia"
+			tin_format: 
+				0: "^\\d{8,9}$"
+			value: "nz"
+		168: 
+			identity: 
+				services: object
+			phone_idd: "227"
+			text: "Níger"
+			value: "ne"
+		169: 
+			identity: 
+				services: object
+			phone_idd: "968"
+			text: "Omã"
+			value: "om"
+		170: 
+			identity: 
+				services: object
+			phone_idd: "680"
+			text: "Palau"
+			value: "pw"
+		171: 
+			identity: 
+				services: object
+			phone_idd: "507"
+			text: "Panamá"
+			tin_format: 
+				0: "^[a-zA-Z0-9]\\d{7}$"
+			value: "pa"
+		172: 
+			identity: 
+				services: object
+			phone_idd: "675"
+			text: "Papua-Nova Guiné"
+			value: "pg"
+		173: 
+			identity: 
+				services: object
+			phone_idd: "92"
+			text: "Paquistão"
+			tin_format: 
+				0: "^\\d{13}$"
+				1: "^\\d{7}$"
+			value: "pk"
+		174: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "595"
+			text: "Paraguai"
+			value: "py"
+		175: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			text: "Países Baixos Caribenhos"
+			value: "bq"
+		176: 
+			identity: 
+				services: object
+			phone_idd: "51"
+			text: "Peru"
+			value: "pe"
+		177: 
+			identity: 
+				services: object
+			phone_idd: "689"
+			text: "Polinésia Francesa"
+			value: "pf"
+		178: 
+			identity: 
+				services: object
+			phone_idd: "48"
+			text: "Polônia"
+			tin_format: 
+				0: "^\\d{10,11}$"
+			value: "pl"
+		179: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "1787"
+			text: "Porto Rico"
+			value: "pr"
+		180: 
+			identity: 
+				services: object
+			phone_idd: "351"
+			text: "Portugal"
+			tin_format: 
+				0: "^\\d{9}$"
+			value: "pt"
+		181: 
+			identity: 
+				services: object
+			phone_idd: "996"
+			text: "Quirguistão"
+			value: "kg"
+		182: 
+			identity: 
+				services: object
+			phone_idd: "686"
+			text: "Quiribati"
+			value: "ki"
+		183: 
+			identity: 
+				services: object
+			phone_idd: "254"
+			text: "Quênia"
+			value: "ke"
+		184: 
+			identity: 
+				services: object
+			phone_idd: "44"
+			text: "Reino Unido"
+			tin_format: 
+				0: "^\\d{10}$"
+				1: "^[A-Za-z]{2}\\d{6}[A-Za-z]$"
+			value: "gb"
+		185: 
+			identity: 
+				services: object
+			phone_idd: "236"
+			text: "República Centro-Africana"
+			value: "cf"
+		186: 
+			identity: 
+				services: object
+			phone_idd: "1809"
+			text: "República Dominicana"
+			value: "do"
+		187: 
+			identity: 
+				services: object
+			phone_idd: "420"
+			text: "República Tcheca"
+			tin_format: 
+				0: "^\\d{9,10}$"
+			value: "cz"
+		188: 
+			identity: 
+				services: object
+			phone_idd: "237"
+			text: "República dos Camarões"
+			value: "cm"
+		189: 
+			identity: 
+				services: object
+			phone_idd: "262"
+			text: "Reunião"
+			value: "re"
+		190: 
+			identity: 
+				services: object
+			phone_idd: "40"
+			text: "Romênia"
+			tin_format: 
+				0: "^\\d{13}$"
+			value: "ro"
+		191: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "250"
+			text: "Ruanda"
+			value: "rw"
+		192: 
+			identity: 
+				services: object
+			phone_idd: "7"
+			text: "Rússia"
+			tin_format: 
+				0: "^\\d{12}$"
+			value: "ru"
+		193: 
+			identity: 
+				services: object
+			phone_idd: "21"
+			text: "Saara Ocidental"
+			value: "eh"
+		194: 
+			identity: 
+				services: object
+			phone_idd: "508"
+			text: "Saint Pierre e Miquelon"
+			value: "pm"
+		195: 
+			identity: 
+				services: object
+			phone_idd: "685"
+			text: "Samoa"
+			value: "ws"
+		196: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "684"
+			text: "Samoa Americana"
+			value: "as"
+		197: 
+			identity: 
+				services: object
+			phone_idd: "378"
+			text: "San Marino"
+			tin_format: 
+				0: "^\\d{8,9}$"
+				1: "^[SsMm]\\d{5}$"
+			value: "sm"
+		198: 
+			identity: 
+				services: object
+			phone_idd: "290"
+			text: "Santa Helena"
+			value: "sh"
+		199: 
+			identity: 
+				services: object
+			phone_idd: "1758"
+			text: "Santa Lúcia"
+			tin_format: 
+				0: "^\\d{1,6}$"
+			value: "lc"
+		200: 
+			identity: 
+				services: object
+			phone_idd: "221"
+			text: "Senegal"
+			value: "sn"
+		201: 
+			identity: 
+				services: object
+			phone_idd: "232"
+			text: "Serra Leoa"
+			value: "sl"
+		202: 
+			identity: 
+				services: object
+			phone_idd: "248"
+			text: "Seychelles"
+			tin_format: 
+				0: "^\\d{2}[1-7]\\d{6}$"
+			value: "sc"
+		203: 
+			identity: 
+				services: object
+			phone_idd: "1721"
+			text: "Sint Maarten"
+			value: "sx"
+		204: 
+			identity: 
+				services: object
+			phone_idd: "252"
+			text: "Somália"
+			value: "so"
+		205: 
+			identity: 
+				services: object
+			phone_idd: "94"
+			text: "Sri Lanka"
+			value: "lk"
+		206: 
+			identity: 
+				services: object
+			phone_idd: "268"
+			text: "Suazilândia"
+			value: "sz"
+		207: 
+			identity: 
+				services: object
+			phone_idd: "249"
+			text: "Sudão"
+			value: "sd"
+		208: 
+			identity: 
+				services: object
+			phone_idd: "211"
+			text: "Sudão do Sul"
+			value: "ss"
+		209: 
+			identity: 
+				services: object
+			phone_idd: "597"
+			text: "Suriname"
+			value: "sr"
+		210: 
+			identity: 
+				services: object
+			phone_idd: "46"
+			text: "Suécia"
+			tin_format: 
+				0: "^\\d{10}$"
+				1: "^\\d{12}$"
+			value: "se"
+		211: 
+			identity: 
+				services: object
+			phone_idd: "41"
+			text: "Suíça"
+			tin_format: 
+				0: "^759\\d{10}$"
+				1: "^(CHE|che)\\d{9}$"
+			value: "ch"
+		212: 
+			identity: 
+				services: object
+			phone_idd: "4779"
+			text: "Svalbard e Jan Mayen"
+			value: "sj"
+		213: 
+			identity: 
+				services: object
+			phone_idd: "590"
+			text: "São Bartolomeu"
+			value: "bl"
+		214: 
+			identity: 
+				services: object
+			phone_idd: "1869"
+			text: "São Cristovão e Nevis"
+			value: "kn"
+		215: 
+			identity: 
+				services: object
+			phone_idd: "590"
+			text: "São Martinho"
+			value: "mf"
+		216: 
+			identity: 
+				services: object
+			phone_idd: "239"
+			text: "São Tomé e Príncipe"
+			value: "st"
+		217: 
+			identity: 
+				services: object
+			phone_idd: "1784"
+			text: "São Vicente e Granadinas"
+			tin_format: 
+				0: "^\\d+$"
+			value: "vc"
+		218: 
+			identity: 
+				services: object
+			phone_idd: "381"
+			text: "Sérvia"
+			value: "rs"
+		219: 
+			identity: 
+				services: object
+			phone_idd: "963"
+			text: "Síria"
+			value: "sy"
+		220: 
+			identity: 
+				services: object
+			phone_idd: "992"
+			text: "Tadjiquistão"
+			value: "tj"
+		221: 
+			identity: 
+				services: object
+			phone_idd: "66"
+			text: "Tailândia"
+			value: "th"
+		222: 
+			identity: 
+				services: object
+			phone_idd: "886"
+			text: "Taiwan"
+			value: "tw"
+		223: 
+			identity: 
+				services: object
+			phone_idd: "255"
+			text: "Tanzânia"
+			value: "tz"
+		224: 
+			identity: 
+				services: object
+			phone_idd: "246"
+			text: "Território Britânico do Oceano Índico"
+			value: "io"
+		225: 
+			identity: 
+				services: object
+			text: "Territórios Franceses do Sul"
+			value: "tf"
+		226: 
+			identity: 
+				services: object
+			phone_idd: "970"
+			text: "Territórios palestinos"
+			value: "ps"
+		227: 
+			identity: 
+				services: object
+			phone_idd: "670"
+			text: "Timor-Leste"
+			value: "tl"
+		228: 
+			identity: 
+				services: object
+			phone_idd: "228"
+			text: "Togo"
+			value: "tg"
+		229: 
+			identity: 
+				services: object
+			phone_idd: "690"
+			text: "Tokelau"
+			value: "tk"
+		230: 
+			identity: 
+				services: object
+			phone_idd: "676"
+			text: "Tonga"
+			value: "to"
+		231: 
+			identity: 
+				services: object
+			phone_idd: "1868"
+			text: "Trinidad e Tobago"
+			value: "tt"
+		232: 
+			identity: 
+				services: object
+			phone_idd: "216"
+			text: "Tunísia"
+			value: "tn"
+		233: 
+			identity: 
+				services: object
+			phone_idd: "993"
+			text: "Turcomenistão"
+			value: "tm"
+		234: 
+			identity: 
+				services: object
+			phone_idd: "90"
+			text: "Turquia"
+			tin_format: 
+				0: "^\\d{10}$"
+			value: "tr"
+		235: 
+			identity: 
+				services: object
+			phone_idd: "688"
+			text: "Tuvalu"
+			value: "tv"
+		236: 
+			identity: 
+				services: object
+			phone_idd: "380"
+			text: "Ucrânia"
+			value: "ua"
+		237: 
+			identity: 
+				services: object
+			phone_idd: "256"
+			text: "Uganda"
+			value: "ug"
+		238: 
+			identity: 
+				services: object
+			phone_idd: "598"
+			text: "Uruguai"
+			tin_format: 
+				0: "^\\d{8,9}$"
+				1: "^\\d{8}001\\d$"
+			value: "uy"
+		239: 
+			identity: 
+				services: object
+			phone_idd: "998"
+			text: "Uzbequistão"
+			value: "uz"
+		240: 
+			disabled: "DISABLED"
+			identity: 
+				services: object
+			phone_idd: "678"
+			text: "Vanuatu"
+			value: "vu"
+		241: 
+			identity: 
+				services: object
+			phone_idd: "58"
+			text: "Venezuela"
+			value: "ve"
+		242: 
+			identity: 
+				services: object
+			phone_idd: "84"
+			text: "Vietnã"
+			value: "vn"
+		243: 
+			identity: 
+				services: object
+			phone_idd: "681"
+			text: "Wallis e Futuna"
+			value: "wf"
+		244: 
+			identity: 
+				services: object
+			phone_idd: "263"
+			text: "Zimbábue"
+			value: "zw"
+		245: 
+			identity: 
+				services: object
+			phone_idd: "260"
+			text: "Zâmbia"
+			value: "zm"
+		246: 
+			identity: 
+				services: object
+			phone_idd: "27"
+			text: "África do Sul"
+			tin_format: 
+				0: "^[01239]\\d{9}$"
+			value: "za"
+		247: 
+			identity: 
+				services: object
+			phone_idd: "43"
+			text: "Áustria"
+			tin_format: 
+				0: "^\\d{9}$"
+			value: "at"
+		248: 
+			identity: 
+				services: object
+			phone_idd: "91"
+			text: "Índia"
+			tin_format: 
+				0: "^[a-zA-Z]{5}\\d{4}[a-zA-Z]$"
+			value: "in"
 
 MSG  45 - RECEBIDA
 Chaves: 
@@ -1088,7 +6165,10 @@ Chaves:
 		currency: "USD"
 		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
 		loginid: "VRTC4549934"
-		total: object
+		total: 
+			deriv: 
+				amount: 0
+				currency: "USD"
 	echo_req: 
 		account: "all"
 		balance: 1
@@ -1152,7 +6232,8 @@ Chaves:
 MSG  62 - RECEBIDA
 Chaves: 
 	echo_req: 
-		forget_all: array
+		forget_all: 
+			0: "proposal"
 		req_id: 25
 	forget_all: 
 		0: "efaa519d-7678-deeb-0aba-6fa99d5118a1"
@@ -1313,8 +6394,13 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "open"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+		transaction_ids: 
+			buy: 261462147148
 		underlying: "1HZ100V"
 		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
@@ -1391,8 +6477,17 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "open"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+			1: 
+				epoch: 1628719057
+				tick: 3523.26
+				tick_display_value: "3523.26"
+		transaction_ids: 
+			buy: 261462147148
 		underlying: "1HZ100V"
 		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
@@ -1469,8 +6564,21 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "open"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+			1: 
+				epoch: 1628719057
+				tick: 3523.26
+				tick_display_value: "3523.26"
+			2: 
+				epoch: 1628719058
+				tick: 3523.24
+				tick_display_value: "3523.24"
+		transaction_ids: 
+			buy: 261462147148
 		underlying: "1HZ100V"
 		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
@@ -1547,8 +6655,25 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "open"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+			1: 
+				epoch: 1628719057
+				tick: 3523.26
+				tick_display_value: "3523.26"
+			2: 
+				epoch: 1628719058
+				tick: 3523.24
+				tick_display_value: "3523.24"
+			3: 
+				epoch: 1628719059
+				tick: 3523.78
+				tick_display_value: "3523.78"
+		transaction_ids: 
+			buy: 261462147148
 		underlying: "1HZ100V"
 		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
@@ -1625,8 +6750,29 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "open"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+			1: 
+				epoch: 1628719057
+				tick: 3523.26
+				tick_display_value: "3523.26"
+			2: 
+				epoch: 1628719058
+				tick: 3523.24
+				tick_display_value: "3523.24"
+			3: 
+				epoch: 1628719059
+				tick: 3523.78
+				tick_display_value: "3523.78"
+			4: 
+				epoch: 1628719060
+				tick: 3523.51
+				tick_display_value: "3523.51"
+		transaction_ids: 
+			buy: 261462147148
 		underlying: "1HZ100V"
 		validation_error: "A revenda deste contrato não é oferecida."
 	req_id: 11
@@ -1666,7 +6812,15 @@ Chaves:
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: 
 		account_id: "94901488"
-		audit_details: object
+		audit_details: 
+			all_ticks: 
+				0: object
+				1: object
+				2: object
+				3: object
+				4: object
+				5: object
+				6: object
 		barrier: "3522.72"
 		barrier_count: 1
 		bid_price: 19.53
@@ -1707,8 +6861,33 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "open"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+			1: 
+				epoch: 1628719057
+				tick: 3523.26
+				tick_display_value: "3523.26"
+			2: 
+				epoch: 1628719058
+				tick: 3523.24
+				tick_display_value: "3523.24"
+			3: 
+				epoch: 1628719059
+				tick: 3523.78
+				tick_display_value: "3523.78"
+			4: 
+				epoch: 1628719060
+				tick: 3523.51
+				tick_display_value: "3523.51"
+			5: 
+				epoch: 1628719061
+				tick: 3523.36
+				tick_display_value: "3523.36"
+		transaction_ids: 
+			buy: 261462147148
 		underlying: "1HZ100V"
 	req_id: 11
 	subscription: 
@@ -1738,7 +6917,10 @@ Chaves:
 		currency: "USD"
 		id: "1671ca4b-7dcf-3490-56d4-8e04817bb2b3"
 		loginid: "VRTC4549934"
-		total: object
+		total: 
+			deriv: 
+				amount: 0
+				currency: "USD"
 	echo_req: 
 		account: "all"
 		balance: 1
@@ -1792,7 +6974,16 @@ Chaves:
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: 
 		account_id: "94901488"
-		audit_details: object
+		audit_details: 
+			all_ticks: 
+				0: object
+				1: object
+				2: object
+				3: object
+				4: object
+				5: object
+				6: object
+				7: object
 		barrier: "3522.72"
 		barrier_count: 1
 		bid_price: 19.53
@@ -1837,8 +7028,34 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "won"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+			1: 
+				epoch: 1628719057
+				tick: 3523.26
+				tick_display_value: "3523.26"
+			2: 
+				epoch: 1628719058
+				tick: 3523.24
+				tick_display_value: "3523.24"
+			3: 
+				epoch: 1628719059
+				tick: 3523.78
+				tick_display_value: "3523.78"
+			4: 
+				epoch: 1628719060
+				tick: 3523.51
+				tick_display_value: "3523.51"
+			5: 
+				epoch: 1628719061
+				tick: 3523.36
+				tick_display_value: "3523.36"
+		transaction_ids: 
+			buy: 261462147148
+			sell: 261462172548
 		underlying: "1HZ100V"
 		validation_error: "Esse contrato foi vendido."
 	req_id: 28
@@ -1876,7 +7093,16 @@ Chaves:
 	msg_type: "proposal_open_contract"
 	proposal_open_contract: 
 		account_id: "94901488"
-		audit_details: object
+		audit_details: 
+			all_ticks: 
+				0: object
+				1: object
+				2: object
+				3: object
+				4: object
+				5: object
+				6: object
+				7: object
 		barrier: "3522.72"
 		barrier_count: 1
 		bid_price: 19.53
@@ -1922,8 +7148,34 @@ Chaves:
 		shortcode: "CALL_1HZ100V_19.53_1628719055_5T_S0P_0"
 		status: "won"
 		tick_count: 5
-		tick_stream: array
-		transaction_ids: object
+		tick_stream: 
+			0: 
+				epoch: 1628719056
+				tick: 3522.72
+				tick_display_value: "3522.72"
+			1: 
+				epoch: 1628719057
+				tick: 3523.26
+				tick_display_value: "3523.26"
+			2: 
+				epoch: 1628719058
+				tick: 3523.24
+				tick_display_value: "3523.24"
+			3: 
+				epoch: 1628719059
+				tick: 3523.78
+				tick_display_value: "3523.78"
+			4: 
+				epoch: 1628719060
+				tick: 3523.51
+				tick_display_value: "3523.51"
+			5: 
+				epoch: 1628719061
+				tick: 3523.36
+				tick_display_value: "3523.36"
+		transaction_ids: 
+			buy: 261462147148
+			sell: 261462172548
 		underlying: "1HZ100V"
 		validation_error: "Esse contrato foi vendido."
 	req_id: 11
@@ -2558,7 +7810,8 @@ Chaves:
 MSG 115 - RECEBIDA
 Chaves: 
 	echo_req: 
-		forget_all: array
+		forget_all: 
+			0: "proposal"
 		req_id: 30
 	forget_all: 
 		0: "b17f99c0-f871-9fe5-f988-b2fa5d1c140e"
@@ -2593,7 +7846,239 @@ Chaves:
 MSG 117 - RECEBIDA
 Chaves: 
 	contracts_for: 
-		available: array
+		available: 
+			0: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callput"
+				contract_category_display: "Up/Down"
+				contract_display: "Higher"
+				contract_type: "CALL"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "up"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			1: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callput"
+				contract_category_display: "Up/Down"
+				contract_display: "Lower"
+				contract_type: "PUT"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "down"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			2: 
+				barrier: "1.25314"
+				barrier_category: "euro_non_atm"
+				barriers: 1
+				contract_category: "callput"
+				contract_category_display: "Up/Down"
+				contract_display: "Higher"
+				contract_type: "CALL"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "up"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			3: 
+				barrier: "1.25314"
+				barrier_category: "euro_non_atm"
+				barriers: 1
+				contract_category: "callput"
+				contract_category_display: "Up/Down"
+				contract_display: "Lower"
+				contract_type: "PUT"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "down"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			4: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callput"
+				contract_category_display: "Up/Down"
+				contract_display: "Higher"
+				contract_type: "CALL"
+				exchange_name: "FOREX"
+				expiry_type: "intraday"
+				market: "forex"
+				max_contract_duration: "1d"
+				min_contract_duration: "1m"
+				sentiment: "up"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			5: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callput"
+				contract_category_display: "Up/Down"
+				contract_display: "Lower"
+				contract_type: "PUT"
+				exchange_name: "FOREX"
+				expiry_type: "intraday"
+				market: "forex"
+				max_contract_duration: "1d"
+				min_contract_duration: "1m"
+				sentiment: "down"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			6: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callputequal"
+				contract_category_display: "Rise/Fall Equal"
+				contract_display: "Higher"
+				contract_type: "CALLE"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "up"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			7: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callputequal"
+				contract_category_display: "Rise/Fall Equal"
+				contract_display: "Lower"
+				contract_type: "PUTE"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "down"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			8: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callputequal"
+				contract_category_display: "Rise/Fall Equal"
+				contract_display: "Higher"
+				contract_type: "CALLE"
+				exchange_name: "FOREX"
+				expiry_type: "intraday"
+				market: "forex"
+				max_contract_duration: "1d"
+				min_contract_duration: "3m"
+				sentiment: "up"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			9: 
+				barrier_category: "euro_atm"
+				barriers: 0
+				contract_category: "callputequal"
+				contract_category_display: "Rise/Fall Equal"
+				contract_display: "Lower"
+				contract_type: "PUTE"
+				exchange_name: "FOREX"
+				expiry_type: "intraday"
+				market: "forex"
+				max_contract_duration: "1d"
+				min_contract_duration: "3m"
+				sentiment: "down"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			10: 
+				barrier_category: "american"
+				barriers: 0
+				cancellation_range: array
+				contract_category: "multiplier"
+				contract_category_display: "Multiply Up/Multiply Down"
+				contract_display: "Multiply Up"
+				contract_type: "MULTUP"
+				exchange_name: "FOREX"
+				expiry_type: "no_expiry"
+				market: "forex"
+				max_contract_duration: "0"
+				min_contract_duration: "0"
+				multiplier_range: array
+				sentiment: "up"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			11: 
+				barrier_category: "american"
+				barriers: 0
+				cancellation_range: array
+				contract_category: "multiplier"
+				contract_category_display: "Multiply Up/Multiply Down"
+				contract_display: "Multiply Down"
+				contract_type: "MULTDOWN"
+				exchange_name: "FOREX"
+				expiry_type: "no_expiry"
+				market: "forex"
+				max_contract_duration: "0"
+				min_contract_duration: "0"
+				multiplier_range: array
+				sentiment: "down"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			12: 
+				barrier: "1.25314"
+				barrier_category: "american"
+				barriers: 1
+				contract_category: "touchnotouch"
+				contract_category_display: "Touch/No Touch"
+				contract_display: "Touches"
+				contract_type: "ONETOUCH"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "high_vol"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
+			13: 
+				barrier: "1.25314"
+				barrier_category: "american"
+				barriers: 1
+				contract_category: "touchnotouch"
+				contract_category_display: "Touch/No Touch"
+				contract_display: "Does Not Touch"
+				contract_type: "NOTOUCH"
+				exchange_name: "FOREX"
+				expiry_type: "daily"
+				market: "forex"
+				max_contract_duration: "365d"
+				min_contract_duration: "1d"
+				sentiment: "low_vol"
+				start_type: "spot"
+				submarket: "major_pairs"
+				underlying_symbol: "frxUSDCAD"
 		close: 1628726399
 		feed_license: "realtime"
 		hit_count: 14
@@ -2640,8 +8125,182 @@ Chaves:
 		subscribe: 1
 		ticks_history: "frxUSDCAD"
 	history: 
-		prices: array
-		times: array
+		prices: 
+			0: 1.2505
+			1: 1.25052
+			2: 1.25049
+			3: 1.2505
+			4: 1.2505
+			5: 1.2505
+			6: 1.2505
+			7: 1.25051
+			8: 1.25053
+			9: 1.2505
+			10: 1.25053
+			11: 1.25051
+			12: 1.25051
+			13: 1.25051
+			14: 1.25053
+			15: 1.25051
+			16: 1.25051
+			17: 1.2505
+			18: 1.25051
+			19: 1.25052
+			20: 1.25052
+			21: 1.25051
+			22: 1.25051
+			23: 1.25051
+			24: 1.25051
+			25: 1.25051
+			26: 1.25052
+			27: 1.2505
+			28: 1.25051
+			29: 1.25052
+			30: 1.25049
+			31: 1.25055
+			32: 1.25052
+			33: 1.25051
+			34: 1.25052
+			35: 1.25051
+			36: 1.25051
+			37: 1.25066
+			38: 1.25059
+			39: 1.25062
+			40: 1.25063
+			41: 1.25067
+			42: 1.25059
+			43: 1.25063
+			44: 1.25061
+			45: 1.25065
+			46: 1.25065
+			47: 1.25065
+			48: 1.25065
+			49: 1.25069
+			50: 1.25065
+			51: 1.25066
+			52: 1.25066
+			53: 1.25059
+			54: 1.25071
+			55: 1.25063
+			56: 1.25067
+			57: 1.25067
+			58: 1.25061
+			59: 1.25068
+			60: 1.25068
+			61: 1.25061
+			62: 1.25063
+			63: 1.25068
+			64: 1.25068
+			65: 1.25064
+			66: 1.25059
+			67: 1.25063
+			68: 1.25063
+			69: 1.25063
+			70: 1.25068
+			71: 1.25064
+			72: 1.25063
+			73: 1.25069
+			74: 1.25056
+			75: 1.25067
+			76: 1.25068
+			77: 1.2507
+			78: 1.25063
+			79: 1.25063
+			80: 1.25068
+			81: 1.25066
+			82: 1.25065
+			83: 1.2507
+			84: 1.25067
+			85: 1.25059
+			86: 1.25059
+		times: 
+			0: 1628718922
+			1: 1628718924
+			2: 1628718925
+			3: 1628718926
+			4: 1628718928
+			5: 1628718931
+			6: 1628718932
+			7: 1628718933
+			8: 1628718937
+			9: 1628718938
+			10: 1628718939
+			11: 1628718941
+			12: 1628718943
+			13: 1628718944
+			14: 1628718945
+			15: 1628718950
+			16: 1628718953
+			17: 1628718954
+			18: 1628718958
+			19: 1628718960
+			20: 1628718962
+			21: 1628718965
+			22: 1628718967
+			23: 1628718969
+			24: 1628718970
+			25: 1628718971
+			26: 1628718974
+			27: 1628718977
+			28: 1628718982
+			29: 1628718983
+			30: 1628718986
+			31: 1628718993
+			32: 1628718994
+			33: 1628719003
+			34: 1628719010
+			35: 1628719013
+			36: 1628719014
+			37: 1628719026
+			38: 1628719027
+			39: 1628719028
+			40: 1628719029
+			41: 1628719030
+			42: 1628719031
+			43: 1628719032
+			44: 1628719033
+			45: 1628719034
+			46: 1628719035
+			47: 1628719037
+			48: 1628719038
+			49: 1628719039
+			50: 1628719040
+			51: 1628719041
+			52: 1628719042
+			53: 1628719043
+			54: 1628719044
+			55: 1628719045
+			56: 1628719047
+			57: 1628719048
+			58: 1628719049
+			59: 1628719051
+			60: 1628719052
+			61: 1628719053
+			62: 1628719056
+			63: 1628719058
+			64: 1628719059
+			65: 1628719062
+			66: 1628719063
+			67: 1628719064
+			68: 1628719065
+			69: 1628719068
+			70: 1628719069
+			71: 1628719070
+			72: 1628719071
+			73: 1628719072
+			74: 1628719073
+			75: 1628719074
+			76: 1628719075
+			77: 1628719076
+			78: 1628719078
+			79: 1628719080
+			80: 1628719082
+			81: 1628719083
+			82: 1628719084
+			83: 1628719085
+			84: 1628719086
+			85: 1628719087
+			86: 1628719088
 	msg_type: "history"
 	pip_size: 5
 	req_id: 33
@@ -2717,8 +8376,2008 @@ Chaves:
 		style: "ticks"
 		ticks_history: "frxUSDCAD"
 	history: 
-		prices: array
-		times: array
+		prices: 
+			0: 1.2508
+			1: 1.25086
+			2: 1.25085
+			3: 1.2508
+			4: 1.25086
+			5: 1.25085
+			6: 1.2508
+			7: 1.25086
+			8: 1.2508
+			9: 1.2508
+			10: 1.25085
+			11: 1.2508
+			12: 1.2508
+			13: 1.25085
+			14: 1.2508
+			15: 1.25086
+			16: 1.2508
+			17: 1.2508
+			18: 1.25085
+			19: 1.2508
+			20: 1.25086
+			21: 1.25085
+			22: 1.25084
+			23: 1.2508
+			24: 1.2508
+			25: 1.25086
+			26: 1.25085
+			27: 1.2508
+			28: 1.25086
+			29: 1.25085
+			30: 1.2508
+			31: 1.25086
+			32: 1.25085
+			33: 1.2508
+			34: 1.2508
+			35: 1.25085
+			36: 1.2508
+			37: 1.25086
+			38: 1.2508
+			39: 1.2508
+			40: 1.25086
+			41: 1.2508
+			42: 1.2508
+			43: 1.25074
+			44: 1.2508
+			45: 1.2508
+			46: 1.25085
+			47: 1.25086
+			48: 1.2508
+			49: 1.25085
+			50: 1.2508
+			51: 1.2508
+			52: 1.25085
+			53: 1.25078
+			54: 1.2508
+			55: 1.25078
+			56: 1.2508
+			57: 1.2508
+			58: 1.2508
+			59: 1.25083
+			60: 1.25083
+			61: 1.25078
+			62: 1.25082
+			63: 1.25078
+			64: 1.25078
+			65: 1.25078
+			66: 1.25082
+			67: 1.25078
+			68: 1.25083
+			69: 1.25078
+			70: 1.25078
+			71: 1.25083
+			72: 1.25078
+			73: 1.25066
+			74: 1.25081
+			75: 1.25077
+			76: 1.25081
+			77: 1.25076
+			78: 1.25076
+			79: 1.25077
+			80: 1.25081
+			81: 1.25077
+			82: 1.25077
+			83: 1.25082
+			84: 1.25082
+			85: 1.25077
+			86: 1.25081
+			87: 1.25074
+			88: 1.25078
+			89: 1.25078
+			90: 1.25082
+			91: 1.25078
+			92: 1.25082
+			93: 1.25078
+			94: 1.25078
+			95: 1.25078
+			96: 1.25082
+			97: 1.25078
+			98: 1.25078
+			99: 1.25081
+			100: 1.25081
+			101: 1.25078
+			102: 1.25082
+			103: 1.25078
+			104: 1.25078
+			105: 1.25082
+			106: 1.25078
+			107: 1.25075
+			108: 1.25078
+			109: 1.25078
+			110: 1.25082
+			111: 1.25078
+			112: 1.25078
+			113: 1.25079
+			114: 1.25078
+			115: 1.25078
+			116: 1.25078
+			117: 1.25078
+			118: 1.25078
+			119: 1.25082
+			120: 1.25078
+			121: 1.25083
+			122: 1.25082
+			123: 1.25079
+			124: 1.25078
+			125: 1.25078
+			126: 1.25078
+			127: 1.25085
+			128: 1.25078
+			129: 1.25078
+			130: 1.25074
+			131: 1.25078
+			132: 1.25081
+			133: 1.25078
+			134: 1.25079
+			135: 1.25078
+			136: 1.25082
+			137: 1.25078
+			138: 1.25078
+			139: 1.25078
+			140: 1.25078
+			141: 1.25078
+			142: 1.25078
+			143: 1.25078
+			144: 1.25081
+			145: 1.25078
+			146: 1.25078
+			147: 1.25078
+			148: 1.25078
+			149: 1.25081
+			150: 1.25085
+			151: 1.25077
+			152: 1.25077
+			153: 1.25077
+			154: 1.25077
+			155: 1.25077
+			156: 1.25077
+			157: 1.25083
+			158: 1.25077
+			159: 1.25071
+			160: 1.25074
+			161: 1.25077
+			162: 1.25077
+			163: 1.25079
+			164: 1.25079
+			165: 1.25078
+			166: 1.25077
+			167: 1.25081
+			168: 1.25085
+			169: 1.25078
+			170: 1.25075
+			171: 1.25081
+			172: 1.25077
+			173: 1.25077
+			174: 1.25082
+			175: 1.25077
+			176: 1.25066
+			177: 1.25071
+			178: 1.25066
+			179: 1.25069
+			180: 1.2507
+			181: 1.25066
+			182: 1.25066
+			183: 1.25069
+			184: 1.25071
+			185: 1.25067
+			186: 1.25066
+			187: 1.25066
+			188: 1.25066
+			189: 1.25064
+			190: 1.25069
+			191: 1.25067
+			192: 1.25064
+			193: 1.25066
+			194: 1.25066
+			195: 1.25065
+			196: 1.25063
+			197: 1.25066
+			198: 1.25066
+			199: 1.25069
+			200: 1.25069
+			201: 1.25066
+			202: 1.25066
+			203: 1.2507
+			204: 1.25071
+			205: 1.25066
+			206: 1.25066
+			207: 1.25064
+			208: 1.25039
+			209: 1.25055
+			210: 1.25059
+			211: 1.25059
+			212: 1.25061
+			213: 1.25061
+			214: 1.25065
+			215: 1.25061
+			216: 1.25059
+			217: 1.25061
+			218: 1.25061
+			219: 1.25061
+			220: 1.25061
+			221: 1.25061
+			222: 1.25061
+			223: 1.25061
+			224: 1.25061
+			225: 1.25061
+			226: 1.25061
+			227: 1.25061
+			228: 1.25061
+			229: 1.25055
+			230: 1.25061
+			231: 1.25061
+			232: 1.25065
+			233: 1.25061
+			234: 1.25061
+			235: 1.25061
+			236: 1.25061
+			237: 1.25061
+			238: 1.25061
+			239: 1.2506
+			240: 1.25059
+			241: 1.25065
+			242: 1.25061
+			243: 1.25061
+			244: 1.25061
+			245: 1.25061
+			246: 1.25061
+			247: 1.25061
+			248: 1.2507
+			249: 1.25061
+			250: 1.25061
+			251: 1.25061
+			252: 1.25065
+			253: 1.25061
+			254: 1.25061
+			255: 1.25061
+			256: 1.25061
+			257: 1.25062
+			258: 1.25062
+			259: 1.25055
+			260: 1.25062
+			261: 1.2506
+			262: 1.25059
+			263: 1.25057
+			264: 1.25061
+			265: 1.2506
+			266: 1.25066
+			267: 1.25065
+			268: 1.2507
+			269: 1.25061
+			270: 1.2506
+			271: 1.25057
+			272: 1.25056
+			273: 1.25056
+			274: 1.25056
+			275: 1.25056
+			276: 1.25056
+			277: 1.25056
+			278: 1.25056
+			279: 1.25056
+			280: 1.25056
+			281: 1.25056
+			282: 1.25055
+			283: 1.25056
+			284: 1.25056
+			285: 1.25056
+			286: 1.25056
+			287: 1.25056
+			288: 1.25056
+			289: 1.25059
+			290: 1.25056
+			291: 1.25056
+			292: 1.25056
+			293: 1.25056
+			294: 1.25056
+			295: 1.25056
+			296: 1.25055
+			297: 1.25057
+			298: 1.25059
+			299: 1.25058
+			300: 1.2506
+			301: 1.2507
+			302: 1.25061
+			303: 1.2506
+			304: 1.25064
+			305: 1.2506
+			306: 1.2506
+			307: 1.25062
+			308: 1.25064
+			309: 1.25063
+			310: 1.2506
+			311: 1.25061
+			312: 1.25061
+			313: 1.25061
+			314: 1.2507
+			315: 1.25061
+			316: 1.25059
+			317: 1.25056
+			318: 1.25056
+			319: 1.25056
+			320: 1.25056
+			321: 1.25056
+			322: 1.25055
+			323: 1.25056
+			324: 1.25056
+			325: 1.25058
+			326: 1.25056
+			327: 1.25056
+			328: 1.25056
+			329: 1.25056
+			330: 1.25057
+			331: 1.25053
+			332: 1.25056
+			333: 1.25058
+			334: 1.25056
+			335: 1.25055
+			336: 1.25059
+			337: 1.25058
+			338: 1.25059
+			339: 1.25056
+			340: 1.25054
+			341: 1.25053
+			342: 1.25056
+			343: 1.25056
+			344: 1.25056
+			345: 1.25056
+			346: 1.25055
+			347: 1.25056
+			348: 1.25058
+			349: 1.25059
+			350: 1.25056
+			351: 1.25056
+			352: 1.25059
+			353: 1.25065
+			354: 1.25056
+			355: 1.25056
+			356: 1.25056
+			357: 1.25061
+			358: 1.25062
+			359: 1.25055
+			360: 1.25056
+			361: 1.25056
+			362: 1.25054
+			363: 1.25056
+			364: 1.25056
+			365: 1.25056
+			366: 1.25058
+			367: 1.25065
+			368: 1.25053
+			369: 1.25056
+			370: 1.25056
+			371: 1.25056
+			372: 1.25055
+			373: 1.25053
+			374: 1.25055
+			375: 1.25056
+			376: 1.25065
+			377: 1.25057
+			378: 1.25056
+			379: 1.25056
+			380: 1.25056
+			381: 1.25056
+			382: 1.25056
+			383: 1.25056
+			384: 1.25056
+			385: 1.25056
+			386: 1.25056
+			387: 1.25055
+			388: 1.25059
+			389: 1.25059
+			390: 1.25059
+			391: 1.25058
+			392: 1.25056
+			393: 1.25056
+			394: 1.25058
+			395: 1.25058
+			396: 1.25058
+			397: 1.25058
+			398: 1.25058
+			399: 1.25063
+			400: 1.25062
+			401: 1.25062
+			402: 1.25062
+			403: 1.25062
+			404: 1.25062
+			405: 1.25062
+			406: 1.25063
+			407: 1.25064
+			408: 1.25062
+			409: 1.25062
+			410: 1.25062
+			411: 1.25062
+			412: 1.25054
+			413: 1.25051
+			414: 1.25053
+			415: 1.25053
+			416: 1.25052
+			417: 1.25052
+			418: 1.25055
+			419: 1.25058
+			420: 1.25053
+			421: 1.25051
+			422: 1.25052
+			423: 1.25052
+			424: 1.25055
+			425: 1.25056
+			426: 1.25056
+			427: 1.25065
+			428: 1.25055
+			429: 1.25054
+			430: 1.25055
+			431: 1.25055
+			432: 1.25056
+			433: 1.25056
+			434: 1.25055
+			435: 1.25055
+			436: 1.25055
+			437: 1.25055
+			438: 1.25055
+			439: 1.25055
+			440: 1.25056
+			441: 1.25055
+			442: 1.25056
+			443: 1.25055
+			444: 1.25057
+			445: 1.25056
+			446: 1.25055
+			447: 1.25055
+			448: 1.25055
+			449: 1.25055
+			450: 1.25065
+			451: 1.25055
+			452: 1.25064
+			453: 1.25056
+			454: 1.25056
+			455: 1.25056
+			456: 1.25056
+			457: 1.25054
+			458: 1.25056
+			459: 1.25056
+			460: 1.25056
+			461: 1.25056
+			462: 1.25065
+			463: 1.25056
+			464: 1.25055
+			465: 1.25056
+			466: 1.25056
+			467: 1.25055
+			468: 1.25056
+			469: 1.25055
+			470: 1.25055
+			471: 1.25055
+			472: 1.2506
+			473: 1.25054
+			474: 1.25055
+			475: 1.25055
+			476: 1.25055
+			477: 1.25065
+			478: 1.25054
+			479: 1.25052
+			480: 1.25054
+			481: 1.2507
+			482: 1.25058
+			483: 1.25055
+			484: 1.25055
+			485: 1.25054
+			486: 1.25055
+			487: 1.25055
+			488: 1.2506
+			489: 1.25055
+			490: 1.25055
+			491: 1.25061
+			492: 1.25055
+			493: 1.25055
+			494: 1.25056
+			495: 1.25057
+			496: 1.25055
+			497: 1.25055
+			498: 1.25054
+			499: 1.25055
+			500: 1.25056
+			501: 1.25055
+			502: 1.25055
+			503: 1.25056
+			504: 1.25055
+			505: 1.25056
+			506: 1.25046
+			507: 1.25062
+			508: 1.25053
+			509: 1.25055
+			510: 1.25055
+			511: 1.25055
+			512: 1.25059
+			513: 1.25038
+			514: 1.2504
+			515: 1.25056
+			516: 1.25055
+			517: 1.25054
+			518: 1.25055
+			519: 1.25055
+			520: 1.25055
+			521: 1.25055
+			522: 1.25055
+			523: 1.2506
+			524: 1.25055
+			525: 1.25055
+			526: 1.25055
+			527: 1.25054
+			528: 1.25056
+			529: 1.25055
+			530: 1.25054
+			531: 1.25055
+			532: 1.25048
+			533: 1.25034
+			534: 1.25023
+			535: 1.25023
+			536: 1.25023
+			537: 1.2502
+			538: 1.25029
+			539: 1.25043
+			540: 1.25039
+			541: 1.25044
+			542: 1.2503
+			543: 1.25044
+			544: 1.25044
+			545: 1.25044
+			546: 1.25044
+			547: 1.25041
+			548: 1.2504
+			549: 1.25044
+			550: 1.25044
+			551: 1.25044
+			552: 1.25047
+			553: 1.25035
+			554: 1.25041
+			555: 1.25045
+			556: 1.25047
+			557: 1.25039
+			558: 1.25047
+			559: 1.25045
+			560: 1.25044
+			561: 1.25035
+			562: 1.25044
+			563: 1.25044
+			564: 1.25044
+			565: 1.25044
+			566: 1.25041
+			567: 1.2504
+			568: 1.25041
+			569: 1.2504
+			570: 1.25048
+			571: 1.25049
+			572: 1.2506
+			573: 1.25047
+			574: 1.25046
+			575: 1.25037
+			576: 1.25046
+			577: 1.25046
+			578: 1.25047
+			579: 1.25047
+			580: 1.25047
+			581: 1.25046
+			582: 1.2505
+			583: 1.25047
+			584: 1.25048
+			585: 1.25048
+			586: 1.25048
+			587: 1.25048
+			588: 1.25048
+			589: 1.25048
+			590: 1.25048
+			591: 1.25049
+			592: 1.25048
+			593: 1.25048
+			594: 1.25051
+			595: 1.2504
+			596: 1.25048
+			597: 1.25046
+			598: 1.25048
+			599: 1.25042
+			600: 1.25046
+			601: 1.2505
+			602: 1.25048
+			603: 1.2505
+			604: 1.25048
+			605: 1.25045
+			606: 1.25048
+			607: 1.25046
+			608: 1.25045
+			609: 1.25045
+			610: 1.2505
+			611: 1.25047
+			612: 1.25048
+			613: 1.25051
+			614: 1.25048
+			615: 1.2505
+			616: 1.25043
+			617: 1.25049
+			618: 1.25045
+			619: 1.25041
+			620: 1.25046
+			621: 1.25046
+			622: 1.25049
+			623: 1.25048
+			624: 1.2505
+			625: 1.25031
+			626: 1.25049
+			627: 1.25047
+			628: 1.25048
+			629: 1.25051
+			630: 1.25049
+			631: 1.25049
+			632: 1.25049
+			633: 1.25047
+			634: 1.25049
+			635: 1.25048
+			636: 1.25049
+			637: 1.25047
+			638: 1.25049
+			639: 1.25045
+			640: 1.25047
+			641: 1.2504
+			642: 1.25046
+			643: 1.25049
+			644: 1.25045
+			645: 1.25045
+			646: 1.25049
+			647: 1.2505
+			648: 1.2504
+			649: 1.25041
+			650: 1.2504
+			651: 1.25042
+			652: 1.25049
+			653: 1.25049
+			654: 1.25041
+			655: 1.25046
+			656: 1.25049
+			657: 1.25049
+			658: 1.2505
+			659: 1.25043
+			660: 1.25051
+			661: 1.25044
+			662: 1.25051
+			663: 1.25052
+			664: 1.25052
+			665: 1.25055
+			666: 1.25048
+			667: 1.25054
+			668: 1.25052
+			669: 1.25049
+			670: 1.25052
+			671: 1.25053
+			672: 1.25049
+			673: 1.25045
+			674: 1.25053
+			675: 1.25053
+			676: 1.2505
+			677: 1.25053
+			678: 1.25053
+			679: 1.25055
+			680: 1.25054
+			681: 1.25053
+			682: 1.25051
+			683: 1.2507
+			684: 1.25053
+			685: 1.25049
+			686: 1.25049
+			687: 1.25049
+			688: 1.25053
+			689: 1.2504
+			690: 1.25052
+			691: 1.25049
+			692: 1.25052
+			693: 1.25053
+			694: 1.25045
+			695: 1.2505
+			696: 1.25049
+			697: 1.25053
+			698: 1.25053
+			699: 1.25053
+			700: 1.2506
+			701: 1.25052
+			702: 1.25055
+			703: 1.25053
+			704: 1.25053
+			705: 1.25049
+			706: 1.25053
+			707: 1.25049
+			708: 1.25053
+			709: 1.25053
+			710: 1.25055
+			711: 1.25049
+			712: 1.25053
+			713: 1.25054
+			714: 1.25053
+			715: 1.2505
+			716: 1.25053
+			717: 1.25052
+			718: 1.25049
+			719: 1.25053
+			720: 1.25054
+			721: 1.25054
+			722: 1.25051
+			723: 1.25051
+			724: 1.25054
+			725: 1.25049
+			726: 1.25051
+			727: 1.25051
+			728: 1.25051
+			729: 1.25051
+			730: 1.2505
+			731: 1.25055
+			732: 1.25055
+			733: 1.25051
+			734: 1.25054
+			735: 1.25054
+			736: 1.25054
+			737: 1.25049
+			738: 1.25054
+			739: 1.25054
+			740: 1.25052
+			741: 1.25054
+			742: 1.25054
+			743: 1.25054
+			744: 1.25055
+			745: 1.25056
+			746: 1.25054
+			747: 1.25054
+			748: 1.2505
+			749: 1.25052
+			750: 1.25052
+			751: 1.25049
+			752: 1.25052
+			753: 1.25052
+			754: 1.25053
+			755: 1.25052
+			756: 1.25049
+			757: 1.25051
+			758: 1.25052
+			759: 1.2505
+			760: 1.25052
+			761: 1.25051
+			762: 1.25052
+			763: 1.25052
+			764: 1.25051
+			765: 1.25052
+			766: 1.25052
+			767: 1.25052
+			768: 1.25052
+			769: 1.25052
+			770: 1.25051
+			771: 1.25051
+			772: 1.25051
+			773: 1.25051
+			774: 1.25051
+			775: 1.25051
+			776: 1.25051
+			777: 1.25051
+			778: 1.25051
+			779: 1.25051
+			780: 1.25051
+			781: 1.25051
+			782: 1.25052
+			783: 1.25051
+			784: 1.25052
+			785: 1.25055
+			786: 1.25051
+			787: 1.2505
+			788: 1.25051
+			789: 1.25054
+			790: 1.25051
+			791: 1.2503
+			792: 1.25052
+			793: 1.25052
+			794: 1.25051
+			795: 1.25051
+			796: 1.25051
+			797: 1.2507
+			798: 1.25051
+			799: 1.25047
+			800: 1.25051
+			801: 1.25051
+			802: 1.25055
+			803: 1.25051
+			804: 1.25052
+			805: 1.25051
+			806: 1.25052
+			807: 1.25051
+			808: 1.25049
+			809: 1.2505
+			810: 1.25055
+			811: 1.25052
+			812: 1.25051
+			813: 1.25052
+			814: 1.25047
+			815: 1.25051
+			816: 1.25051
+			817: 1.25052
+			818: 1.25052
+			819: 1.25052
+			820: 1.25052
+			821: 1.25052
+			822: 1.25052
+			823: 1.2505
+			824: 1.2505
+			825: 1.25052
+			826: 1.25052
+			827: 1.25052
+			828: 1.25053
+			829: 1.25052
+			830: 1.25052
+			831: 1.25052
+			832: 1.25052
+			833: 1.25052
+			834: 1.25052
+			835: 1.25052
+			836: 1.25051
+			837: 1.25051
+			838: 1.25051
+			839: 1.25051
+			840: 1.25051
+			841: 1.25051
+			842: 1.25051
+			843: 1.25051
+			844: 1.25051
+			845: 1.25049
+			846: 1.25051
+			847: 1.25051
+			848: 1.25049
+			849: 1.25051
+			850: 1.2505
+			851: 1.25051
+			852: 1.25051
+			853: 1.25051
+			854: 1.25051
+			855: 1.25051
+			856: 1.25051
+			857: 1.25052
+			858: 1.25053
+			859: 1.25051
+			860: 1.25051
+			861: 1.25053
+			862: 1.25051
+			863: 1.25052
+			864: 1.25045
+			865: 1.25051
+			866: 1.25053
+			867: 1.25051
+			868: 1.25052
+			869: 1.25051
+			870: 1.25051
+			871: 1.25051
+			872: 1.25052
+			873: 1.25051
+			874: 1.25051
+			875: 1.2505
+			876: 1.25051
+			877: 1.25052
+			878: 1.2505
+			879: 1.25052
+			880: 1.2505
+			881: 1.25052
+			882: 1.25051
+			883: 1.25052
+			884: 1.25054
+			885: 1.25052
+			886: 1.25054
+			887: 1.2505
+			888: 1.25052
+			889: 1.2505
+			890: 1.2505
+			891: 1.2505
+			892: 1.25052
+			893: 1.25052
+			894: 1.25052
+			895: 1.2505
+			896: 1.25052
+			897: 1.25052
+			898: 1.2505
+			899: 1.2505
+			900: 1.25051
+			901: 1.25045
+			902: 1.2505
+			903: 1.2505
+			904: 1.2505
+			905: 1.25048
+			906: 1.2505
+			907: 1.2505
+			908: 1.2505
+			909: 1.25051
+			910: 1.25052
+			911: 1.2505
+			912: 1.2505
+			913: 1.25052
+			914: 1.25049
+			915: 1.2505
+			916: 1.2505
+			917: 1.2505
+			918: 1.2505
+			919: 1.25051
+			920: 1.25053
+			921: 1.2505
+			922: 1.25053
+			923: 1.25051
+			924: 1.25051
+			925: 1.25051
+			926: 1.25053
+			927: 1.25051
+			928: 1.25051
+			929: 1.2505
+			930: 1.25051
+			931: 1.25052
+			932: 1.25052
+			933: 1.25051
+			934: 1.25051
+			935: 1.25051
+			936: 1.25051
+			937: 1.25051
+			938: 1.25052
+			939: 1.2505
+			940: 1.25051
+			941: 1.25052
+			942: 1.25049
+			943: 1.25055
+			944: 1.25052
+			945: 1.25051
+			946: 1.25052
+			947: 1.25051
+			948: 1.25051
+			949: 1.25066
+			950: 1.25059
+			951: 1.25062
+			952: 1.25063
+			953: 1.25067
+			954: 1.25059
+			955: 1.25063
+			956: 1.25061
+			957: 1.25065
+			958: 1.25065
+			959: 1.25065
+			960: 1.25065
+			961: 1.25069
+			962: 1.25065
+			963: 1.25066
+			964: 1.25066
+			965: 1.25059
+			966: 1.25071
+			967: 1.25063
+			968: 1.25067
+			969: 1.25067
+			970: 1.25061
+			971: 1.25068
+			972: 1.25068
+			973: 1.25061
+			974: 1.25063
+			975: 1.25068
+			976: 1.25068
+			977: 1.25064
+			978: 1.25059
+			979: 1.25063
+			980: 1.25063
+			981: 1.25063
+			982: 1.25068
+			983: 1.25064
+			984: 1.25063
+			985: 1.25069
+			986: 1.25056
+			987: 1.25067
+			988: 1.25068
+			989: 1.2507
+			990: 1.25063
+			991: 1.25063
+			992: 1.25068
+			993: 1.25066
+			994: 1.25065
+			995: 1.2507
+			996: 1.25067
+			997: 1.25059
+			998: 1.25059
+			999: 1.25063
+		times: 
+			0: 1628716875
+			1: 1628716876
+			2: 1628716877
+			3: 1628716878
+			4: 1628716879
+			5: 1628716880
+			6: 1628716881
+			7: 1628716882
+			8: 1628716885
+			9: 1628716886
+			10: 1628716887
+			11: 1628716888
+			12: 1628716889
+			13: 1628716890
+			14: 1628716891
+			15: 1628716892
+			16: 1628716894
+			17: 1628716895
+			18: 1628716896
+			19: 1628716899
+			20: 1628716903
+			21: 1628716904
+			22: 1628716906
+			23: 1628716907
+			24: 1628716908
+			25: 1628716909
+			26: 1628716910
+			27: 1628716911
+			28: 1628716912
+			29: 1628716913
+			30: 1628716914
+			31: 1628716915
+			32: 1628716916
+			33: 1628716917
+			34: 1628716918
+			35: 1628716919
+			36: 1628716924
+			37: 1628716925
+			38: 1628716926
+			39: 1628716927
+			40: 1628716928
+			41: 1628716929
+			42: 1628716930
+			43: 1628716931
+			44: 1628716933
+			45: 1628716934
+			46: 1628716935
+			47: 1628716936
+			48: 1628716937
+			49: 1628716938
+			50: 1628716941
+			51: 1628716942
+			52: 1628716943
+			53: 1628716944
+			54: 1628716945
+			55: 1628716946
+			56: 1628716948
+			57: 1628716951
+			58: 1628716954
+			59: 1628716955
+			60: 1628716956
+			61: 1628716958
+			62: 1628716959
+			63: 1628716961
+			64: 1628716963
+			65: 1628716964
+			66: 1628716965
+			67: 1628716966
+			68: 1628716967
+			69: 1628716968
+			70: 1628716969
+			71: 1628716970
+			72: 1628716971
+			73: 1628716972
+			74: 1628716973
+			75: 1628716974
+			76: 1628716975
+			77: 1628716977
+			78: 1628716979
+			79: 1628716980
+			80: 1628716981
+			81: 1628716982
+			82: 1628716983
+			83: 1628716984
+			84: 1628716985
+			85: 1628716986
+			86: 1628716990
+			87: 1628716992
+			88: 1628716993
+			89: 1628716994
+			90: 1628716996
+			91: 1628716997
+			92: 1628716999
+			93: 1628717002
+			94: 1628717005
+			95: 1628717007
+			96: 1628717008
+			97: 1628717009
+			98: 1628717011
+			99: 1628717012
+			100: 1628717014
+			101: 1628717015
+			102: 1628717017
+			103: 1628717018
+			104: 1628717020
+			105: 1628717023
+			106: 1628717024
+			107: 1628717029
+			108: 1628717032
+			109: 1628717034
+			110: 1628717035
+			111: 1628717038
+			112: 1628717039
+			113: 1628717041
+			114: 1628717042
+			115: 1628717043
+			116: 1628717044
+			117: 1628717046
+			118: 1628717047
+			119: 1628717049
+			120: 1628717050
+			121: 1628717051
+			122: 1628717052
+			123: 1628717053
+			124: 1628717055
+			125: 1628717056
+			126: 1628717058
+			127: 1628717059
+			128: 1628717060
+			129: 1628717061
+			130: 1628717062
+			131: 1628717063
+			132: 1628717067
+			133: 1628717068
+			134: 1628717071
+			135: 1628717072
+			136: 1628717074
+			137: 1628717079
+			138: 1628717081
+			139: 1628717085
+			140: 1628717086
+			141: 1628717088
+			142: 1628717092
+			143: 1628717093
+			144: 1628717094
+			145: 1628717097
+			146: 1628717098
+			147: 1628717099
+			148: 1628717100
+			149: 1628717101
+			150: 1628717102
+			151: 1628717103
+			152: 1628717104
+			153: 1628717105
+			154: 1628717106
+			155: 1628717107
+			156: 1628717109
+			157: 1628717111
+			158: 1628717112
+			159: 1628717117
+			160: 1628717119
+			161: 1628717129
+			162: 1628717139
+			163: 1628717143
+			164: 1628717147
+			165: 1628717148
+			166: 1628717149
+			167: 1628717152
+			168: 1628717156
+			169: 1628717157
+			170: 1628717158
+			171: 1628717159
+			172: 1628717160
+			173: 1628717161
+			174: 1628717162
+			175: 1628717163
+			176: 1628717165
+			177: 1628717166
+			178: 1628717167
+			179: 1628717168
+			180: 1628717169
+			181: 1628717171
+			182: 1628717178
+			183: 1628717179
+			184: 1628717180
+			185: 1628717181
+			186: 1628717182
+			187: 1628717183
+			188: 1628717185
+			189: 1628717186
+			190: 1628717187
+			191: 1628717188
+			192: 1628717189
+			193: 1628717191
+			194: 1628717192
+			195: 1628717201
+			196: 1628717217
+			197: 1628717219
+			198: 1628717223
+			199: 1628717225
+			200: 1628717226
+			201: 1628717228
+			202: 1628717230
+			203: 1628717231
+			204: 1628717235
+			205: 1628717245
+			206: 1628717247
+			207: 1628717248
+			208: 1628717249
+			209: 1628717250
+			210: 1628717253
+			211: 1628717254
+			212: 1628717258
+			213: 1628717259
+			214: 1628717261
+			215: 1628717264
+			216: 1628717269
+			217: 1628717270
+			218: 1628717275
+			219: 1628717276
+			220: 1628717277
+			221: 1628717279
+			222: 1628717280
+			223: 1628717281
+			224: 1628717282
+			225: 1628717284
+			226: 1628717285
+			227: 1628717287
+			228: 1628717290
+			229: 1628717291
+			230: 1628717293
+			231: 1628717294
+			232: 1628717295
+			233: 1628717296
+			234: 1628717298
+			235: 1628717299
+			236: 1628717301
+			237: 1628717308
+			238: 1628717309
+			239: 1628717311
+			240: 1628717313
+			241: 1628717314
+			242: 1628717316
+			243: 1628717318
+			244: 1628717320
+			245: 1628717321
+			246: 1628717323
+			247: 1628717324
+			248: 1628717325
+			249: 1628717329
+			250: 1628717330
+			251: 1628717332
+			252: 1628717337
+			253: 1628717338
+			254: 1628717345
+			255: 1628717346
+			256: 1628717347
+			257: 1628717348
+			258: 1628717349
+			259: 1628717351
+			260: 1628717357
+			261: 1628717359
+			262: 1628717360
+			263: 1628717361
+			264: 1628717364
+			265: 1628717367
+			266: 1628717369
+			267: 1628717372
+			268: 1628717374
+			269: 1628717379
+			270: 1628717381
+			271: 1628717388
+			272: 1628717389
+			273: 1628717390
+			274: 1628717391
+			275: 1628717394
+			276: 1628717395
+			277: 1628717397
+			278: 1628717398
+			279: 1628717400
+			280: 1628717401
+			281: 1628717402
+			282: 1628717403
+			283: 1628717404
+			284: 1628717405
+			285: 1628717406
+			286: 1628717408
+			287: 1628717410
+			288: 1628717411
+			289: 1628717412
+			290: 1628717414
+			291: 1628717418
+			292: 1628717419
+			293: 1628717420
+			294: 1628717421
+			295: 1628717422
+			296: 1628717423
+			297: 1628717425
+			298: 1628717426
+			299: 1628717427
+			300: 1628717431
+			301: 1628717434
+			302: 1628717438
+			303: 1628717439
+			304: 1628717440
+			305: 1628717441
+			306: 1628717445
+			307: 1628717446
+			308: 1628717447
+			309: 1628717451
+			310: 1628717457
+			311: 1628717458
+			312: 1628717459
+			313: 1628717462
+			314: 1628717464
+			315: 1628717468
+			316: 1628717474
+			317: 1628717475
+			318: 1628717481
+			319: 1628717483
+			320: 1628717484
+			321: 1628717486
+			322: 1628717487
+			323: 1628717489
+			324: 1628717491
+			325: 1628717494
+			326: 1628717499
+			327: 1628717502
+			328: 1628717504
+			329: 1628717513
+			330: 1628717515
+			331: 1628717517
+			332: 1628717522
+			333: 1628717524
+			334: 1628717529
+			335: 1628717531
+			336: 1628717534
+			337: 1628717535
+			338: 1628717537
+			339: 1628717543
+			340: 1628717544
+			341: 1628717547
+			342: 1628717549
+			343: 1628717552
+			344: 1628717553
+			345: 1628717563
+			346: 1628717564
+			347: 1628717565
+			348: 1628717568
+			349: 1628717569
+			350: 1628717570
+			351: 1628717571
+			352: 1628717572
+			353: 1628717574
+			354: 1628717576
+			355: 1628717579
+			356: 1628717581
+			357: 1628717586
+			358: 1628717591
+			359: 1628717593
+			360: 1628717594
+			361: 1628717603
+			362: 1628717607
+			363: 1628717613
+			364: 1628717619
+			365: 1628717623
+			366: 1628717627
+			367: 1628717633
+			368: 1628717637
+			369: 1628717638
+			370: 1628717639
+			371: 1628717649
+			372: 1628717651
+			373: 1628717652
+			374: 1628717654
+			375: 1628717659
+			376: 1628717665
+			377: 1628717667
+			378: 1628717669
+			379: 1628717670
+			380: 1628717674
+			381: 1628717682
+			382: 1628717683
+			383: 1628717692
+			384: 1628717694
+			385: 1628717695
+			386: 1628717703
+			387: 1628717711
+			388: 1628717712
+			389: 1628717713
+			390: 1628717715
+			391: 1628717716
+			392: 1628717720
+			393: 1628717724
+			394: 1628717725
+			395: 1628717734
+			396: 1628717739
+			397: 1628717753
+			398: 1628717763
+			399: 1628717769
+			400: 1628717770
+			401: 1628717771
+			402: 1628717772
+			403: 1628717773
+			404: 1628717778
+			405: 1628717783
+			406: 1628717787
+			407: 1628717789
+			408: 1628717792
+			409: 1628717794
+			410: 1628717796
+			411: 1628717797
+			412: 1628717799
+			413: 1628717800
+			414: 1628717801
+			415: 1628717804
+			416: 1628717805
+			417: 1628717814
+			418: 1628717816
+			419: 1628717817
+			420: 1628717818
+			421: 1628717820
+			422: 1628717821
+			423: 1628717822
+			424: 1628717824
+			425: 1628717825
+			426: 1628717826
+			427: 1628717829
+			428: 1628717831
+			429: 1628717833
+			430: 1628717835
+			431: 1628717843
+			432: 1628717844
+			433: 1628717845
+			434: 1628717846
+			435: 1628717847
+			436: 1628717853
+			437: 1628717854
+			438: 1628717858
+			439: 1628717859
+			440: 1628717866
+			441: 1628717874
+			442: 1628717884
+			443: 1628717888
+			444: 1628717889
+			445: 1628717890
+			446: 1628717893
+			447: 1628717898
+			448: 1628717899
+			449: 1628717901
+			450: 1628717904
+			451: 1628717905
+			452: 1628717906
+			453: 1628717907
+			454: 1628717909
+			455: 1628717914
+			456: 1628717916
+			457: 1628717917
+			458: 1628717918
+			459: 1628717923
+			460: 1628717924
+			461: 1628717929
+			462: 1628717934
+			463: 1628717936
+			464: 1628717937
+			465: 1628717940
+			466: 1628717941
+			467: 1628717942
+			468: 1628717944
+			469: 1628717945
+			470: 1628717947
+			471: 1628717948
+			472: 1628717949
+			473: 1628717951
+			474: 1628717961
+			475: 1628717962
+			476: 1628717963
+			477: 1628717964
+			478: 1628717965
+			479: 1628717966
+			480: 1628717969
+			481: 1628717970
+			482: 1628717972
+			483: 1628717973
+			484: 1628717974
+			485: 1628717987
+			486: 1628717989
+			487: 1628717991
+			488: 1628717994
+			489: 1628717995
+			490: 1628717996
+			491: 1628717997
+			492: 1628717998
+			493: 1628718002
+			494: 1628718003
+			495: 1628718004
+			496: 1628718005
+			497: 1628718009
+			498: 1628718010
+			499: 1628718011
+			500: 1628718012
+			501: 1628718013
+			502: 1628718014
+			503: 1628718016
+			504: 1628718024
+			505: 1628718025
+			506: 1628718026
+			507: 1628718027
+			508: 1628718030
+			509: 1628718031
+			510: 1628718032
+			511: 1628718036
+			512: 1628718043
+			513: 1628718044
+			514: 1628718045
+			515: 1628718046
+			516: 1628718047
+			517: 1628718048
+			518: 1628718053
+			519: 1628718054
+			520: 1628718071
+			521: 1628718083
+			522: 1628718085
+			523: 1628718087
+			524: 1628718088
+			525: 1628718091
+			526: 1628718094
+			527: 1628718098
+			528: 1628718099
+			529: 1628718102
+			530: 1628718105
+			531: 1628718109
+			532: 1628718110
+			533: 1628718111
+			534: 1628718112
+			535: 1628718113
+			536: 1628718115
+			537: 1628718116
+			538: 1628718117
+			539: 1628718118
+			540: 1628718119
+			541: 1628718120
+			542: 1628718121
+			543: 1628718122
+			544: 1628718123
+			545: 1628718124
+			546: 1628718125
+			547: 1628718126
+			548: 1628718127
+			549: 1628718128
+			550: 1628718130
+			551: 1628718131
+			552: 1628718134
+			553: 1628718136
+			554: 1628718137
+			555: 1628718139
+			556: 1628718143
+			557: 1628718144
+			558: 1628718145
+			559: 1628718146
+			560: 1628718147
+			561: 1628718148
+			562: 1628718149
+			563: 1628718150
+			564: 1628718151
+			565: 1628718152
+			566: 1628718154
+			567: 1628718156
+			568: 1628718158
+			569: 1628718159
+			570: 1628718160
+			571: 1628718161
+			572: 1628718164
+			573: 1628718166
+			574: 1628718167
+			575: 1628718168
+			576: 1628718169
+			577: 1628718170
+			578: 1628718171
+			579: 1628718173
+			580: 1628718174
+			581: 1628718176
+			582: 1628718177
+			583: 1628718181
+			584: 1628718182
+			585: 1628718191
+			586: 1628718197
+			587: 1628718199
+			588: 1628718201
+			589: 1628718203
+			590: 1628718205
+			591: 1628718206
+			592: 1628718207
+			593: 1628718208
+			594: 1628718212
+			595: 1628718213
+			596: 1628718215
+			597: 1628718220
+			598: 1628718221
+			599: 1628718224
+			600: 1628718226
+			601: 1628718227
+			602: 1628718228
+			603: 1628718229
+			604: 1628718230
+			605: 1628718231
+			606: 1628718232
+			607: 1628718233
+			608: 1628718235
+			609: 1628718236
+			610: 1628718237
+			611: 1628718242
+			612: 1628718244
+			613: 1628718245
+			614: 1628718249
+			615: 1628718250
+			616: 1628718251
+			617: 1628718252
+			618: 1628718254
+			619: 1628718255
+			620: 1628718256
+			621: 1628718257
+			622: 1628718258
+			623: 1628718259
+			624: 1628718260
+			625: 1628718261
+			626: 1628718262
+			627: 1628718263
+			628: 1628718265
+			629: 1628718266
+			630: 1628718267
+			631: 1628718270
+			632: 1628718271
+			633: 1628718272
+			634: 1628718274
+			635: 1628718276
+			636: 1628718277
+			637: 1628718278
+			638: 1628718280
+			639: 1628718283
+			640: 1628718284
+			641: 1628718288
+			642: 1628718289
+			643: 1628718291
+			644: 1628718294
+			645: 1628718295
+			646: 1628718296
+			647: 1628718297
+			648: 1628718301
+			649: 1628718302
+			650: 1628718303
+			651: 1628718304
+			652: 1628718305
+			653: 1628718306
+			654: 1628718307
+			655: 1628718308
+			656: 1628718309
+			657: 1628718310
+			658: 1628718311
+			659: 1628718312
+			660: 1628718313
+			661: 1628718314
+			662: 1628718316
+			663: 1628718317
+			664: 1628718318
+			665: 1628718319
+			666: 1628718322
+			667: 1628718328
+			668: 1628718331
+			669: 1628718333
+			670: 1628718340
+			671: 1628718341
+			672: 1628718346
+			673: 1628718348
+			674: 1628718349
+			675: 1628718351
+			676: 1628718352
+			677: 1628718353
+			678: 1628718354
+			679: 1628718360
+			680: 1628718361
+			681: 1628718366
+			682: 1628718371
+			683: 1628718375
+			684: 1628718378
+			685: 1628718380
+			686: 1628718384
+			687: 1628718386
+			688: 1628718387
+			689: 1628718388
+			690: 1628718389
+			691: 1628718394
+			692: 1628718398
+			693: 1628718399
+			694: 1628718400
+			695: 1628718403
+			696: 1628718404
+			697: 1628718407
+			698: 1628718418
+			699: 1628718425
+			700: 1628718430
+			701: 1628718431
+			702: 1628718432
+			703: 1628718438
+			704: 1628718446
+			705: 1628718447
+			706: 1628718452
+			707: 1628718459
+			708: 1628718464
+			709: 1628718465
+			710: 1628718466
+			711: 1628718469
+			712: 1628718470
+			713: 1628718471
+			714: 1628718476
+			715: 1628718477
+			716: 1628718478
+			717: 1628718483
+			718: 1628718484
+			719: 1628718491
+			720: 1628718494
+			721: 1628718495
+			722: 1628718498
+			723: 1628718504
+			724: 1628718505
+			725: 1628718514
+			726: 1628718516
+			727: 1628718521
+			728: 1628718524
+			729: 1628718531
+			730: 1628718532
+			731: 1628718534
+			732: 1628718538
+			733: 1628718541
+			734: 1628718545
+			735: 1628718546
+			736: 1628718548
+			737: 1628718551
+			738: 1628718561
+			739: 1628718568
+			740: 1628718572
+			741: 1628718581
+			742: 1628718590
+			743: 1628718591
+			744: 1628718594
+			745: 1628718598
+			746: 1628718603
+			747: 1628718604
+			748: 1628718608
+			749: 1628718609
+			750: 1628718610
+			751: 1628718611
+			752: 1628718612
+			753: 1628718613
+			754: 1628718614
+			755: 1628718621
+			756: 1628718622
+			757: 1628718623
+			758: 1628718624
+			759: 1628718626
+			760: 1628718628
+			761: 1628718630
+			762: 1628718631
+			763: 1628718632
+			764: 1628718633
+			765: 1628718635
+			766: 1628718637
+			767: 1628718638
+			768: 1628718639
+			769: 1628718640
+			770: 1628718641
+			771: 1628718642
+			772: 1628718643
+			773: 1628718644
+			774: 1628718645
+			775: 1628718647
+			776: 1628718648
+			777: 1628718649
+			778: 1628718655
+			779: 1628718656
+			780: 1628718659
+			781: 1628718661
+			782: 1628718662
+			783: 1628718663
+			784: 1628718664
+			785: 1628718665
+			786: 1628718671
+			787: 1628718686
+			788: 1628718687
+			789: 1628718688
+			790: 1628718692
+			791: 1628718693
+			792: 1628718694
+			793: 1628718695
+			794: 1628718696
+			795: 1628718698
+			796: 1628718699
+			797: 1628718700
+			798: 1628718703
+			799: 1628718704
+			800: 1628718705
+			801: 1628718708
+			802: 1628718709
+			803: 1628718710
+			804: 1628718711
+			805: 1628718712
+			806: 1628718713
+			807: 1628718714
+			808: 1628718715
+			809: 1628718716
+			810: 1628718717
+			811: 1628718718
+			812: 1628718724
+			813: 1628718728
+			814: 1628718730
+			815: 1628718731
+			816: 1628718738
+			817: 1628718740
+			818: 1628718741
+			819: 1628718742
+			820: 1628718743
+			821: 1628718744
+			822: 1628718748
+			823: 1628718751
+			824: 1628718752
+			825: 1628718753
+			826: 1628718756
+			827: 1628718757
+			828: 1628718762
+			829: 1628718765
+			830: 1628718766
+			831: 1628718768
+			832: 1628718772
+			833: 1628718773
+			834: 1628718778
+			835: 1628718781
+			836: 1628718782
+			837: 1628718783
+			838: 1628718784
+			839: 1628718785
+			840: 1628718787
+			841: 1628718790
+			842: 1628718791
+			843: 1628718792
+			844: 1628718793
+			845: 1628718794
+			846: 1628718802
+			847: 1628718803
+			848: 1628718806
+			849: 1628718807
+			850: 1628718808
+			851: 1628718809
+			852: 1628718810
+			853: 1628718811
+			854: 1628718812
+			855: 1628718813
+			856: 1628718814
+			857: 1628718815
+			858: 1628718816
+			859: 1628718817
+			860: 1628718818
+			861: 1628718819
+			862: 1628718820
+			863: 1628718821
+			864: 1628718825
+			865: 1628718826
+			866: 1628718827
+			867: 1628718828
+			868: 1628718829
+			869: 1628718831
+			870: 1628718832
+			871: 1628718835
+			872: 1628718838
+			873: 1628718839
+			874: 1628718841
+			875: 1628718846
+			876: 1628718851
+			877: 1628718853
+			878: 1628718856
+			879: 1628718857
+			880: 1628718858
+			881: 1628718859
+			882: 1628718863
+			883: 1628718864
+			884: 1628718865
+			885: 1628718868
+			886: 1628718869
+			887: 1628718871
+			888: 1628718875
+			889: 1628718878
+			890: 1628718879
+			891: 1628718881
+			892: 1628718882
+			893: 1628718886
+			894: 1628718889
+			895: 1628718890
+			896: 1628718891
+			897: 1628718892
+			898: 1628718893
+			899: 1628718894
+			900: 1628718898
+			901: 1628718900
+			902: 1628718901
+			903: 1628718903
+			904: 1628718907
+			905: 1628718909
+			906: 1628718910
+			907: 1628718911
+			908: 1628718913
+			909: 1628718915
+			910: 1628718916
+			911: 1628718919
+			912: 1628718922
+			913: 1628718924
+			914: 1628718925
+			915: 1628718926
+			916: 1628718928
+			917: 1628718931
+			918: 1628718932
+			919: 1628718933
+			920: 1628718937
+			921: 1628718938
+			922: 1628718939
+			923: 1628718941
+			924: 1628718943
+			925: 1628718944
+			926: 1628718945
+			927: 1628718950
+			928: 1628718953
+			929: 1628718954
+			930: 1628718958
+			931: 1628718960
+			932: 1628718962
+			933: 1628718965
+			934: 1628718967
+			935: 1628718969
+			936: 1628718970
+			937: 1628718971
+			938: 1628718974
+			939: 1628718977
+			940: 1628718982
+			941: 1628718983
+			942: 1628718986
+			943: 1628718993
+			944: 1628718994
+			945: 1628719003
+			946: 1628719010
+			947: 1628719013
+			948: 1628719014
+			949: 1628719026
+			950: 1628719027
+			951: 1628719028
+			952: 1628719029
+			953: 1628719030
+			954: 1628719031
+			955: 1628719032
+			956: 1628719033
+			957: 1628719034
+			958: 1628719035
+			959: 1628719037
+			960: 1628719038
+			961: 1628719039
+			962: 1628719040
+			963: 1628719041
+			964: 1628719042
+			965: 1628719043
+			966: 1628719044
+			967: 1628719045
+			968: 1628719047
+			969: 1628719048
+			970: 1628719049
+			971: 1628719051
+			972: 1628719052
+			973: 1628719053
+			974: 1628719056
+			975: 1628719058
+			976: 1628719059
+			977: 1628719062
+			978: 1628719063
+			979: 1628719064
+			980: 1628719065
+			981: 1628719068
+			982: 1628719069
+			983: 1628719070
+			984: 1628719071
+			985: 1628719072
+			986: 1628719073
+			987: 1628719074
+			988: 1628719075
+			989: 1628719076
+			990: 1628719078
+			991: 1628719080
+			992: 1628719082
+			993: 1628719083
+			994: 1628719084
+			995: 1628719085
+			996: 1628719086
+			997: 1628719087
+			998: 1628719088
+			999: 1628719089
 	msg_type: "history"
 	pip_size: 5
 	req_id: 36
@@ -2739,7 +10398,8 @@ Chaves:
 		symbol: "frxUSDCAD"
 	error: 
 		code: "ContractBuyValidationError"
-		details: object
+		details: 
+			field: "duration"
 		message: "Negociações sobre contratos de Forex com durações inferior a 5 horas não estão disponíveis das 21:00:00 às 23:59:59"
 	msg_type: "proposal"
 	req_id: 34
@@ -2760,7 +10420,8 @@ Chaves:
 		symbol: "frxUSDCAD"
 	error: 
 		code: "ContractBuyValidationError"
-		details: object
+		details: 
+			field: "duration"
 		message: "Negociações sobre contratos de Forex com durações inferior a 5 horas não estão disponíveis das 21:00:00 às 23:59:59"
 	msg_type: "proposal"
 	req_id: 35
