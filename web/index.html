@@ -22,13 +22,29 @@
 
   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
 
+  <link rel="stylesheet" href="element.css">
+
 </head>
 
 <body>
-    <h1>Mimes Pyramidal Broker v1.0 God Edition</h1>
-  <!-- your content here... -->
-  <!-- <script src="js/scripts.js"></script> -->
-  <script></script>
+
+  <div id="app">
+    <el-button @click="visible = true">Button</el-button>
+    <el-dialog :visible.sync="visible" title="Hello world">
+      <p>Try Element</p>
+    </el-dialog>
+  </div>
+
+  <script src="vue.js"></script>
+  <script src="element.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: function () {
+        return { visible: false }
+      }
+    });
+  </script>
 </body>
 
 </html>
