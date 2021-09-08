@@ -14,6 +14,7 @@ import json
 
 token_deriv = "HVumMdEbE5TdVUP"#certo
 # token_deriv = "HVumMdEbE5TdVUPU"#errado
+# token_deriv_mimes = "aFGutHpwxtAT3If"
 uri_deriv = "wss://ws.binaryws.com/websockets/v3?app_id=1089"
 auth_deriv = False
 
